@@ -13,10 +13,10 @@
 
 @layer utilities {
     .bg-light {
-        background-image: url('assets/bg-light.png');
+        background-image: url('/public/bg-light.png');
     }
     .bg-dark {
-        background-image: url('assets/bg-dark.png');
+        background-image: url('/public/bg-dark.png');
     }
 }
 

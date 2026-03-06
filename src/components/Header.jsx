@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import LanguageButton from './LanguageButton';
 import Navigation from './Navigation';
 import ThemeButton from './ThemeButton';
@@ -7,10 +8,10 @@ export default function Header() {
     return (
         <header className='flex justify-between'>
             <div className='flex space-x-16 items-end'>
-                <a className='flex text-4xl font-bold text-primary' href='#'>
+                <Link to="/" className='flex text-4xl font-bold text-primary'>
                     <IoIosRocket className='inline-block mr-2' />
                     sofie hyllen
-                </a>
+                </Link>
                 <Navigation />
             </div>
             <div className='flex space-x-7'>
