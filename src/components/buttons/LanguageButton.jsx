@@ -12,8 +12,8 @@ export default function LanguageButton() {
                 onClick={() => changeLanguage('en')}
                 className={`font-display font-bold ${
                     i18n.language === 'en'
-                        ? 'text-[#161621] underline dark:text-white'
-                        : 'text-[#5D5D89]'
+                        ? 'underline'
+                        : 'text-neutral'
                 }`}>
                 en
             </button>
@@ -22,8 +22,8 @@ export default function LanguageButton() {
                 onClick={() => changeLanguage('da')}
                 className={`font-display font-bold ${
                     i18n.language === 'da'
-                        ? 'text-[#161621] underline dark:text-white'
-                        : 'text-[#5D5D89]'
+                        ? 'underline'
+                        : 'text-neutral'
                 }`}>
                 da
             </button>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export default function Button({ variant = 'primary', children, ...props }) {
     // Define variant styles
     const variants = {
-        primary: 'bg-gradient-to-r from-[#C8F679] to-primary text-[#161621]',
+        primary: 'bg-gradient-to-r from-[#C8F679] to-accent text-[#161621]',
         secondary: '',
     };
 

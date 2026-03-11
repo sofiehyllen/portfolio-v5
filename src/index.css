@@ -21,7 +21,7 @@
 }
 
 /* Global rules and classes */
-/* blockquote,
+blockquote,
 dl,
 dd,
 h1,
@@ -45,7 +45,7 @@ h5,
 h6 {
     font-size: inherit;
     font-weight: inherit;
-} */
+}
 
 img,
 video {

@@ -2,12 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
-import Layout from './components/Layout';
+import Layout from './components/wrappers/Layout';
 import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
     return (
-
         <Routes>
             <Route element={<Layout />}>
                 <Route path="/" element={<HomePage />} />
@@ -17,7 +16,6 @@ function App() {
                 <Route path="*" element={<HomePage />} />
             </Route>
         </Routes>
-
     );
 }
 
