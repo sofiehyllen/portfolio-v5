@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 @font-face {
-    font-family: 'Avenir Next';
-    src: url('/public/AvenirNextLTPro-Regular.otf') format('otf');
-    font-weight: normal; /* You can specify weights here if needed */
-    font-style: normal;
+	font-family: "Avenir Next";
+	src: url("/public/AvenirNextLTPro-Regular.otf") format("otf");
+	font-weight: normal; /* You can specify weights here if needed */
+	font-style: normal;
 }
 
 @tailwind base;
@@ -12,12 +12,12 @@
 @tailwind utilities;
 
 @layer utilities {
-    .bg-light {
-        background-image: url('/public/bg-light.png');
-    }
-    .bg-dark {
-        background-image: url('/public/bg-dark.png');
-    }
+	.bg-light {
+		background-image: url("/public/bg-light.png");
+	}
+	.bg-dark {
+		background-image: url("/public/bg-dark.png");
+	}
 }
 
 /* Global rules and classes */
@@ -34,7 +34,7 @@ hr,
 figure,
 p,
 pre {
-    margin: 0;
+	margin: 0;
 }
 
 h1,
@@ -43,12 +43,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: inherit;
-    font-weight: inherit;
+	font-size: inherit;
+	font-weight: inherit;
 }
 
 img,
 video {
-    max-width: 100%;
-    max-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 }
