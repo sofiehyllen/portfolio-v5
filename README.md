@@ -1,11 +1,27 @@
-# React + Vite
+# Portfolio (WIP)
 
-This template provides a minimal setup to get React working in Vite with HMR and
-some ESLint rules.
+This project is a portfolio currently under development.
 
-Currently, two official plugins are available:
+The goal is to build a fast, responsive and accessible website to showcase
+projects, technical skills and professional experience.
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md)
-    uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)
-    uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- DaisyUI
+- i18next
+
+## Status
+
+🚧 Work in progress  
+Core layout and design system are being implemented.
+
+## Planned Features
+
+- Responsive layout
+- Dark / light theme
+- Multi-language support
+- Project showcase pages
+- Contact section
