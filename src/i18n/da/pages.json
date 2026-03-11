@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Velkommen",
+    "subtitle": "Web Developer portfolio."
+  },
+  "projects": {
+    "title": "Projekter",
+    "subtitle": "Her kan du finde mine seneste projekter."
+  },
+  "about": {
+    "title": "Lidt om mig",
+    "subtitle": "Jeg er uddannet Webudvikler."
+  },
+  "contact": {
+    "title": "Kontakt mig",
+    "subtitle": "Her er mine kontakt informationer."
+  }
+}

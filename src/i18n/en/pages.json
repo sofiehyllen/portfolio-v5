@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Welcome",
+    "subtitle": "Web Developer portfolio."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Check out my latest projects."
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "I am a web developer."
+  },
+  "contact": {
+    "title": "Let's get in touch!",
+    "subtitle": "Here you will find my contact information."
+  }
+}
