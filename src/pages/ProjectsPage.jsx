@@ -11,6 +11,7 @@ export default function ProjectsPage() {
 			subtitle={t("projects.subtitle")}
 		>
 			<ProjectCard />
+			<ProjectCard />
 		</PageLayout>
 	);
 }

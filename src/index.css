@@ -20,6 +20,17 @@
 	}
 }
 
+@layer base {
+	html,
+	body {
+		scrollbar-width: none;
+	}
+	html::-webkit-scrollbar,
+	body::-webkit-scrollbar {
+		display: none;
+	}
+}
+
 /* Global rules and classes */
 blockquote,
 dl,
