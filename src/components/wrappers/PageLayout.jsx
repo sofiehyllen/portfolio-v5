@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 export default function PageLayout({ title, subtitle, children }) {
 	return (
-		<section className="mt-28 mx-36">
-			<h1 className="font-display font-bold text-8xl pb-12 text-primary-content">
+		<section className="mt-20 md:mt-28 md:mx-36">
+			<h1 className="font-display font-bold text-5xl pb-12 text-primary-content md:text-8xl">
 				{title}
 			</h1>
-			<p className="text-lg text-neutral-content pb-20">{subtitle}</p>
+			<p className="text-neutral-content pb-20 md:text-lg">{subtitle}</p>
 			{children}
 		</section>
 	);

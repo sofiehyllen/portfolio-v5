@@ -18,7 +18,7 @@ export default {
                 light: {
                     primary: '#FCFCFC',
                     'primary-content': '#161621',
-                    secondary: '#F5F5F4',
+                    secondary: '#E9E9F3',
                     'secondary-content': '#212131',
                     accent: '#A1F01B',
                     neutral: '#5D5D89',
@@ -35,7 +35,7 @@ export default {
                     primary: '#161621',
                     'primary-content': '#FCFCFC',
                     secondary: '#212131',
-                    'secondary-content': '#F5F5F4',
+                    'secondary-content': '#E9E9F3',
                     accent: '#A1F01B',
                     neutral: '#5D5D89',
                     'neutral-content': '#B2B2CD',
