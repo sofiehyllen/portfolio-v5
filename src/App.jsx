@@ -4,6 +4,7 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import Layout from "./components/wrappers/Layout";
 import ProjectsPage from "./pages/ProjectsPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Route path="/contact" element={<ContactPage />} />
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="*" element={<HomePage />} />
+				<Route path="/projects/:id" element={<ProjectPage />} />
 			</Route>
 		</Routes>
 	);
