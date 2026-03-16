@@ -1,14 +1,44 @@
 {
   "parkzone": {
     "title": "ParkZone – Technical Case Study",
-    "subtitle": "parkzone subtitle"
+    "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
+    "date": "jun 2024",
+    "tags": ["python", "flask"],
+    "code": "https://github.com/sofiehyllen/parkzone",
+    "description": [
+      "This project is a full frontend redesign and technical prototype of ParkZone’s public website.",
+      "The focus was not only on UX and visual redesign, but on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
+      "The prototype simulates a production-ready structure with dynamic content, API integration, reusable components, and a structured booking/payment flow."
+    ]
   },
   "wait": {
     "title": "Wait - Food ordering platform",
-    "subtitle": "wait subtitle"
+    "subtitle": "Full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
+    "date": "jun 2025",
+    "tags": ["python", "flask"],
+    "code": "https://gitlab.com/sofiehyllen/wait_webdev",
+    "description": [
+      "This project is a full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles including customers, restaurants, partners, and administrators, each with their own functionality and dashboards.",
+      "The backend is built with Python and Flask, using MySQL for persistent data storage and Redis for session management and basket state. The system is containerized using Docker Compose and runs as a multi-service architecture with Flask, MySQL, Redis, and Nginx. The project also includes automated testing, database seeding, and environment-based configuration for development, testing, and production."
+    ]
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
-    "subtitle": "shopify subtitle"
+    "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
+    "date": "jan 2026",
+    "tags": ["python", "flask"],
+    "code": "https://gitlab.com/sofiehyllen/bachelor_project",
+    "description": [
+      "This project implements an AI-powered search widget for Shopify stores that enhances product discovery through natural language queries.",
+      "Instead of relying on traditional keyword-based search, the system analyzes user prompts to understand intent and generates personalized product inspiration pages containing relevant product recommendations. The widget integrates with Shopify via the Admin API and can be embedded directly into existing webshops without requiring changes to the storefront layout or design.",
+      "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor's degree in web development."
+    ]
+  },
+    "common": {
+    "description": "Projektbeskrivelse",
+    "date": "_dato",
+    "code": "_kode",
+    "tags": "_tags",
+    "link": "_link"
   }
 }

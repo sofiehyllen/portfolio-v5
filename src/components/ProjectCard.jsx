@@ -26,7 +26,7 @@ export default function ProjectCard({
 				<hr className="border-neutral-content/20" />
 
 				<div className="flex flex-col md:flex-row gap-6 py-4">
-					<p className="text-sm leading-relaxed text-balance text-neutral-content md:w-1/2">
+					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content md:w-1/2">
 						{description}
 					</p>
 					{image && !imgError ? (
@@ -38,11 +38,11 @@ export default function ProjectCard({
 								onError={() => setImgError(true)}
 							/>
 						</div>
-						) : (
+					) : (
 						<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
-							<MdImageNotSupported className="size-20 text-neutral-content"/>
+							<MdImageNotSupported className="size-20 text-neutral-content" />
 						</div>
-						)}
+					)}
 				</div>
 
 				<hr className="border-neutral-content/20 pb-4" />
@@ -55,7 +55,7 @@ export default function ProjectCard({
 							))}
 						</div>
 					)}
-					<p className="text-xs text-neutral-content font-display">
+					<p className="text-xs text-neutral-content font-mono">
 						{date}
 					</p>
 				</div>

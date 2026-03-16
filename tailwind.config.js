@@ -9,6 +9,7 @@ export default {
             fontFamily: {
                 display: ['"Space Grotesk", sans-serif'],
                 sans: ['"Avenir Next", sans-serif'],
+                mono: ['"Source Code Pro", monospace']
             },
         },
     },
