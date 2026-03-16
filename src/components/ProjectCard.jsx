@@ -30,7 +30,7 @@ export default function ProjectCard({
 						{description}
 					</p>
 					{image && !imgError ? (
-						<div className="md:w-1/2 rounded-xl overflow-hidden">
+						<div className="h-48 rounded-xl overflow-hidden md:w-1/2">
 							<img
 								src={image}
 								alt={title}

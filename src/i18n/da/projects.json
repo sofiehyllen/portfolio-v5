@@ -1,25 +1,38 @@
 {
   "parkzone": {
     "title": "ParkZone – Technical Case Study",
-    "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
+    "subtitle": "Fuld frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var på at bygge en skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS-opsætning.",
     "date": "jun 2024",
     "tags": ["python", "flask"],
-    "code": "https://github.com/sofiehyllen/parkzone",
+    "code": "github.com/sofiehyllen/parkzone",
+    "link": "parkzone-beige.vercel.app",
     "description": [
-      "This project is a full frontend redesign and technical prototype of ParkZone’s public website.",
-      "The focus was not only on UX and visual redesign, but on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
-      "The prototype simulates a production-ready structure with dynamic content, API integration, reusable components, and a structured booking/payment flow."
-    ]
+      "Dette projekt er en fuld frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside.",
+      "Fokus var ikke kun på UX og visuelt redesign, men på at bygge en skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS-opsætning.",
+      "Prototypen simulerer en produktionsklar struktur med dynamisk indhold, API-integration, genanvendelige komponenter og et struktureret booking/betalingsflow."
+    ],
+    "features": ""
   },
   "wait": {
     "title": "Wait - Food ordering platform",
-    "subtitle": "Full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
+    "subtitle": "Full-stack platform som tager udgangspunkt i Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
     "tags": ["python", "flask"],
-    "code": "https://gitlab.com/sofiehyllen/wait_webdev",
+    "code": "gitlab.com/sofiehyllen/wait_webdev",
+    "link": "devenv.monster",
     "description": [
-      "This project is a full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles including customers, restaurants, partners, and administrators, each with their own functionality and dashboards.",
-      "The backend is built with Python and Flask, using MySQL for persistent data storage and Redis for session management and basket state. The system is containerized using Docker Compose and runs as a multi-service architecture with Flask, MySQL, Redis, and Nginx. The project also includes automated testing, database seeding, and environment-based configuration for development, testing, and production."
+      "Dette projekt er en full-stack platform til bestilling af mad, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, herunder kunder, restauranter, partnere og administratorer, hver med deres egen funktionalitet og dashboards.",
+      "Backenden er bygget med Python og Flask, og bruger MySQL til persistent datalagring og Redis til sessionsstyring og kurvtilstand. Systemet er containeriseret med Docker Compose og kører som en multi-service arkitektur med Flask, MySQL, Redis og Nginx.",
+      "Projektet inkluderer også automatiseret testning, database-seeding og miljøbaseret konfiguration til udvikling, testning og produktion."
+    ],
+    "features": [
+      "Brugerautentificering (oprettelse, login, e-mailbekræftelse).",
+      "Nulstilling af adgangskode via e-mail.",
+      "Rollebaseret adgangskontrol (kunde, restaurant, partner, admin).",
+      "Indkøbskurv med Redis-tilstandsstyring.",
+      "Paginering og søgefunktionalitet til skalerbare dataforespørgsler.",
+      "Kortintegration med geoplacering.",
+      "Adminpanel til håndtering af brugere, restauranter og elementer med mulighed for at blokere eller slette."
     ]
   },
   "shopify": {
@@ -27,11 +40,18 @@
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
     "tags": ["python", "flask"],
-    "code": "https://gitlab.com/sofiehyllen/bachelor_project",
+    "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
-      "This project implements an AI-powered search widget for Shopify stores that enhances product discovery through natural language queries.",
-      "Instead of relying on traditional keyword-based search, the system analyzes user prompts to understand intent and generates personalized product inspiration pages containing relevant product recommendations. The widget integrates with Shopify via the Admin API and can be embedded directly into existing webshops without requiring changes to the storefront layout or design.",
-      "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor's degree in web development."
+      "Dette projekt implementerer en AI-drevet søgewidget til Shopify stores, der forbedrer produktsøgning gennem naturlige sprogforespørgsler.",
+      "Frem for at været baseret på traditionel nøgleordsbaseret søgning analyserer systemet brugerens input for at forstå hensigten og genererer personaliserede produktinspirationsider med relevante produktanbefalinger. Widgetten integrerer med Shopify via Admin API'et og kan indlejres direkte i eksisterende webshops uden behov for ændringer i shoppens eksisterende layout eller design.",
+      "Projektets primære fokus er backendarkitektur, API-integration og AI-assisteret søgelogik, udviklet som en del af en bacheloruddannelse i Webudvikling."
+    ],
+    "features": [
+      "AI-assisteret produktsøgning med OpenAI til fortolkning af naturlige sprogforespørgsler.",
+      "PostgreSQL fuldtekst-søgning til rangering og hentning af relevante produkter.",
+      "Shopify Admin API og GraphQL-integration til produktsynkronisering og dynamisk sidegenerering.",
+      "Automatisk synkronisering af Shopify-produkter, varianter, kollektioner og medier.",
+      "Database upsert-arkitektur til effektiv synkronisering af Shopify-data."
     ]
   },
     "common": {
@@ -39,6 +59,8 @@
     "date": "_dato",
     "code": "_kode",
     "tags": "_tags",
-    "link": "_link"
+    "link": "_link",
+    "features": "Key features",
+    "back": "Tilbage"
   }
 }

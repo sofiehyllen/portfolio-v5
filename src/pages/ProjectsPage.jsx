@@ -22,7 +22,7 @@ export default function ProjectsPage() {
 			title={t("projects.title")}
 			subtitle={t("projects.subtitle")}
 		>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-7">
 				{projects.map((project) => (
 					<ProjectCard
 						key={project.id}
