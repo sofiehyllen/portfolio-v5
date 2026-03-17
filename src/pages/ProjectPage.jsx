@@ -12,8 +12,7 @@ export default function ProjectPage() {
 		<div className="space-y-7 mt-14 md:mt-20 md:mx-16 2xl:mx-32">
 			<button
 				onClick={() => navigate(-1)}
-				className="flex items-center gap-2 font-mono text-sm mb-8"
-			>
+				className="flex items-center gap-2 font-mono text-sm mb-8">
 				<SlArrowLeft
 					strokeWidth={10}
 					className="size-3 text-primary-content"
@@ -48,13 +47,15 @@ export default function ProjectPage() {
 							{t("common.features")}
 						</h3>
 						<ul className="space-y-2 list-disc list-inside">
-							{t(`${id}.features`, { returnObjects: true }).map((p, i) => (
-								<li
-									className="font-mono text-sm xl:text-base"
-									key={i}
-									dangerouslySetInnerHTML={{ __html: p }}
-								/>
-							))}
+							{t(`${id}.features`, { returnObjects: true }).map(
+								(p, i) => (
+									<li
+										className="font-mono text-sm xl:text-base"
+										key={i}
+										dangerouslySetInnerHTML={{ __html: p }}
+									/>
+								)
+							)}
 						</ul>
 					</div>
 				</div>

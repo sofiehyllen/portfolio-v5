@@ -1,7 +1,9 @@
 {
   "home": {
-    "title": "Welcome",
-    "subtitle": "Web Developer portfolio."
+    "pretitle": "Hello! I am",
+    "title": "sofie hyllen",
+    "subtitle": "Professional Bachelor's Degree in Web Development",
+    "description": "I'm a developer with a Bachelor's degree in Web Development with a strong interest in fullstack/backend development, data systems, and application architecture."
   },
   "projects": {
     "title": "Projects",
@@ -9,7 +11,13 @@
   },
   "about": {
     "title": "About me",
-    "subtitle": "I am a web developer."
+    "subtitle": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "atm": "At the moment",
+    "atm-content": [
+      "I recently graduated and I'm currently open to work.",
+      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
+      "I have been exploring new backend tools and system design concepts."
+    ]
   },
   "contact": {
     "title": "Let's get in touch!",

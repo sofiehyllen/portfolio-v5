@@ -36,8 +36,7 @@ export default function CodeBlock({ id }) {
 					<a
 						href={`https://${t(`${id}.code`)}`}
 						target="_blank"
-						className="font-normal underline text-[#8BD30D] dark:text-accent"
-					>
+						className="font-normal underline text-[#8BD30D] dark:text-accent">
 						{t(`${id}.code`)}
 					</a>
 				</code>
@@ -49,8 +48,7 @@ export default function CodeBlock({ id }) {
 						<a
 							href={`https://${t(`${id}.link`)}`}
 							target="_blank"
-							className="font-normal underline text-[#8BD30D] dark:text-accent"
-						>
+							className="font-normal underline text-[#8BD30D] dark:text-accent">
 							{t(`${id}.link`)}
 						</a>
 					</code>

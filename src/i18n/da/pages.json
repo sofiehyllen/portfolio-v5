@@ -1,7 +1,8 @@
 {
   "home": {
-    "title": "Velkommen",
-    "subtitle": "Web Developer portfolio."
+    "pretitle": "Hej! Jeg hedder",
+    "title": "sofie hyllen",
+    "subtitle": "Professionsbachelor i Web Udvikling"
   },
   "projects": {
     "title": "Projekter",

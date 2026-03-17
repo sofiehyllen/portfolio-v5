@@ -20,8 +20,7 @@ export default function ProjectsPage() {
 	return (
 		<PageLayout
 			title={t("projects.title")}
-			subtitle={t("projects.subtitle")}
-		>
+			subtitle={t("projects.subtitle")}>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-7">
 				{projects.map((project) => (
 					<ProjectCard

@@ -7,7 +7,6 @@ export default function ContactPage() {
 	return (
 		<PageLayout
 			title={t("contact.title")}
-			subtitle={t("contact.subtitle")}
-		></PageLayout>
+			subtitle={t("contact.subtitle")}></PageLayout>
 	);
 }

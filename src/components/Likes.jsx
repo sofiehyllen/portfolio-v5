@@ -7,8 +7,7 @@ export default function Likes() {
 	return (
 		<button
 			className="btn btn-neutral btn-sm "
-			onClick={() => setLikes((likes) => likes + 1)}
-		>
+			onClick={() => setLikes((likes) => likes + 1)}>
 			<GoHeartFill />
 			{likes}
 		</button>

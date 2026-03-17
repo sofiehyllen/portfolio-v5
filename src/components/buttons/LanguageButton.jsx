@@ -15,9 +15,10 @@ export default function LanguageButton() {
 				<button
 					onClick={() => changeLanguage("en")}
 					className={`font-display font-bold text-3xl md:text-base ${
-						i18n.language === "en" ? "text-secondary-content underline" : "text-neutral hover:text-secondary-content transition-colors"
-					}`}
-				>
+						i18n.language === "en"
+							? "text-secondary-content underline"
+							: "text-neutral hover:text-secondary-content transition-colors"
+					}`}>
 					en
 				</button>
 				<span className="font-medium px-2 text-neutral text-3xl md:text-base">
@@ -26,9 +27,10 @@ export default function LanguageButton() {
 				<button
 					onClick={() => changeLanguage("da")}
 					className={`font-display font-bold text-3xl md:text-base ${
-						i18n.language === "da" ? "text-secondary-content underline" : "text-neutral hover:text-secondary-content transition-colors"
-					}`}
-				>
+						i18n.language === "da"
+							? "text-secondary-content underline"
+							: "text-neutral hover:text-secondary-content transition-colors"
+					}`}>
 					da
 				</button>
 			</div>

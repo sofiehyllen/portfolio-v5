@@ -7,7 +7,6 @@ export default function AboutPage() {
 	return (
 		<PageLayout
 			title={t("about.title")}
-			subtitle={t("about.subtitle")}
-		></PageLayout>
+			subtitle={t("about.subtitle")}></PageLayout>
 	);
 }
