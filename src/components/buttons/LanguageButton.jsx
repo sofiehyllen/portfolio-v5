@@ -15,7 +15,7 @@ export default function LanguageButton() {
 				<button
 					onClick={() => changeLanguage("en")}
 					className={`font-display font-bold text-3xl md:text-base ${
-						i18n.language === "en" ? "underline" : "text-neutral"
+						i18n.language === "en" ? "text-secondary-content underline" : "text-neutral hover:text-secondary-content transition-colors"
 					}`}
 				>
 					en
@@ -26,7 +26,7 @@ export default function LanguageButton() {
 				<button
 					onClick={() => changeLanguage("da")}
 					className={`font-display font-bold text-3xl md:text-base ${
-						i18n.language === "da" ? "underline" : "text-neutral"
+						i18n.language === "da" ? "text-secondary-content underline" : "text-neutral hover:text-secondary-content transition-colors"
 					}`}
 				>
 					da

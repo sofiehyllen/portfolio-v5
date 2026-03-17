@@ -1,9 +1,9 @@
 {
   "parkzone": {
-    "title": "ParkZone – Technical Case Study",
-    "subtitle": "Fuld frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var på at bygge en skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS-opsætning.",
+    "title": "Technical Case Study - ParkZone",
+    "subtitle": "Frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS.",
     "date": "jun 2024",
-    "tags": ["python", "flask"],
+    "tags": ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
@@ -11,13 +11,21 @@
       "Fokus var ikke kun på UX og visuelt redesign, men på at bygge en skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS-opsætning.",
       "Prototypen simulerer en produktionsklar struktur med dynamisk indhold, API-integration, genanvendelige komponenter og et struktureret booking/betalingsflow."
     ],
-    "features": ""
+    "features": [
+      "mangler",
+      "Password reset via email.",
+      "Role-based access control (customer, restaurant, partner, admin).",
+      "Shopping basket with Redis state management.",
+      "Pagination and search functionality for scalable data queries.",
+      "Map integration with geolocation.",
+      "Admin dashboard for managing users, restaurants, and items with options to block or delete entries."
+    ]
   },
   "wait": {
     "title": "Wait - Food ordering platform",
-    "subtitle": "Full-stack platform som tager udgangspunkt i Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
+    "subtitle": "Full-stack platform baseret på Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
-    "tags": ["python", "flask"],
+    "tags": ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "Gitlab-CI", "Gunicorn", "REST API"],
     "code": "gitlab.com/sofiehyllen/wait_webdev",
     "link": "devenv.monster",
     "description": [
@@ -26,20 +34,20 @@
       "Projektet inkluderer også automatiseret testning, database-seeding og miljøbaseret konfiguration til udvikling, testning og produktion."
     ],
     "features": [
-      "Brugerautentificering (oprettelse, login, e-mailbekræftelse).",
-      "Nulstilling af adgangskode via e-mail.",
-      "Rollebaseret adgangskontrol (kunde, restaurant, partner, admin).",
-      "Indkøbskurv med Redis-tilstandsstyring.",
-      "Paginering og søgefunktionalitet til skalerbare dataforespørgsler.",
-      "Kortintegration med geoplacering.",
-      "Adminpanel til håndtering af brugere, restauranter og elementer med mulighed for at blokere eller slette."
+      "<strong>Brugerautentificering</strong> (oprettelse, login, e-mailbekræftelse).",
+      "<strong>Nulstilling af adgangskode</strong> via e-mail.",
+      "<strong>Rollebaseret adgangskontrol</strong> (kunde, restaurant, partner, admin).",
+      "Indkøbskurv med <strong>Redis-tilstandsstyring</strong>.",
+      "<strong>Paginering og søgefunktionalitet</strong> til skalerbare dataforespørgsler.",
+      "<strong>Kortintegration</strong> med geoplacering.",
+      "<strong>Adminpanel</strong> til håndtering af brugere, restauranter og elementer med mulighed for at blokere eller slette."
     ]
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
-    "tags": ["python", "flask"],
+    "tags": ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "Dette projekt implementerer en AI-drevet søgewidget til Shopify stores, der forbedrer produktsøgning gennem naturlige sprogforespørgsler.",
@@ -47,11 +55,30 @@
       "Projektets primære fokus er backendarkitektur, API-integration og AI-assisteret søgelogik, udviklet som en del af en bacheloruddannelse i Webudvikling."
     ],
     "features": [
-      "AI-assisteret produktsøgning med OpenAI til fortolkning af naturlige sprogforespørgsler.",
-      "PostgreSQL fuldtekst-søgning til rangering og hentning af relevante produkter.",
-      "Shopify Admin API og GraphQL-integration til produktsynkronisering og dynamisk sidegenerering.",
-      "Automatisk synkronisering af Shopify-produkter, varianter, kollektioner og medier.",
-      "Database upsert-arkitektur til effektiv synkronisering af Shopify-data."
+      "<strong>AI-assisteret produktsøgning</strong> med OpenAI til fortolkning af naturlige sprogforespørgsler.",
+      "<strong>PostgreSQL fulltext-søgning</strong> til rangering og hentning af relevante produkter.",
+      "<strong>Shopify Admin API og GraphQL-integration</strong> til produktsynkronisering og dynamisk sidegenerering.",
+      "<strong>Automatisk synkronisering</strong> af Shopify-produkter, varianter, kollektioner og medier.",
+      "<strong>Database upsert-arkitektur</strong> til effektiv synkronisering af Shopify-data."
+    ]
+  },
+  "snake": {
+    "title": "Optimering af Neurale Agenter med en Genetisk Algoritme",
+    "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
+    "date": "jun 2025",
+    "tags": ["python"],
+    "code": "gitlab.com/aai_exam/ga_snake_project",
+    "description": [
+      "Dette projekt undersøger brugen af en genetisk algoritme til at udvikle intelligente Snake-agenter, der maksimerer æbleindsamling og overlevelse. Neurale netværk fungerer som controllere, mens genetiske operationer som selection, crossover og mutation styrer indlæringen.",
+      "Hver agent bruger et feedforward neuralt netværk, der mapper 24 inputfunktioner — afstande til vægge, krop og mad — til 4 bevægelsesoutputs. Netværket består af et inputlag, et hidden lag og et outputlag.",
+      "Resultaterne viser, at agenter med veltunet fitnessfunktion og inputfunktioner udvikler stadig mere avanceret adfærd, hvilket viser, at evolutionære algoritmer kan producere adaptive agenter i simple spilmiljøer."
+    ],
+    "features": [
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler"
     ]
   },
     "common": {

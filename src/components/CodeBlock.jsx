@@ -6,17 +6,17 @@ export default function CodeBlock({ id }) {
 	const { t, i18n } = useTranslation("projects");
 
 	return (
-		<div className="mockup-code h-fit bg-base-100 text-sm space-y-1.5 xl:w-2/5 dark:bg-secondary">
+		<div className="mockup-code h-fit bg-base-100 text-sm space-y-1.5 pr-4 xl:w-2/5 dark:bg-secondary">
 			<pre data-prefix="$">
 				<code className="font-semibold">
 					{t("common.date")}:{" "}
 					<span className="font-normal">{t(`${id}.date`)}</span>
 				</code>
 			</pre>
-			<pre data-prefix="$" className="flex">
-				<code className="font-semibold flex items-center">
+			<pre data-prefix="$" className="">
+				<code className="font-semibold inline-flex ">
 					{t("common.tags")}:{" "}
-					<span className="flex space-x-2">
+					<span className="flex gap-2 flex-wrap">
 						{t(`${id}.tags`, { returnObjects: true }).map(
 							(p, i) => (
 								<Tag key={i} title={p}>
@@ -27,9 +27,9 @@ export default function CodeBlock({ id }) {
 					</span>
 				</code>
 			</pre>
-			<pre data-prefix="$">
+			{/* <pre data-prefix="$">
 				<code></code>
-			</pre>
+			</pre> */}
 			<pre data-prefix="$">
 				<code className="font-semibold">
 					{t("common.code")}:{" "}

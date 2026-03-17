@@ -1,9 +1,9 @@
 {
   "parkzone": {
-    "title": "ParkZone – Technical Case Study",
+    "title": "Technical Case Study - ParkZone",
     "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
     "date": "jun 2024",
-    "tags": ["python", "flask"],
+    "tags": ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
@@ -11,13 +11,21 @@
       "The focus was not only on UX and visual redesign, but on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
       "The prototype simulates a production-ready structure with dynamic content, API integration, reusable components, and a structured booking/payment flow."
     ],
-    "features": ""
+    "features": [
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler"
+    ]
   },
   "wait": {
     "title": "Wait - Food ordering platform",
     "subtitle": "Full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
     "date": "jun 2025",
-    "tags": ["python", "flask"],
+    "tags": ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "Gitlab-CI", "Gunicorn", "REST API"],
     "code": "gitlab.com/sofiehyllen/wait_webdev",
     "link": "www.devenv.monster",
     "description": [
@@ -26,20 +34,20 @@
       "The project also includes automated testing, database seeding, and environment-based configuration for development, testing, and production."
     ],
     "features": [
-      "User authentication (signup, login, email verification).",
-      "Password reset via email.",
-      "Role-based access control (customer, restaurant, partner, admin).",
-      "Shopping basket with Redis state management.",
-      "Pagination and search functionality for scalable data queries.",
-      "Map integration with geolocation.",
-      "Admin dashboard for managing users, restaurants, and items with options to block or delete entries."
+      "<strong>User authentication</strong> (signup, login, email verification).",
+      "<strong>Password reset</strong> via email.",
+      "<strong>Role-based access control</strong> (customer, restaurant, partner, admin).",
+      "Shopping basket with <strong>Redis state management</strong>.",
+      "<strong>Pagination and search functionality</strong> for scalable data queries.",
+      "<strong>Map integration</strong> with geolocation.",
+      "<strong>Admin dashboard</strong> for managing users, restaurants, and items with options to block or delete entries."
     ]
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
     "subtitle": "An AI-powered search widget for Shopify stores that interprets natural language queries to generate dynamic results pages with personalized product recommendations.",
     "date": "jan 2026",
-    "tags": ["python", "flask"],
+    "tags": ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "This project implements an AI-powered search widget for Shopify stores that enhances product discovery through natural language queries.",
@@ -47,11 +55,30 @@
       "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor's degree in web development."
     ],
     "features": [
-      "AI-assisted product search using OpenAI to interpret natural language queries.",
-      "PostgreSQL full-text search for ranking and retrieving relevant products.",
-      "Shopify Admin API and GraphQL integration for product synchronization and dynamic page generation.",
-      "Automatic synchronization of Shopify products, variants, collections, and media.",
-      "Database upsert architecture for efficient Shopify data synchronization."
+      "<strong>AI-assisted product search</strong> using OpenAI to interpret natural language queries.",
+      "<strong>PostgreSQL full-text search</strong> for ranking and retrieving relevant products.",
+      "<strong>Shopify Admin API and GraphQL integration</strong> for product synchronization and dynamic page generation.",
+      "<strong>Automatic synchronization</strong> of Shopify products, variants, collections, and media.",
+      "<strong>Database upsert architecture</strong> for efficient Shopify data synchronization."
+    ]
+  },
+    "snake": {
+    "title": "Optimizing Neural Agents with a Genetic Algorithm Approach",
+    "subtitle": "This project uses a Genetic Algorithm to evolve neural network–controlled Snake agents that learn survival and apple collection in a classic Snake game. ",
+    "date": "jun 2025",
+    "tags": ["python"],
+    "code": "gitlab.com/aai_exam/ga_snake_project",
+    "description": [
+      "This project explores the use of a genetic algorithm to evolve intelligent Snake agents that maximize apple collection and survival. Neural networks act as controllers, while genetic operations such as selection, crossover, and mutation guide learning.",
+      "Each agent uses a feedforward neural network mapping 24 input features — distances to walls, body, and food — into 4 movement outputs. The network includes an input layer, a hidden layer, and an output layer.",
+      "The results show that with tuned fitness functions and input features, agents develop increasingly sophisticated behavior, suggesting that evolutionary algorithms can produce adaptive agents in simple game environments."
+    ],
+    "features": [
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler"
     ]
   },
   "common": {

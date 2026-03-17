@@ -16,7 +16,7 @@ export default function ProjectCard({
 
 	return (
 		<Link to={link}>
-			<div className="rounded-2xl bg-base-100/60 dark:bg-white/5 backdrop-blur-sm p-8 flex flex-col">
+			<div className="rounded-2xl bg-primary/50 md:bg-secondary/30 backdrop-blur-sm p-4 flex flex-col dark:bg-white/5 lg:p-6 xl:p-8">
 				<div className="flex items-start justify-between gap-4 pb-3">
 					<h2 className="text-3xl font-medium font-display text-secondary-content">
 						{title}
@@ -25,12 +25,12 @@ export default function ProjectCard({
 
 				<hr className="border-neutral-content/20" />
 
-				<div className="flex flex-col md:flex-row gap-6 py-4">
-					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content md:w-1/2">
+				<div className="flex flex-col gap-4 py-4 2xl:flex-row">
+					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content 2xl:w-1/2">
 						{description}
 					</p>
 					{image && !imgError ? (
-						<div className="h-48 rounded-xl overflow-hidden md:w-1/2">
+						<div className="h-48 rounded-xl overflow-hidden md:mx-4 md:h-56 xl:mx-0 2xl:h-48 2xl:w-1/2">
 							<img
 								src={image}
 								alt={title}
@@ -47,7 +47,7 @@ export default function ProjectCard({
 
 				<hr className="border-neutral-content/20 pb-4" />
 
-				<div className="flex items-center justify-between">
+				<div className="flex justify-between">
 					{tags.length > 0 && (
 						<div className="flex flex-wrap gap-2">
 							{tags.map((tag) => (
@@ -55,7 +55,7 @@ export default function ProjectCard({
 							))}
 						</div>
 					)}
-					<p className="text-xs text-neutral-content font-mono">
+					<p className="text-xs text-neutral-content font-mono shrink-0 pt-1 ml-4 md:ml-10">
 						{date}
 					</p>
 				</div>
