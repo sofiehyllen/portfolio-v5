@@ -19,6 +19,8 @@
       "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
       "I have been exploring new backend tools and system design concepts."
     ],
+    "education": "Uddannelse",
+    "experience": "Erfaring",
     "timeline": {
       "bachelor": {
         "time": "aug 2024 - jan 2026",
@@ -34,6 +36,16 @@
         "time": "sep 2015 - jun 2018",
         "title": "Studentereksamen",
         "content": "Frederikshavn Gymnasium & HF"
+      },
+      "intern_ds": {
+        "time": "aug 2025 - okt 2025",
+        "title": "Fullstack Developer",
+        "content": "Praktik hos Danske Spil A/S"
+      },
+      "intern_dp": {
+        "time": "jan 2024 - mar 2024",
+        "title": "Fullstack Developer",
+        "content": "Praktik hos Dreamplan ApS"
       }
     }
   },

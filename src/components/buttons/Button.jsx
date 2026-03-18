@@ -22,7 +22,7 @@ export default function Button({ variant = "primary", children, ...props }) {
 
 	return (
 		<button
-			className={`${baseStyle} bg-gradient-to-r from-[#C8F679] to-accent text-[#161621]`}
+			className={`${baseStyle} bg-gradient-to-r from-[#C8F679] to-accent text-[#161621] transition-all duration-300 hover:brightness-105 hover:dark:brightness-110`}
 			{...props}>
 			{children}
 		</button>
