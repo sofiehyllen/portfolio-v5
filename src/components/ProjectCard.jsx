@@ -3,16 +3,17 @@ import Tag from "./Tag";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { MdImageNotSupported } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
-export default function ProjectCard({
-	title,
-	description,
-	image,
-	tags = [],
-	link,
-	date,
-}) {
+export default function ProjectCard({ id, image }) {
+	const { t } = useTranslation("projects");
 	const [imgError, setImgError] = useState(false);
+
+	const title = t(`${id}.title`);
+	const description = t(`${id}.subtitle`);
+	const tags = t(`${id}.tags`, { returnObjects: true }) || [];
+	const date = t(`${id}.date`);
+	const link = `/projects/${id}`;
 
 	return (
 		<Link to={link}>
@@ -65,10 +66,6 @@ export default function ProjectCard({
 }
 
 ProjectCard.propTypes = {
-	title: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired,
 	image: PropTypes.string,
-	tags: PropTypes.arrayOf(PropTypes.string),
-	link: PropTypes.string,
-	date: PropTypes.string,
 };

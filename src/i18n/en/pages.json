@@ -3,11 +3,12 @@
     "pretitle": "Hello! I am",
     "title": "sofie hyllen",
     "subtitle": "Professional Bachelor's Degree in Web Development",
-    "description": "I'm a developer with a Bachelor's degree in Web Development with a strong interest in fullstack/backend development, data systems, and application architecture."
+    "description": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "contact": "contact"
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Check out my latest projects."
+    "subtitle": "A collection of projects I've built along the way. Some projects are live and production-ready, others are still evolving (or thrown into a corner). I'll get back to the ones in the corner eventually. Probably."
   },
   "about": {
     "title": "About me",
@@ -17,7 +18,24 @@
       "I recently graduated and I'm currently open to work.",
       "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
       "I have been exploring new backend tools and system design concepts."
-    ]
+    ],
+    "timeline": {
+      "bachelor": {
+        "time": "aug 2024 - jan 2026",
+        "title": "Professional Bachelor's Degree in Web Development",
+        "content": "KEA - Copenhagen School of Design and Technology"
+      },
+      "mmd": {
+        "time": "aug 2022 - jun 2024",
+        "title": "Multimedia Design - Frontend Development",
+        "content": "Business Academy Aarhus"
+      },
+      "stx": {
+        "time": "sep 2015 - jun 2018",
+        "title": "Student Examination (STX)",
+        "content": "Frederikshavn Gymnasium & HF"
+      }
+    }
   },
   "contact": {
     "title": "Let's get in touch!",

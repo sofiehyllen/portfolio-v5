@@ -8,8 +8,10 @@ import enNavigation from "./en/navigation.json";
 import enPages from "./en/pages.json";
 import enProjects from "./en/projects.json";
 
+const savedLanguage = localStorage.getItem("language") || "da";
+
 i18n.use(initReactI18next).init({
-	lng: "da",
+	lng: savedLanguage,
 	fallbackLng: "en",
 
 	ns: ["navigation", "pages", "projects"],

@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function LanguageButton() {
@@ -5,6 +6,7 @@ export default function LanguageButton() {
 
 	const changeLanguage = (lng) => {
 		i18n.changeLanguage(lng);
+		localStorage.setItem("language", lng);
 	};
 	return (
 		<div className="md:flex md:align-bottom">

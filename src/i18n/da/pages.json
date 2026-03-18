@@ -2,15 +2,40 @@
   "home": {
     "pretitle": "Hej! Jeg hedder",
     "title": "sofie hyllen",
-    "subtitle": "Professionsbachelor i Web Udvikling"
+    "subtitle": "Professionsbachelor i Web Udvikling",
+    "description": "Udvikler med en professionsbachelor i Webudvikling og en stor interesse i fullstack/backend udvikling, datasystemer, og applikationsarkitektur.",
+    "contact": "kontakt"
   },
   "projects": {
     "title": "Projekter",
-    "subtitle": "Her kan du finde mine seneste projekter."
+    "subtitle": "En samling af projekter jeg har bygget hen ad vejen. Nogle af dem er live og production-ready, andre er stadig under udvikling (eller sparket til hjørne). Jeg kommer tilbage til dem i hjørnet på et tidspunkt. Måske."
   },
   "about": {
     "title": "Lidt om mig",
-    "subtitle": "Jeg er uddannet Webudvikler."
+    "subtitle": "Udvikler med en professionsbachelor i Webudvikling og en stor interesse i fullstack/backend udvikling, datasystemer, og applikationsarkitektur.",
+    "atm": "At the moment",
+    "atm-content": [
+      "I recently graduated and I'm currently open to work.",
+      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
+      "I have been exploring new backend tools and system design concepts."
+    ],
+    "timeline": {
+      "bachelor": {
+        "time": "aug 2024 - jan 2026",
+        "title": "Professionsbachelor i Webudvikling",
+        "content": "KEA - Københavns Erhvervsakademi"
+      },
+      "mmd": {
+        "time": "aug 2022 - jun 2024",
+        "title": "Multimediedesign - Frontend Development",
+        "content": "Aarhus Erhvervsakademi"
+      },
+      "stx": {
+        "time": "sep 2015 - jun 2018",
+        "title": "Studentereksamen",
+        "content": "Frederikshavn Gymnasium & HF"
+      }
+    }
   },
   "contact": {
     "title": "Kontakt mig",

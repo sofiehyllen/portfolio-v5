@@ -18,6 +18,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.rainbow-border {
+		position: relative;
+		background: transparent;
+		border: 2px solid transparent;
+		z-index: 0;
+	}
+	.rainbow-border::after {
+		content: "";
+		position: absolute;
+		inset: -2px;
+		border-radius: inherit;
+		background: conic-gradient(
+			from -110deg,
+			#a1f01c,
+			#1994ff,
+			#b911e3,
+			#e97100,
+			#a1f01b
+		);
+		z-index: -1;
+	}
+}
+
 @layer utilities {
 	.bg-light {
 		background-image: url("/public/bg-light.png");

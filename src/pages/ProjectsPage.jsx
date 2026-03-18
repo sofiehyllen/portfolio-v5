@@ -15,7 +15,6 @@ const projects = [
 
 export default function ProjectsPage() {
 	const { t } = useTranslation("pages");
-	const { t: tProjects } = useTranslation("projects");
 
 	return (
 		<PageLayout
@@ -23,17 +22,7 @@ export default function ProjectsPage() {
 			subtitle={t("projects.subtitle")}>
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-7">
 				{projects.map((project) => (
-					<ProjectCard
-						key={project.id}
-						title={tProjects(`${project.id}.title`)}
-						description={tProjects(`${project.id}.subtitle`)}
-						image={project.image}
-						tags={tProjects(`${project.id}.tags`, {
-							returnObjects: true,
-						})}
-						link={`/projects/${project.id}`}
-						date={tProjects(`${project.id}.date`)}
-					/>
+					<ProjectCard key={project.id} {...project} />
 				))}
 			</div>
 		</PageLayout>

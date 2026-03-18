@@ -6,7 +6,7 @@ export default function CodeBlock({ id }) {
 	const { t, i18n } = useTranslation("projects");
 
 	return (
-		<div className="mockup-code h-fit bg-base-100 text-sm space-y-1.5 pr-4 xl:w-2/5 dark:bg-secondary">
+		<div className="mockup-code h-fit bg-base-100 text-sm space-y-3 pr-4 xl:w-2/5 dark:bg-secondary">
 			<pre data-prefix="$">
 				<code className="font-semibold">
 					{t("common.date")}:{" "}
