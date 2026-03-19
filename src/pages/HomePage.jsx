@@ -23,13 +23,13 @@ export default function HomePage() {
 					</p>
 					<div className="flex items-center">
 						<div className="flex space-x-5 items-center border-r-2 border-secondary-content/20 pr-6 mr-6">
-							<a href="https://www.linkedin.com/in/sofiefhyllen/" target="_blank">
+							<a href="https://www.linkedin.com/in/sofiefhyllen/" target="_blank" rel="noopener noreferrer">
 								<FaLinkedin className="size-6 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
-							<a href="https://gitlab.com/sofiehyllen" target="_blank">
+							<a href="https://gitlab.com/sofiehyllen" target="_blank" rel="noopener noreferrer">
 								<FaGitlab className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
-							<a href="https://github.com/sofiehyllen" target="_blank">
+							<a href="https://github.com/sofiehyllen" target="_blank" rel="noopener noreferrer">
 								<FaGithub className="size-6 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
 						</div>
