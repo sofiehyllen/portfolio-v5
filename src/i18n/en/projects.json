@@ -34,13 +34,13 @@
       "The project also includes automated testing, database seeding, and environment-based configuration for development, testing, and production."
     ],
     "features": [
-      "<strong>User authentication</strong> (signup, login, email verification).",
-      "<strong>Password reset</strong> via email.",
-      "<strong>Role-based access control</strong> (customer, restaurant, partner, admin).",
-      "Shopping basket with <strong>Redis state management</strong>.",
-      "<strong>Pagination and search functionality</strong> for scalable data queries.",
-      "<strong>Map integration</strong> with geolocation.",
-      "<strong>Admin dashboard</strong> for managing users, restaurants, and items with options to block or delete entries."
+      "**User authentication** (signup, login, email verification).",
+      "**Password reset** via email.",
+      "**Role-based access control** (customer, restaurant, partner, admin).",
+      "Shopping basket with **Redis state management**.",
+      "**Pagination and search functionality** for scalable data queries.",
+      "**Map integration** with geolocation.",
+      "**Admin dashboard** for managing users, restaurants, and items with options to block or delete entries."
     ]
   },
   "shopify": {
@@ -55,11 +55,11 @@
       "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor's degree in web development."
     ],
     "features": [
-      "<strong>AI-assisted product search</strong> using OpenAI to interpret natural language queries.",
-      "<strong>PostgreSQL full-text search</strong> for ranking and retrieving relevant products.",
-      "<strong>Shopify Admin API and GraphQL integration</strong> for product synchronization and dynamic page generation.",
-      "<strong>Automatic synchronization</strong> of Shopify products, variants, collections, and media.",
-      "<strong>Database upsert architecture</strong> for efficient Shopify data synchronization."
+      "**AI-assisted product search** using OpenAI to interpret natural language queries.",
+      "**PostgreSQL full-text search** for ranking and retrieving relevant products.",
+      "**Shopify Admin API and GraphQL integration** for product synchronization and dynamic page generation.",
+      "**Automatic synchronization** of Shopify products, variants, collections, and media.",
+      "**Database upsert architecture** for efficient Shopify data synchronization."
     ]
   },
     "snake": {

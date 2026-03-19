@@ -13,12 +13,12 @@
     ],
     "features": [
       "mangler",
-      "Password reset via email.",
-      "Role-based access control (customer, restaurant, partner, admin).",
-      "Shopping basket with Redis state management.",
-      "Pagination and search functionality for scalable data queries.",
-      "Map integration with geolocation.",
-      "Admin dashboard for managing users, restaurants, and items with options to block or delete entries."
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler",
+      "mangler"
     ]
   },
   "wait": {
@@ -34,13 +34,13 @@
       "Projektet inkluderer også automatiseret testning, database-seeding og miljøbaseret konfiguration til udvikling, testning og produktion."
     ],
     "features": [
-      "<strong>Brugerautentificering</strong> (oprettelse, login, e-mailbekræftelse).",
-      "<strong>Nulstilling af adgangskode</strong> via e-mail.",
-      "<strong>Rollebaseret adgangskontrol</strong> (kunde, restaurant, partner, admin).",
-      "Indkøbskurv med <strong>Redis-tilstandsstyring</strong>.",
-      "<strong>Paginering og søgefunktionalitet</strong> til skalerbare dataforespørgsler.",
-      "<strong>Kortintegration</strong> med geoplacering.",
-      "<strong>Adminpanel</strong> til håndtering af brugere, restauranter og elementer med mulighed for at blokere eller slette."
+      "**Brugerautentificering** (oprettelse, login, e-mailbekræftelse).",
+      "**Nulstilling af adgangskode** via e-mail.",
+      "**Rollebaseret adgangskontrol** (kunde, restaurant, partner, admin).",
+      "Indkøbskurv med **Redis-tilstandsstyring**.",
+      "**Paginering og søgefunktionalitet** til skalerbare dataforespørgsler.",
+      "**Kortintegration** med geoplacering.",
+      "**Adminpanel** til håndtering af brugere, restauranter og elementer med mulighed for at blokere eller slette."
     ]
   },
   "shopify": {
@@ -55,11 +55,11 @@
       "Projektets primære fokus er backendarkitektur, API-integration og AI-assisteret søgelogik, udviklet som en del af en bacheloruddannelse i Webudvikling."
     ],
     "features": [
-      "<strong>AI-assisteret produktsøgning</strong> med OpenAI til fortolkning af naturlige sprogforespørgsler.",
-      "<strong>PostgreSQL fulltext-søgning</strong> til rangering og hentning af relevante produkter.",
-      "<strong>Shopify Admin API og GraphQL-integration</strong> til produktsynkronisering og dynamisk sidegenerering.",
-      "<strong>Automatisk synkronisering</strong> af Shopify-produkter, varianter, kollektioner og medier.",
-      "<strong>Database upsert-arkitektur</strong> til effektiv synkronisering af Shopify-data."
+      "**AI-assisteret produktsøgning** med OpenAI til fortolkning af naturlige sprogforespørgsler.",
+      "**PostgreSQL fulltext-søgning** til rangering og hentning af relevante produkter.",
+      "**Shopify Admin API og GraphQL-integration** til produktsynkronisering og dynamisk sidegenerering.",
+      "**Automatisk synkronisering** af Shopify-produkter, varianter, kollektioner og medier.",
+      "**Database upsert-arkitektur** til effektiv synkronisering af Shopify-data."
     ]
   },
   "snake": {

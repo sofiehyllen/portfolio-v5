@@ -3,6 +3,12 @@ import { useTranslation } from "react-i18next";
 import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 
+function parseBold(text) {
+	return text.split(/\*\*(.*?)\*\*/g).map((part, i) =>
+		i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+	);
+}
+
 export default function ProjectPage() {
 	const { id } = useParams();
 	const { t } = useTranslation("projects");
@@ -51,9 +57,9 @@ export default function ProjectPage() {
 								(p, i) => (
 									<li
 										className="font-mono text-sm xl:text-base"
-										key={i}
-										dangerouslySetInnerHTML={{ __html: p }}
-									/>
+										key={i}>
+										{parseBold(p)}
+									</li>
 								)
 							)}
 						</ul>
