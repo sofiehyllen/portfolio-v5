@@ -3,13 +3,44 @@
 @font-face {
 	font-family: "Avenir Next";
 	src: url("/public/AvenirNextLTPro-Regular.otf") format("otf");
-	font-weight: normal; /* You can specify weights here if needed */
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Source Code Pro";
+	src: url("/public/SourceCodePro-VariableFont_wght.ttf") format("ttf");
+	font-weight: normal;
 	font-style: normal;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.rainbow-border {
+		position: relative;
+		background: transparent;
+		border: 2px solid transparent;
+		z-index: 0;
+	}
+	.rainbow-border::after {
+		content: "";
+		position: absolute;
+		inset: -2px;
+		border-radius: inherit;
+		background: conic-gradient(
+			from -110deg,
+			#a1f01c,
+			#1994ff,
+			#b911e3,
+			#e97100,
+			#a1f01b
+		);
+		z-index: -1;
+	}
+}
 
 @layer utilities {
 	.bg-light {

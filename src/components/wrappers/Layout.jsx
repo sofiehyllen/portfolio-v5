@@ -3,7 +3,7 @@ import Header from "../Header";
 
 export default function Layout() {
 	return (
-		<div className="min-h-screen p-5 pt-7 bg-light bg-no-repeat bg-cover dark:bg-dark md:p-12 md:mt-0">
+		<div className="min-h-screen p-5 pt-7 bg-light bg-no-repeat bg-cover bg-fixed dark:bg-dark md:p-12 md:mt-0">
 			<Header />
 			<Outlet />
 		</div>

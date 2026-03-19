@@ -1,7 +1,7 @@
 {
-  "projects": "Projects",
-  "about": "About",
-  "contact": "Contact",
+  "projects": "projects",
+  "about": "about",
+  "contact": "contact",
   "controls": "Control center",
   "language": "Language",
   "theme": "Theme"

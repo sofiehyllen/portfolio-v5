@@ -1,15 +1,53 @@
 {
   "home": {
-    "title": "Welcome",
-    "subtitle": "Web Developer portfolio."
+    "pretitle": "Hello! I am",
+    "title": "sofie hyllen",
+    "subtitle": "Professional Bachelor's Degree in Web Development",
+    "description": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "contact": "contact"
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Check out my latest projects."
+    "subtitle": "A collection of projects I've built along the way. Some projects are live and production-ready, others are still evolving (or thrown into a corner). I'll get back to the ones in the corner eventually. Probably."
   },
   "about": {
     "title": "About me",
-    "subtitle": "I am a web developer."
+    "subtitle": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "atm": "At the moment",
+    "atm-content": [
+      "I recently graduated and I'm currently open to work.",
+      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
+      "I have been exploring new backend tools and system design concepts."
+    ],
+    "education": "Education",
+    "experience": "Experience",
+    "timeline": {
+      "bachelor": {
+        "time": "aug 2024 - jan 2026",
+        "title": "Professional Bachelor's Degree in Web Development",
+        "content": "KEA - Copenhagen School of Design and Technology"
+      },
+      "mmd": {
+        "time": "aug 2022 - jun 2024",
+        "title": "Multimedia Design - Frontend Development",
+        "content": "Business Academy Aarhus"
+      },
+      "stx": {
+        "time": "sep 2015 - jun 2018",
+        "title": "STX - Student Examination",
+        "content": "Frederikshavn Gymnasium & HF"
+      },
+      "intern_ds": {
+        "time": "aug 2025 - oct 2025",
+        "title": "Fullstack Developer",
+        "content": "Internship at Danske Spil A/S"
+      },
+      "intern_dp": {
+        "time": "jan 2024 - mar 2024",
+        "title": "Fullstack Developer",
+        "content": "Internship at Dreamplan ApS"
+      }
+    }
   },
   "contact": {
     "title": "Let's get in touch!",
