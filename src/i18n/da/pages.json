@@ -58,6 +58,17 @@
   },
   "contact": {
     "title": "Kontakt mig",
-    "subtitle": "Her er mine kontakt informationer."
+    "subtitle": "Udfyld formularen nedenfor eller find mig på de sociale medier.",
+    "name": "Navn",
+    "email": "E-mail",
+    "subject": "Emne",
+    "message": "Besked",
+    "name_placeholder": "Dit navn",
+    "email_placeholder": "din@email.dk",
+    "subject_placeholder": "Hvad handler det om?",
+    "message_placeholder": "Skriv din besked her...",
+    "send": "Send",
+    "sent": "Din e-mailklient er åbnet — send beskeden derfra.",
+    "send_again": "Send en ny besked"
   }
 }

@@ -58,6 +58,17 @@
   },
   "contact": {
     "title": "Let's get in touch!",
-    "subtitle": "Here you will find my contact information."
+    "subtitle": "Fill out the form below or find me on social media.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "name_placeholder": "your name",
+    "email_placeholder": "your@email.com",
+    "subject_placeholder": "what is it about?",
+    "message_placeholder": "write your message here...",
+    "send": "Send",
+    "sent": "Your email client has been opened — send the message from there.",
+    "send_again": "Send another message"
   }
 }
