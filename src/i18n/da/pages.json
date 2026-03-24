@@ -13,12 +13,19 @@
   "about": {
     "title": "Lidt om mig",
     "subtitle": "Udvikler med en professionsbachelor i Webudvikling og en stor interesse i fullstack/backend udvikling, datasystemer, og applikationsarkitektur.",
-    "atm": "At the moment",
+    "atm": "Hvad sker der lige nu",
     "atm-content": [
-      "I recently graduated and I'm currently open to work.",
-      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
-      "I have been exploring new backend tools and system design concepts."
+      "Jeg er for nyligt blevet færdiguddannet og er lige nu **open to work**.",
+      "Jeg har på det seneste brugt tid på at **bygge dette portfolio** for lettere at kunne vise mine projekter, kompetencer og teknologier.",
+      "Jeg bruger også tid på at **udforske nye backend-teknologier** og systemdesign-principper."
     ],
+    "skills": {
+      "title": "Teknologier & Værktøjer",
+      "backend": "Backend",
+      "databases": "Databaser",
+      "frontend": "Frontend",
+      "devops": "DevOps & Infrastruktur"
+    },
     "education": "Uddannelse",
     "experience": "Erfaring",
     "timeline": {

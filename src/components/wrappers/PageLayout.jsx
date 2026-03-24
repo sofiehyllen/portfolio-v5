@@ -6,7 +6,7 @@ export default function PageLayout({ title, subtitle, children }) {
 			<h1 className="font-display font-bold text-5xl pb-8 text-primary-content md:text-8xl md:pb-12">
 				{title}
 			</h1>
-			<p className="text-neutral-content pb-10 font-mono md:pb-20 md:w-2/3 ">
+			<p className=" pb-10 font-mono text-lg md:pb-20 md:w-2/3 ">
 				{subtitle}
 			</p>
 			{children}

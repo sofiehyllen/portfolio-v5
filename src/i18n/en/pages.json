@@ -12,13 +12,20 @@
   },
   "about": {
     "title": "About me",
-    "subtitle": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "subtitle": "My name is Sofie and I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
     "atm": "At the moment",
     "atm-content": [
-      "I recently graduated and I'm currently open to work.",
-      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
-      "I have been exploring new backend tools and system design concepts."
+      "I recently graduated and I'm **currently open to work**.",
+      "I'm **building this portfolio** to showcase my projects, skills and tools.",
+      "I've been **exploring new backend technologies** and system design principles."
     ],
+    "skills": {
+      "title": "Technologies & Tools",
+      "backend": "Backend",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "devops": "DevOps & Infrastructure"
+    },
     "education": "Education",
     "experience": "Experience",
     "timeline": {
