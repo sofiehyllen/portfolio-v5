@@ -63,12 +63,14 @@
     "email": "E-mail",
     "subject": "Emne",
     "message": "Besked",
-    "name_placeholder": "Dit navn",
+    "name_placeholder": "dit navn",
     "email_placeholder": "din@email.dk",
-    "subject_placeholder": "Hvad handler det om?",
-    "message_placeholder": "Skriv din besked her...",
+    "subject_placeholder": "hvad handler det om?",
+    "message_placeholder": "skriv din besked her...",
     "send": "Send",
-    "sent": "Din e-mailklient er åbnet — send beskeden derfra.",
-    "send_again": "Send en ny besked"
+    "sending": "Sender...",
+    "sent": "Tak for din besked. Jeg vender tilbage hurtigst muligt.",
+    "error": "Noget gik galt. Prøv igen eller kontakt mig direkte.",
+    "send_again": "Send ny besked"
   }
 }

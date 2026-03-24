@@ -68,7 +68,9 @@
     "subject_placeholder": "what is it about?",
     "message_placeholder": "write your message here...",
     "send": "Send",
-    "sent": "Your email client has been opened — send the message from there.",
-    "send_again": "Send another message"
+    "sending": "Sending...",
+    "sent": "Thank you for your message. I'll get back to you as soon as possible.",
+    "error": "Something went wrong. Please try again or contact me directly.",
+    "send_again": "Send new message"
   }
 }
