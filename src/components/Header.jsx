@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 import ThemeButton from "./buttons/ThemeButton";
 import { IoIosRocket } from "react-icons/io";
 import { useTranslation } from "react-i18next";
-import MobileLogo from "../assets/mobile_logo.svg";
+import MobileLogo from "@assets/mobile_logo.svg";
 import { BsToggles } from "react-icons/bs";
 
 export default function Header() {

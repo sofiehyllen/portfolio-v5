@@ -5,7 +5,7 @@ import { useState } from "react";
 import { MdImageNotSupported } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
-export default function ProjectCard({ id, image }) {
+export default function ProjectCard({ id, coverimg }) {
 	const { t } = useTranslation("projects");
 	const [imgError, setImgError] = useState(false);
 
@@ -30,10 +30,10 @@ export default function ProjectCard({ id, image }) {
 					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content 2xl:w-1/2">
 						{description}
 					</p>
-					{image && !imgError ? (
+					{coverimg && !imgError ? (
 						<div className="h-48 rounded-xl overflow-hidden md:mx-4 md:h-56 xl:mx-0 2xl:h-48 2xl:w-1/2">
 							<img
-								src={image}
+								src={coverimg}
 								alt={title}
 								className="w-full h-full object-cover"
 								onError={() => setImgError(true)}
@@ -67,5 +67,5 @@ export default function ProjectCard({ id, image }) {
 
 ProjectCard.propTypes = {
 	id: PropTypes.string.isRequired,
-	image: PropTypes.string,
+	coverimg: PropTypes.string,
 };
