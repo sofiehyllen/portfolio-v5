@@ -5,6 +5,7 @@ import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
 import { projectImages, projectGalleries } from "../data/projects";
 import { MdImageNotSupported } from "react-icons/md";
+import Lightbox from "../components/Lightbox";
 
 function parseBold(text) {
 	return text.split(/\*\*(.*?)\*\*/g).map((part, i) =>
@@ -24,6 +25,7 @@ export default function ProjectPage() {
 	const { t } = useTranslation("projects");
 	const navigate = useNavigate();
 	const [imgError, setImgError] = useState(false);
+	const [lightboxIndex, setLightboxIndex] = useState(null);
 
 	const image = projectImages[id];
 	const gallery = projectGalleries[id] ?? [];
@@ -90,11 +92,13 @@ export default function ProjectPage() {
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
 						{gallery.map(({ src, size, caption }, i) => (
 							<div key={i} className={`space-y-2 ${SPANS[size]}`}>
-								<div className="overflow-hidden rounded-2xl">
+								<div
+									className="overflow-hidden rounded-2xl cursor-zoom-in"
+									onClick={() => setLightboxIndex(i)}>
 									<img
 										src={src}
 										alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
-										className="w-full h-full object-cover object-top"
+										className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
 								{caption && (
@@ -106,6 +110,13 @@ export default function ProjectPage() {
 						))}
 					</div>
 				</div>
+			)}
+			{lightboxIndex !== null && (
+				<Lightbox
+					images={gallery}
+					initialIndex={lightboxIndex}
+					onClose={() => setLightboxIndex(null)}
+				/>
 			)}
 		</div>
 	);
