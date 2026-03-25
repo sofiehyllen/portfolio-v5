@@ -70,7 +70,7 @@ export default function ProjectPage() {
 						<h2 className="font-display text-3xl font-bold pb-3 text-primary-content">
 							{t("common.description")}
 						</h2>
-						<div className="space-y-5 text-sm xl:text-base">
+						<div className="space-y-5 text-sm text-secondary-content xl:text-base">
 							{t(`${id}.description`, {
 								returnObjects: true,
 							}).map((p, i) => (
@@ -88,7 +88,7 @@ export default function ProjectPage() {
 							{t(`${id}.features`, { returnObjects: true }).map(
 								(p, i) => (
 									<li
-										className="font-mono text-sm xl:text-base"
+										className="font-mono text-sm text-secondary-content xl:text-base"
 										key={i}>
 										{parseBold(p)}
 									</li>

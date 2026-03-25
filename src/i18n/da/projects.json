@@ -3,7 +3,6 @@
     "title": "Technical Case Study - ParkZone",
     "subtitle": "Frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS.",
     "date": "jun 2024",
-    "tags": ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
@@ -25,7 +24,6 @@
     "title": "Wait - Food ordering platform",
     "subtitle": "Full-stack platform baseret på Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
-    "tags": ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "Gitlab-CI", "Gunicorn", "REST API"],
     "code": "gitlab.com/sofiehyllen/wait_webdev",
     "link": "devenv.monster",
     "description": [
@@ -47,7 +45,6 @@
     "title": "AI-Powered Shopify Search Widget",
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
-    "tags": ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "Dette projekt implementerer en AI-drevet søgewidget til Shopify stores, der forbedrer produktsøgning gennem naturlige sprogforespørgsler.",
@@ -66,7 +63,6 @@
     "title": "Optimering af Neurale Agenter med en Genetisk Algoritme",
     "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
     "date": "jun 2025",
-    "tags": ["python"],
     "code": "gitlab.com/aai_exam/ga_snake_project",
     "description": [
       "Dette projekt undersøger brugen af en genetisk algoritme til at udvikle intelligente Snake-agenter, der maksimerer æbleindsamling og overlevelse. Neurale netværk fungerer som controllere, mens genetiske operationer som selection, crossover og mutation styrer indlæringen.",

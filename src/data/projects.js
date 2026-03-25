@@ -29,6 +29,7 @@ import SnakeApplesImg from "@assets/snake_apples.png";
 export const projects = [
 	{
 		id: "shopify",
+		tags: ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
 		coverimg: ShopifyImg,
 		gallery: [
 			{ src: WidgetHomepageImg, size: "full" },
@@ -42,6 +43,7 @@ export const projects = [
 	},
 	{
 		id: "wait",
+		tags: ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "GitLab-CI", "Gunicorn", "REST API"],
 		coverimg: WaitCoverImg,
 		gallery: [
 			{
@@ -83,6 +85,7 @@ export const projects = [
 	},
 	{
 		id: "snake",
+		tags: ["Python"],
 		coverimg: SnakeImg,
 		gallery: [
 			{ src: SnakeGameImg, size: "half" },
@@ -92,6 +95,7 @@ export const projects = [
 	},
 	{
 		id: "parkzone",
+		tags: ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
 		coverimg: ParkzoneImg,
 		gallery: [
 			{ src: ParkzoneHomepageImg, size: "full" },
@@ -107,4 +111,8 @@ export const projectImages = Object.fromEntries(
 
 export const projectGalleries = Object.fromEntries(
 	projects.map(({ id, gallery }) => [id, gallery])
+);
+
+export const projectTags = Object.fromEntries(
+	projects.map(({ id, tags }) => [id, tags])
 );

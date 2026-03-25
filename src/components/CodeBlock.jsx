@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Tag from "./Tag";
 import PropTypes from "prop-types";
+import { projectTags } from "../data/projects";
 
 export default function CodeBlock({ id }) {
 	const { t, i18n } = useTranslation("projects");
@@ -15,17 +16,13 @@ export default function CodeBlock({ id }) {
 					</span>
 				</code>
 			</pre>
-			<pre data-prefix="$" className="">
-				<code className="font-semibold inline-flex ">
+			<pre data-prefix="$">
+				<code className="font-semibold inline-flex">
 					{t("common.tags")}:{" "}
 					<span className="flex gap-2 flex-wrap">
-						{t(`${id}.tags`, { returnObjects: true }).map(
-							(p, i) => (
-								<Tag key={i} title={p}>
-									{p}
-								</Tag>
-							)
-						)}
+						{(projectTags[id] ?? []).map((tag) => (
+							<Tag key={tag} title={tag} />
+						))}
 					</span>
 				</code>
 			</pre>

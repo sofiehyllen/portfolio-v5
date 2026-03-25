@@ -40,7 +40,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 
 	return createPortal(
 		<div
-			className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85"
+			className="fixed inset-0 z-50 flex items-center justify-center bg-black/85"
 			onClick={onClose}>
 			{/* Prev */}
 			<button
@@ -48,7 +48,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 					e.stopPropagation();
 					prev();
 				}}
-				className="w-9 h-9 rounded-full flex justify-center items-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary/70">
+				className="size-9 rounded-full flex justify-center items-center text-2xl text-secondary hover:bg-secondary/10 transition dark:text-secondary-content dark:hover:bg-secondary/70">
 				<MdKeyboardArrowLeft />
 			</button>
 			<div
@@ -58,7 +58,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				<button
 					onClick={onClose}
 					className="absolute -top-10 right-16 text-white/60 hover:text-white transition-colors">
-					<IoCloseOutline className="size-8" />
+					<IoCloseOutline className="size-6" />
 				</button>
 
 				{/* Counter */}
@@ -70,7 +70,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				<img
 					src={src}
 					alt={caption ?? `billede ${index + 1}`}
-					className="max-h-[80vh] w-full object-contain rounded-2xl"
+					className="max-h-[80vh] rounded-xl"
 				/>
 
 				{/* Caption */}
@@ -87,7 +87,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 					e.stopPropagation();
 					next();
 				}}
-				className="size-9 rounded-full flex justify-center items-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary/70">
+				className="size-9 rounded-full flex justify-center items-center text-2xl text-secondary hover:bg-secondary/10 transition dark:text-secondary-content dark:hover:bg-secondary/70">
 				<MdKeyboardArrowRight />
 			</button>
 		</div>,

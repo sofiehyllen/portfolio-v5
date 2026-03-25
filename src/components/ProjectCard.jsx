@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { MdImageNotSupported } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { projectTags } from "../data/projects";
 
 export default function ProjectCard({ id, coverimg }) {
 	const { t } = useTranslation("projects");
@@ -11,7 +12,7 @@ export default function ProjectCard({ id, coverimg }) {
 
 	const title = t(`${id}.title`);
 	const description = t(`${id}.subtitle`);
-	const tags = t(`${id}.tags`, { returnObjects: true }) || [];
+	const tags = projectTags[id] ?? [];
 	const date = t(`${id}.date`);
 	const link = `/projects/${id}`;
 
