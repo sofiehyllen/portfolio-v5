@@ -10,7 +10,9 @@ export default function CodeBlock({ id }) {
 			<pre data-prefix="$">
 				<code className="font-semibold">
 					{t("common.date")}:{" "}
-					<span className="font-normal text-primary-content">{t(`${id}.date`)}</span>
+					<span className="font-normal text-primary-content">
+						{t(`${id}.date`)}
+					</span>
 				</code>
 			</pre>
 			<pre data-prefix="$" className="">

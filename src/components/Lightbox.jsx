@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import PropTypes from "prop-types";
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
@@ -9,8 +8,14 @@ import { IoCloseOutline } from "react-icons/io5";
 export default function Lightbox({ images, initialIndex, onClose }) {
 	const [index, setIndex] = useState(initialIndex);
 
-	const prev = useCallback(() => setIndex((i) => (i - 1 + images.length) % images.length), [images.length]);
-	const next = useCallback(() => setIndex((i) => (i + 1) % images.length), [images.length]);
+	const prev = useCallback(
+		() => setIndex((i) => (i - 1 + images.length) % images.length),
+		[images.length]
+	);
+	const next = useCallback(
+		() => setIndex((i) => (i + 1) % images.length),
+		[images.length]
+	);
 
 	useEffect(() => {
 		document.body.style.overflow = "hidden";
@@ -37,10 +42,18 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 		<div
 			className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85"
 			onClick={onClose}>
+			{/* Prev */}
+			<button
+				onClick={(e) => {
+					e.stopPropagation();
+					prev();
+				}}
+				className="w-9 h-9 rounded-full flex justify-center items-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary/70">
+				<MdKeyboardArrowLeft />
+			</button>
 			<div
 				className="relative flex flex-col items-center w-full max-w-7xl px-16 gap-4"
 				onClick={(e) => e.stopPropagation()}>
-
 				{/* Close */}
 				<button
 					onClick={onClose}
@@ -57,7 +70,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				<img
 					src={src}
 					alt={caption ?? `billede ${index + 1}`}
-					className=" w-full object-contain rounded-2xl"
+					className="max-h-[80vh] w-full object-contain rounded-2xl"
 				/>
 
 				{/* Caption */}
@@ -68,17 +81,13 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				)}
 			</div>
 
-			{/* Prev */}
-			<button
-				onClick={(e) => { e.stopPropagation(); prev(); }}
-				className="w-9 h-9 rounded-full absolute left-4 md:left-8 text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary">
-				<MdKeyboardArrowLeft />
-			</button>
-
 			{/* Next */}
 			<button
-				onClick={(e) => { e.stopPropagation(); next(); }}
-				className="w-9 h-9 rounded-full absolute right-4 md:right-8 text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary">
+				onClick={(e) => {
+					e.stopPropagation();
+					next();
+				}}
+				className="size-9 rounded-full flex justify-center items-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary/70">
 				<MdKeyboardArrowRight />
 			</button>
 		</div>,

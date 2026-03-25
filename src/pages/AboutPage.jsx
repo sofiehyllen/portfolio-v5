@@ -15,7 +15,7 @@ function SkillsSection() {
 				{SKILLS.map(({ key, icon: Icon, items }) => (
 					<div key={key} className="space-y-2">
 						<p className="font-display text-primary-content text-lg font-semibold flex items-center gap-2">
-							<Icon className="mb-1"/>
+							<Icon className="mb-1" />
 							{t(`about.skills.${key}`)}
 						</p>
 						<div className="flex flex-wrap gap-2">
@@ -62,11 +62,15 @@ export default function AboutPage() {
 			<SkillsSection />
 			<div className="space-y-12 lg:flex lg:justify-center lg:space-y-0">
 				<div className="space-y-5 lg:w-1/2 lg:space-y-7">
-					<h3 className="text-center font-display text-3xl font-semibold text-secondary-content">{t("about.education")}</h3>
+					<h3 className="text-center font-display text-3xl font-semibold text-secondary-content">
+						{t("about.education")}
+					</h3>
 					<EducationTimeline />
 				</div>
 				<div className="space-y-5 lg:w-1/2 lg:space-y-7">
-					<h3 className="text-center font-display text-3xl font-semibold text-secondary-content">{t("about.experience")}</h3>
+					<h3 className="text-center font-display text-3xl font-semibold text-secondary-content">
+						{t("about.experience")}
+					</h3>
 					<ExperienceTimeline />
 				</div>
 			</div>

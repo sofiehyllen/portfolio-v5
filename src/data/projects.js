@@ -44,13 +44,41 @@ export const projects = [
 		id: "wait",
 		coverimg: WaitCoverImg,
 		gallery: [
-			{ src: WaitDashboardImg, size: "full", caption: "Customer dashboard" },
-			{ src: WaitSearchImg, size: "half", caption: "Search results in customer dashboard" },
-			{ src: WaitAdminDashboardImg, size: "half", caption: "Admin dashboard" },
-			{ src: WaitAdminUsersImg, size: "wide", caption: "User overview in admin dashboard" },
-			{ src: WaitPartnerImg, size: "narrow", caption: "Partner dashboard" },
-			{ src: WaitRestaurantMenuImg, size: "half", caption: "Menu overview in restaurant dashboard" },
-			{ src: WaitRestaurantAddImg, size: "half", caption: "Restaurant dashboard" },
+			{
+				src: WaitDashboardImg,
+				size: "full",
+				caption: "Customer dashboard",
+			},
+			{
+				src: WaitSearchImg,
+				size: "half",
+				caption: "Search results in customer dashboard",
+			},
+			{
+				src: WaitAdminDashboardImg,
+				size: "half",
+				caption: "Admin dashboard",
+			},
+			{
+				src: WaitAdminUsersImg,
+				size: "wide",
+				caption: "User overview in admin dashboard",
+			},
+			{
+				src: WaitPartnerImg,
+				size: "narrow",
+				caption: "Partner dashboard",
+			},
+			{
+				src: WaitRestaurantMenuImg,
+				size: "half",
+				caption: "Menu overview in restaurant dashboard",
+			},
+			{
+				src: WaitRestaurantAddImg,
+				size: "half",
+				caption: "Restaurant dashboard",
+			},
 		],
 	},
 	{

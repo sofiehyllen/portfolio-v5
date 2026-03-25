@@ -8,9 +8,24 @@ import WaitImg from "@assets/wait_customer_dashboard.png";
 import { Link } from "react-router-dom";
 
 const slides = [
-	{ label: "AI-Powered Shopify Search Widget", img: WidgetImg, date:  "jan 2026", id: "shopify" },
-	{ label: "Food Ordering Platform", img: WaitImg, date:  "jun 2025", id: "wait" },
-	{ label: "Company Website", img: ParkzoneImg, date: "jun 2024", id: "parkzone"},
+	{
+		label: "AI-Powered Shopify Search Widget",
+		img: WidgetImg,
+		date: "jan 2026",
+		id: "shopify",
+	},
+	{
+		label: "Food Ordering Platform",
+		img: WaitImg,
+		date: "jun 2025",
+		id: "wait",
+	},
+	{
+		label: "Company Website",
+		img: ParkzoneImg,
+		date: "jun 2024",
+		id: "parkzone",
+	},
 ];
 
 export default function Carousel() {
@@ -30,25 +45,29 @@ export default function Carousel() {
 							to={`/projects/${slide.id}`}
 							key={i}
 							className={`min-w-full h-fit bg-secondary p-4 rounded-xl`}>
-								<div className="flex justify-between pb-5 pt-1">
-									<p className="font-mono text-accent text-sm">{slide.label}</p>
-									<p className="font-mono text-sm text-neutral">{slide.date}</p>
+							<div className="flex justify-between pb-5 pt-1">
+								<p className="font-mono text-accent text-sm">
+									{slide.label}
+								</p>
+								<p className="font-mono text-sm text-neutral">
+									{slide.date}
+								</p>
+							</div>
+							{slide.img && !imgError ? (
+								<div className="rounded-xl overflow-hidden w-full h-80">
+									<img
+										src={slide.img}
+										alt={slide.label}
+										className="w-full h-full object-cover"
+										onError={() => setImgError(true)}
+									/>
 								</div>
-								{slide.img && !imgError ? (
-									<div className="rounded-xl overflow-hidden w-full h-80">
-										<img
-											src={slide.img}
-											alt={slide.label}
-											className="w-full h-full object-cover"
-											onError={() => setImgError(true)}
-										/>
-									</div>
-								) : (
-									<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
-										<MdImageNotSupported className="size-20 text-neutral-content" />
-									</div>
-								)}
-								{/* <div><img src={slide.img} alt="" /></div> */}
+							) : (
+								<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
+									<MdImageNotSupported className="size-20 text-neutral-content" />
+								</div>
+							)}
+							{/* <div><img src={slide.img} alt="" /></div> */}
 						</Link>
 					))}
 				</div>

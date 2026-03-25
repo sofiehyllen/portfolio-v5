@@ -9,7 +9,8 @@ import { IoIosRocket } from "react-icons/io";
 
 const INITIAL = { name: "", email: "", subject: "", message: "" };
 
-const labelClass = "font-mono text-xs text-neutral-content uppercase mb-2 block";
+const labelClass =
+	"font-mono text-xs text-neutral-content uppercase mb-2 block";
 const inputClass =
 	"input font-mono text-sm placeholder:text-neutral-content/50 w-full";
 const textareaClass =
@@ -51,8 +52,10 @@ export default function ContactPage() {
 			<div className="max-w-2xl bg-primary/50 dark:bg-gray-400/5 p-6 rounded-2xl">
 				{status === "sent" ? (
 					<div className="space-y-6 flex flex-col items-center pt-10 pb-5">
-					<IoIosRocket className="size-12 text-accent" />
-						<p className="font-mono text-primary-content pb-10 text-center">{t("contact.sent")}</p>
+						<IoIosRocket className="size-12 text-accent" />
+						<p className="font-mono text-primary-content pb-10 text-center">
+							{t("contact.sent")}
+						</p>
 						<button
 							className="text-secondary-content font-mono underline text-sm hover:"
 							onClick={() => setStatus("idle")}>
@@ -63,7 +66,9 @@ export default function ContactPage() {
 					<form onSubmit={handleSubmit} className="space-y-6">
 						<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 							<div>
-								<label className={labelClass}>{t("contact.name")}</label>
+								<label className={labelClass}>
+									{t("contact.name")}
+								</label>
 								<input
 									className={inputClass}
 									type="text"
@@ -75,7 +80,9 @@ export default function ContactPage() {
 								/>
 							</div>
 							<div>
-								<label className={labelClass}>{t("contact.email")}</label>
+								<label className={labelClass}>
+									{t("contact.email")}
+								</label>
 								<input
 									className={inputClass}
 									type="email"
@@ -88,7 +95,9 @@ export default function ContactPage() {
 							</div>
 						</div>
 						<div>
-							<label className={labelClass}>{t("contact.subject")}</label>
+							<label className={labelClass}>
+								{t("contact.subject")}
+							</label>
 							<input
 								className={inputClass}
 								type="text"
@@ -100,7 +109,9 @@ export default function ContactPage() {
 							/>
 						</div>
 						<div>
-							<label className={labelClass}>{t("contact.message")}</label>
+							<label className={labelClass}>
+								{t("contact.message")}
+							</label>
 							<textarea
 								className={textareaClass}
 								name="message"
@@ -117,17 +128,31 @@ export default function ContactPage() {
 							</p>
 						)}
 						<div className="flex items-center gap-6">
-							<Button type="submit" variant="primary" disabled={status === "sending"}>
-								{status === "sending" ? t("contact.sending") : t("contact.send")}
+							<Button
+								type="submit"
+								variant="primary"
+								disabled={status === "sending"}>
+								{status === "sending"
+									? t("contact.sending")
+									: t("contact.send")}
 							</Button>
 							<div className="flex items-center gap-4">
-								<a href="https://www.linkedin.com/in/sofiefhyllen/" target="_blank" rel="noopener noreferrer">
+								<a
+									href="https://www.linkedin.com/in/sofiefhyllen/"
+									target="_blank"
+									rel="noopener noreferrer">
 									<FaLinkedin className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 								</a>
-								<a href="https://gitlab.com/sofiehyllen" target="_blank" rel="noopener noreferrer">
+								<a
+									href="https://gitlab.com/sofiehyllen"
+									target="_blank"
+									rel="noopener noreferrer">
 									<FaGitlab className="size-4 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 								</a>
-								<a href="https://github.com/sofiehyllen" target="_blank" rel="noopener noreferrer">
+								<a
+									href="https://github.com/sofiehyllen"
+									target="_blank"
+									rel="noopener noreferrer">
 									<FaGithub className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 								</a>
 							</div>

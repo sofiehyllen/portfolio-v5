@@ -8,9 +8,11 @@ import { MdImageNotSupported } from "react-icons/md";
 import Lightbox from "../components/Lightbox";
 
 function parseBold(text) {
-	return text.split(/\*\*(.*?)\*\*/g).map((part, i) =>
-		i % 2 === 1 ? <strong key={i}>{part}</strong> : part
-	);
+	return text
+		.split(/\*\*(.*?)\*\*/g)
+		.map((part, i) =>
+			i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+		);
 }
 
 const SPANS = {
@@ -35,7 +37,10 @@ export default function ProjectPage() {
 			<button
 				onClick={() => navigate(-1)}
 				className="flex items-center gap-2 font-mono text-sm mb-8">
-				<SlArrowLeft strokeWidth={10} className="size-3 text-primary-content" />{" "}
+				<SlArrowLeft
+					strokeWidth={10}
+					className="size-3 text-primary-content"
+				/>{" "}
 				{t("common.back")}
 			</button>
 			<div className="space-y-5 md:w-2/3">
@@ -66,7 +71,9 @@ export default function ProjectPage() {
 							{t("common.description")}
 						</h2>
 						<div className="space-y-5 text-sm xl:text-base">
-							{t(`${id}.description`, { returnObjects: true }).map((p, i) => (
+							{t(`${id}.description`, {
+								returnObjects: true,
+							}).map((p, i) => (
 								<p className="font-mono" key={i}>
 									{p}
 								</p>
@@ -78,11 +85,15 @@ export default function ProjectPage() {
 							{t("common.features")}
 						</h3>
 						<ul className="space-y-2 list-disc list-inside">
-							{t(`${id}.features`, { returnObjects: true }).map((p, i) => (
-								<li className="font-mono text-sm xl:text-base" key={i}>
-									{parseBold(p)}
-								</li>
-							))}
+							{t(`${id}.features`, { returnObjects: true }).map(
+								(p, i) => (
+									<li
+										className="font-mono text-sm xl:text-base"
+										key={i}>
+										{parseBold(p)}
+									</li>
+								)
+							)}
 						</ul>
 					</div>
 				</div>
@@ -97,7 +108,10 @@ export default function ProjectPage() {
 									onClick={() => setLightboxIndex(i)}>
 									<img
 										src={src}
-										alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
+										alt={
+											caption ??
+											`${t(`${id}.title`)} ${i + 1}`
+										}
 										className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 									/>
 								</div>
