@@ -12,6 +12,13 @@ function parseBold(text) {
 	);
 }
 
+const SPANS = {
+	full: "col-span-2 md:col-span-6",
+	half: "col-span-1 md:col-span-3",
+	wide: "col-span-1 md:col-span-4",
+	narrow: "col-span-1 md:col-span-2",
+};
+
 export default function ProjectPage() {
 	const { id } = useParams();
 	const { t } = useTranslation("projects");
@@ -81,23 +88,22 @@ export default function ProjectPage() {
 			{gallery.length > 0 && (
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-						{gallery.map(({ src, size }, i) => {
-							const spans = {
-								full: "col-span-2 md:col-span-6",
-								half: "col-span-1 md:col-span-3",
-								wide: "col-span-1 md:col-span-4",
-								narrow: "col-span-1 md:col-span-2",
-							};
-							return (
-								<div key={i} className={`overflow-hidden rounded-2xl ${spans[size]}`}>
+						{gallery.map(({ src, size, caption }, i) => (
+							<div key={i} className={`space-y-2 ${SPANS[size]}`}>
+								<div className="overflow-hidden rounded-2xl">
 									<img
 										src={src}
-										alt={`${t(`${id}.title`)} ${i + 1}`}
+										alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
 										className="w-full h-full object-cover object-top"
 									/>
 								</div>
-							);
-						})}
+								{caption && (
+									<p className="font-mono text-xs text-secondary-content italic">
+										{caption}
+									</p>
+								)}
+							</div>
+						))}
 					</div>
 				</div>
 			)}
