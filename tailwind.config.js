@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                display: ['"Space Grotesk", sans-serif'],
+                display: ['"Avenir Next", sans-serif'],
                 sans: ['"Avenir Next", sans-serif'],
                 mono: ['"Source Code Pro", monospace']
             },
@@ -22,12 +22,12 @@ export default {
                     secondary: '#E9E9F3',
                     'secondary-content': '#212131',
                     accent: '#A1F01B',
-                    'accent-content': '#4C7307',
+                    'accent-content': '#263905',
                     neutral: '#5D5D89',
                     'neutral-content': '#5D5D89',
                     'base-100': '#FCFCFC',
                     info: '#67E8F9',
-                    success: '#D8F99F',
+                    success: '#B9F452',
                     warning: '#F97316',
                     error: '#DC2626',
                 },
@@ -39,7 +39,7 @@ export default {
                     secondary: '#212131',
                     'secondary-content': '#E9E9F3',
                     accent: '#A1F01B',
-                    'accent-content': '#324C05',
+                    'accent-content': '#263905',
                     neutral: '#5D5D89',
                     'neutral-content': '#B2B2CD',
                     'base-100': '#212131',

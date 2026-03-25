@@ -79,10 +79,7 @@ export default function ProjectPage() {
 				</div>
 			</div>
 			{gallery.length > 0 && (
-				<div className="py-10 space-y-7">
-					<h3 className="font-display text-3xl font-bold text-primary-content">
-						{t("common.gallery")}
-					</h3>
+				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
 						{gallery.map(({ src, size }, i) => {
 							const spans = {

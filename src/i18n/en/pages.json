@@ -67,8 +67,8 @@
     "email_placeholder": "your@email.com",
     "subject_placeholder": "what is it about?",
     "message_placeholder": "write your message here...",
-    "send": "Send",
-    "sending": "Sending...",
+    "send": "send",
+    "sending": "sending...",
     "sent": "Thank you for your message. I'll get back to you as soon as possible.",
     "error": "Something went wrong. Please try again or contact me directly.",
     "send_again": "Send new message"
