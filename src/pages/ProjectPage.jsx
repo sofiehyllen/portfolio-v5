@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
-import { projectImages } from "../data/projects";
+import { projectImages, projectGalleries } from "../data/projects";
 import { MdImageNotSupported } from "react-icons/md";
 
 function parseBold(text) {
@@ -18,17 +18,15 @@ export default function ProjectPage() {
 	const navigate = useNavigate();
 	const [imgError, setImgError] = useState(false);
 
-	const image = projectImages[id]
+	const image = projectImages[id];
+	const gallery = projectGalleries[id] ?? [];
 
 	return (
 		<div className="space-y-7 mt-14 md:mt-20 md:mx-16 2xl:mx-32">
 			<button
 				onClick={() => navigate(-1)}
 				className="flex items-center gap-2 font-mono text-sm mb-8">
-				<SlArrowLeft
-					strokeWidth={10}
-					className="size-3 text-primary-content"
-				/>{" "}
+				<SlArrowLeft strokeWidth={10} className="size-3 text-primary-content" />{" "}
 				{t("common.back")}
 			</button>
 			<div className="space-y-5 md:w-2/3">
@@ -38,7 +36,7 @@ export default function ProjectPage() {
 				<p className="font-mono xl:text-lg">{t(`${id}.subtitle`)}</p>
 			</div>
 			{image && !imgError ? (
-				<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm">
+				<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm border border-gray-50">
 					<img
 						src={image}
 						alt={t(`${id}.title`)}
@@ -59,9 +57,7 @@ export default function ProjectPage() {
 							{t("common.description")}
 						</h2>
 						<div className="space-y-5 text-sm xl:text-base">
-							{t(`${id}.description`, {
-								returnObjects: true,
-							}).map((p, i) => (
+							{t(`${id}.description`, { returnObjects: true }).map((p, i) => (
 								<p className="font-mono" key={i}>
 									{p}
 								</p>
@@ -73,19 +69,41 @@ export default function ProjectPage() {
 							{t("common.features")}
 						</h3>
 						<ul className="space-y-2 list-disc list-inside">
-							{t(`${id}.features`, { returnObjects: true }).map(
-								(p, i) => (
-									<li
-										className="font-mono text-sm xl:text-base"
-										key={i}>
-										{parseBold(p)}
-									</li>
-								)
-							)}
+							{t(`${id}.features`, { returnObjects: true }).map((p, i) => (
+								<li className="font-mono text-sm xl:text-base" key={i}>
+									{parseBold(p)}
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>
 			</div>
+			{gallery.length > 0 && (
+				<div className="py-10 space-y-7">
+					<h3 className="font-display text-3xl font-bold text-primary-content">
+						{t("common.gallery")}
+					</h3>
+					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+						{gallery.map(({ src, size }, i) => {
+							const spans = {
+								full: "col-span-2 md:col-span-6",
+								half: "col-span-1 md:col-span-3",
+								wide: "col-span-1 md:col-span-4",
+								narrow: "col-span-1 md:col-span-2",
+							};
+							return (
+								<div key={i} className={`overflow-hidden rounded-2xl ${spans[size]}`}>
+									<img
+										src={src}
+										alt={`${t(`${id}.title`)} ${i + 1}`}
+										className="w-full h-full object-cover object-top"
+									/>
+								</div>
+							);
+						})}
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }

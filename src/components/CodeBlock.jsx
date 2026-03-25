@@ -10,7 +10,7 @@ export default function CodeBlock({ id }) {
 			<pre data-prefix="$">
 				<code className="font-semibold">
 					{t("common.date")}:{" "}
-					<span className="font-normal">{t(`${id}.date`)}</span>
+					<span className="font-normal text-primary-content">{t(`${id}.date`)}</span>
 				</code>
 			</pre>
 			<pre data-prefix="$" className="">
@@ -34,7 +34,7 @@ export default function CodeBlock({ id }) {
 						href={`https://${t(`${id}.code`)}`}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="font-normal underline text-[#8BD30D] dark:text-accent">
+						className="font-normal underline text-primary-content">
 						{t(`${id}.code`)}
 					</a>
 				</code>
@@ -47,7 +47,7 @@ export default function CodeBlock({ id }) {
 							href={`https://${t(`${id}.link`)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="font-normal underline text-[#8BD30D] dark:text-accent">
+							className="font-normal underline text-primary-content">
 							{t(`${id}.link`)}
 						</a>
 					</code>

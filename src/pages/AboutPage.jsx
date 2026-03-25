@@ -70,10 +70,7 @@ export default function AboutPage() {
 
 	return (
 		<PageLayout title={t("about.title")} subtitle={t("about.subtitle")}>
-			<div>
-				
-			</div>
-			<div className="space-y-8 mb-20">
+			{/* <div className="space-y-8 mb-20">
 				<h2 className="font-display text-3xl font-semibold text-secondary-content">{t("about.atm")}</h2>
 				<ul className="space-y-2 list-disc list-inside">
 					{t(`about.atm-content`, { returnObjects: true }).map(
@@ -86,7 +83,7 @@ export default function AboutPage() {
 						)
 					)}
 				</ul>
-			</div>
+			</div> */}
 			<SkillsSection />
 			<div className="space-y-12 lg:flex lg:justify-center lg:space-y-0">
 				<div className="space-y-5 lg:w-1/2 lg:space-y-7">
