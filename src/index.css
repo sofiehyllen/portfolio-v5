@@ -53,10 +53,10 @@
 		@apply font-mono text-xs text-neutral-content uppercase block;
 	}
 	.inputfield {
-		@apply input font-mono text-sm placeholder:text-neutral-content/50 w-full bg-secondary
+		@apply input font-mono text-sm placeholder:text-neutral-content/50 w-full bg-secondary;
 	}
 	.textfield {
-		@apply textarea w-full font-mono text-sm placeholder:text-neutral-content/50 resize-none bg-secondary
+		@apply textarea w-full font-mono text-sm placeholder:text-neutral-content/50 resize-none bg-secondary;
 	}
 }
 
