@@ -11,7 +11,7 @@ function SkillsSection() {
 			<h3 className="font-display text-3xl font-semibold text-secondary-content mb-8 md:mb-10">
 				{t("about.skills.title")}
 			</h3>
-			<div className="space-y-10">
+			<div className="space-y-12">
 				{SKILLS.map(({ key, icon: Icon, items }) => (
 					<div key={key} className="space-y-2">
 						<p className="font-display text-primary-content text-lg font-semibold flex items-center gap-2">

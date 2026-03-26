@@ -44,7 +44,7 @@ export default function Carousel() {
 						<Link
 							to={`/projects/${slide.id}`}
 							key={i}
-							className={`min-w-full h-fit bg-secondary p-4 rounded-xl`}>
+							className={`min-w-full h-fit p-4 rounded-xl bg-gray-100 dark:bg-secondary `}>
 							<div className="flex justify-between pb-5 pt-1">
 								<p className="font-mono text-accent text-sm">
 									{slide.label}

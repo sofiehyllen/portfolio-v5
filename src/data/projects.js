@@ -29,7 +29,18 @@ import SnakeApplesImg from "@assets/snake_apples.png";
 export const projects = [
 	{
 		id: "shopify",
-		tags: ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
+		tags: [
+			"Python",
+			"PostgreSQL",
+			"GraphQL",
+			"Docker",
+			"OpenAI",
+			"SQLAlchemy",
+			"Flask",
+			"Shopify API",
+			"Nginx",
+			"Gunicorn",
+		],
 		coverimg: ShopifyImg,
 		gallery: [
 			{ src: WidgetHomepageImg, size: "full" },
@@ -43,7 +54,18 @@ export const projects = [
 	},
 	{
 		id: "wait",
-		tags: ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "GitLab-CI", "Gunicorn", "REST API"],
+		tags: [
+			"Python",
+			"Flask",
+			"Docker",
+			"MySQL",
+			"Redis",
+			"Nginx",
+			"CI/CD",
+			"GitLab-CI",
+			"Gunicorn",
+			"REST API",
+		],
 		coverimg: WaitCoverImg,
 		gallery: [
 			{
@@ -85,7 +107,7 @@ export const projects = [
 	},
 	{
 		id: "snake",
-		tags: ["Python"],
+		tags: ["Python", "Pygame"],
 		coverimg: SnakeImg,
 		gallery: [
 			{ src: SnakeGameImg, size: "half" },
@@ -95,7 +117,15 @@ export const projects = [
 	},
 	{
 		id: "parkzone",
-		tags: ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
+		tags: [
+			"React",
+			"Firebase",
+			"Firestore",
+			"Tailwind",
+			"Vite",
+			"Framer-motion",
+			"clsx",
+		],
 		coverimg: ParkzoneImg,
 		gallery: [
 			{ src: ParkzoneHomepageImg, size: "full" },

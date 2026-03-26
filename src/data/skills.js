@@ -7,7 +7,14 @@ export const SKILLS = [
 	{
 		key: "backend",
 		icon: FiServer,
-		items: ["Python", "Flask", "REST API", "SQLAlchemy", "Gunicorn", "Node.js"],
+		items: [
+			"Python",
+			"Flask",
+			"REST API",
+			"SQLAlchemy",
+			"Gunicorn",
+			"Node.js",
+		],
 	},
 	{
 		key: "databases",

@@ -49,6 +49,10 @@
 	.bg-dark {
 		background-image: url("/public/bg-dark.png");
 	}
+
+	.h1 {
+		
+	}
 }
 
 @layer base {

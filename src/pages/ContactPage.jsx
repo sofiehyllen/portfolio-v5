@@ -6,15 +6,19 @@ import { FaGitlab } from "react-icons/fa6";
 import PageLayout from "../components/wrappers/PageLayout";
 import Button from "../components/buttons/Button";
 import { IoIosRocket } from "react-icons/io";
+import ProfileImg from "@assets/profile_picture.png";
+import { LuMapPin } from "react-icons/lu";
+import { LuMail } from "react-icons/lu";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const INITIAL = { name: "", email: "", subject: "", message: "" };
 
 const labelClass =
 	"font-mono text-xs text-neutral-content uppercase mb-2 block";
 const inputClass =
-	"input font-mono text-sm placeholder:text-neutral-content/50 w-full";
+	"input font-mono text-sm placeholder:text-neutral-content/50 w-full bg-secondary";
 const textareaClass =
-	"textarea w-full font-mono text-sm placeholder:text-neutral-content/50 resize-none";
+	"textarea w-full font-mono text-sm placeholder:text-neutral-content/50 resize-none bg-secondary";
 
 export default function ContactPage() {
 	const { t } = useTranslation("pages");
@@ -49,116 +53,150 @@ export default function ContactPage() {
 
 	return (
 		<PageLayout title={t("contact.title")} subtitle={t("contact.subtitle")}>
-			<div className="max-w-2xl bg-primary/50 dark:bg-gray-400/5 p-6 rounded-2xl">
-				{status === "sent" ? (
-					<div className="space-y-6 flex flex-col items-center pt-10 pb-5">
-						<IoIosRocket className="size-12 text-accent" />
-						<p className="font-mono text-primary-content pb-10 text-center">
-							{t("contact.sent")}
-						</p>
-						<button
-							className="text-secondary-content font-mono underline text-sm hover:"
-							onClick={() => setStatus("idle")}>
-							{t("contact.send_again")}
-						</button>
+			<div className="flex space-x-8">
+				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit max-w-72">
+					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
+						<img src={ProfileImg} alt="Profile image" className="max-w-48"/>
 					</div>
-				) : (
-					<form onSubmit={handleSubmit} className="space-y-6">
-						<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+					<p className="text-center text-2xl font-semibold text-primary-content pt-5">Sofie Fuglsang Hyllen</p>
+					<div className="divider"></div>
+					<div className="space-y-3 text-secondary-content">
+						<div className="flex items-center space-x-4">
+							<LuMapPin className="size-5" />
+							<p>Copenhagen, DK</p>
+						</div>
+						<div className="flex items-center space-x-4">
+							<LuMail className="size-5"/>
+							<a href="mailto:sofiehyllen@outlook.com" className="underline underline-offset-2">sofiehyllen@outlook.com</a>
+						</div>
+						<div className="flex items-center space-x-4">
+							<FaLinkedinIn className="size-5"/>
+							<a href="https://www.linkedin.com/in/sofiefhyllen/"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="underline underline-offset-2">/in/sofiefhyllen</a>
+						</div>
+					</div>
+				</div>
+				<div className="w-3/5 bg-gradient-to-r from-white/35 to-secondary/35 dark:from-white/5 dark:to-gray-400/10 p-6 rounded-2xl h-fit">
+					{status === "sent" ? (
+						<div className="space-y-6 flex flex-col items-center pt-10 pb-5">
+							<IoIosRocket className="size-12 text-accent" />
+							<p className="font-mono text-primary-content pb-10 text-center">
+								{t("contact.sent")}
+							</p>
+							<button
+								className="text-secondary-content font-mono underline text-sm hover:"
+								onClick={() => setStatus("idle")}>
+								{t("contact.send_again")}
+							</button>
+						</div>
+					) : (
+						<form onSubmit={handleSubmit} className="space-y-6 ">
+							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+								<div>
+									<label className={labelClass}>
+										{t("contact.name")}
+									</label>
+									<input
+										className={inputClass}
+										type="text"
+										name="name"
+										value={form.name}
+										onChange={handleChange}
+										placeholder={t(
+											"contact.name_placeholder"
+										)}
+										required
+									/>
+								</div>
+								<div>
+									<label className={labelClass}>
+										{t("contact.email")}
+									</label>
+									<input
+										className={inputClass}
+										type="email"
+										name="email"
+										value={form.email}
+										onChange={handleChange}
+										placeholder={t(
+											"contact.email_placeholder"
+										)}
+										required
+									/>
+								</div>
+							</div>
 							<div>
 								<label className={labelClass}>
-									{t("contact.name")}
+									{t("contact.subject")}
 								</label>
 								<input
 									className={inputClass}
 									type="text"
-									name="name"
-									value={form.name}
+									name="subject"
+									value={form.subject}
 									onChange={handleChange}
-									placeholder={t("contact.name_placeholder")}
+									placeholder={t(
+										"contact.subject_placeholder"
+									)}
 									required
 								/>
 							</div>
 							<div>
 								<label className={labelClass}>
-									{t("contact.email")}
+									{t("contact.message")}
 								</label>
-								<input
-									className={inputClass}
-									type="email"
-									name="email"
-									value={form.email}
+								<textarea
+									className={textareaClass}
+									name="message"
+									rows={6}
+									value={form.message}
 									onChange={handleChange}
-									placeholder={t("contact.email_placeholder")}
+									placeholder={t(
+										"contact.message_placeholder"
+									)}
 									required
 								/>
 							</div>
-						</div>
-						<div>
-							<label className={labelClass}>
-								{t("contact.subject")}
-							</label>
-							<input
-								className={inputClass}
-								type="text"
-								name="subject"
-								value={form.subject}
-								onChange={handleChange}
-								placeholder={t("contact.subject_placeholder")}
-								required
-							/>
-						</div>
-						<div>
-							<label className={labelClass}>
-								{t("contact.message")}
-							</label>
-							<textarea
-								className={textareaClass}
-								name="message"
-								rows={6}
-								value={form.message}
-								onChange={handleChange}
-								placeholder={t("contact.message_placeholder")}
-								required
-							/>
-						</div>
-						{status === "error" && (
-							<p className="font-mono text-xs text-error">
-								{">"} {t("contact.error")}
-							</p>
-						)}
-						<div className="flex items-center gap-6">
-							<Button
-								type="submit"
-								variant="primary"
-								disabled={status === "sending"}>
-								{status === "sending"
-									? t("contact.sending")
-									: t("contact.send")}
-							</Button>
-							<div className="flex items-center gap-4">
-								<a
-									href="https://www.linkedin.com/in/sofiefhyllen/"
-									target="_blank"
-									rel="noopener noreferrer">
-									<FaLinkedin className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-								</a>
-								<a
-									href="https://gitlab.com/sofiehyllen"
-									target="_blank"
-									rel="noopener noreferrer">
-									<FaGitlab className="size-4 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-								</a>
-								<a
-									href="https://github.com/sofiehyllen"
-									target="_blank"
-									rel="noopener noreferrer">
-									<FaGithub className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-								</a>
+							{status === "error" && (
+								<p className="font-mono text-xs text-error">
+									{">"} {t("contact.error")}
+								</p>
+							)}
+							<div className="flex items-center gap-6">
+								<Button
+									type="submit"
+									variant="primary"
+									disabled={status === "sending"}>
+									{status === "sending"
+										? t("contact.sending")
+										: t("contact.send")}
+								</Button>
+								<div className="flex items-center gap-4">
+									<a
+										href="https://www.linkedin.com/in/sofiefhyllen/"
+										target="_blank"
+										rel="noopener noreferrer">
+										<FaLinkedin className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
+									</a>
+									<a
+										href="https://gitlab.com/sofiehyllen"
+										target="_blank"
+										rel="noopener noreferrer">
+										<FaGitlab className="size-4 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
+									</a>
+									<a
+										href="https://github.com/sofiehyllen"
+										target="_blank"
+										rel="noopener noreferrer">
+										<FaGithub className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
+									</a>
+								</div>
 							</div>
-						</div>
-					</form>
-				)}
+						</form>
+					)}
+				</div>
 			</div>
 		</PageLayout>
 	);
