@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 
 export default function Button({ variant = "primary", children, ...props }) {
-	const baseStyle = "px-4 pt-2 pb-1.5 rounded-full text-sm font-semibold";
+	const baseStyle =
+		"px-4 pt-2 pb-1.5 rounded-full text-sm font-semibold w-fit";
 
 	if (variant === "secondary") {
 		return (

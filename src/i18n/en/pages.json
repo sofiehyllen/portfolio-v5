@@ -12,13 +12,20 @@
   },
   "about": {
     "title": "About me",
-    "subtitle": "I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
+    "subtitle": "My name is Sofie and I'm a developer with a Bachelor's degree in Web Development and a strong interest in fullstack/backend development, data systems, and application architecture.",
     "atm": "At the moment",
     "atm-content": [
-      "I recently graduated and I'm currently open to work.",
-      "Lately i have been working on this portfolio to showcase my projects, skills and tools.",
-      "I have been exploring new backend tools and system design concepts."
+      "I recently graduated and I'm **currently open to work**.",
+      "I'm **building this portfolio** to showcase my projects, skills and tools.",
+      "I've been **exploring new backend technologies** and system design principles."
     ],
+    "skills": {
+      "title": "Technologies & Tools",
+      "backend": "Backend",
+      "databases": "Databases",
+      "frontend": "Frontend",
+      "devops": "DevOps & Infrastructure"
+    },
     "education": "Education",
     "experience": "Experience",
     "timeline": {
@@ -51,6 +58,19 @@
   },
   "contact": {
     "title": "Let's get in touch!",
-    "subtitle": "Here you will find my contact information."
+    "subtitle": "Fill out the form below or find me on social media.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "name_placeholder": "your name",
+    "email_placeholder": "your@email.com",
+    "subject_placeholder": "what is it about?",
+    "message_placeholder": "write your message here...",
+    "send": "send",
+    "sending": "sending...",
+    "sent": "Thank you for your message. I'll get back to you as soon as possible.",
+    "error": "Something went wrong. Please try again or contact me directly.",
+    "send_again": "Send new message"
   }
 }

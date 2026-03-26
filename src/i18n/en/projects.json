@@ -3,7 +3,6 @@
     "title": "Technical Case Study - ParkZone",
     "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
     "date": "jun 2024",
-    "tags": ["React", "Firebase", "Firestore", "Tailwind", "Vite", "Framer-motion", "clsx"],
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
@@ -23,9 +22,8 @@
   },
   "wait": {
     "title": "Wait - Food ordering platform",
-    "subtitle": "Full-stack food ordering platform where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
+    "subtitle": "Full-stack food ordering platform based on Wolt where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
     "date": "jun 2025",
-    "tags": ["Python", "Flask", "Docker", "MySQL", "Redis", "Nginx", "CI/CD", "Gitlab-CI", "Gunicorn", "REST API"],
     "code": "gitlab.com/sofiehyllen/wait_webdev",
     "link": "www.devenv.monster",
     "description": [
@@ -47,7 +45,6 @@
     "title": "AI-Powered Shopify Search Widget",
     "subtitle": "An AI-powered search widget for Shopify stores that interprets natural language queries to generate dynamic results pages with personalized product recommendations.",
     "date": "jan 2026",
-    "tags": ["Python", "PostgreSQL", "GraphQL", "Docker", "OpenAI", "Flask", "Nginx", "Gunicorn"],
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "This project implements an AI-powered search widget for Shopify stores that enhances product discovery through natural language queries.",
@@ -66,7 +63,6 @@
     "title": "Optimizing Neural Agents with a Genetic Algorithm Approach",
     "subtitle": "This project uses a Genetic Algorithm to evolve neural network–controlled Snake agents that learn survival and apple collection in a classic Snake game. ",
     "date": "jun 2025",
-    "tags": ["python"],
     "code": "gitlab.com/aai_exam/ga_snake_project",
     "description": [
       "This project explores the use of a genetic algorithm to evolve intelligent Snake agents that maximize apple collection and survival. Neural networks act as controllers, while genetic operations such as selection, crossover, and mutation guide learning.",
