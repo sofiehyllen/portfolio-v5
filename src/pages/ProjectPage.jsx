@@ -65,9 +65,9 @@ export default function ProjectPage() {
 			)}
 			<div className="space-y-7 pt-5 xl:flex xl:space-x-10 xl:space-y-0">
 				<CodeBlock id={id} />
-				<div className="xl:w-3/5 space-y-10">
+				<div className="xl:w-3/5 space-y-16">
 					<div>
-						<h2 className="font-display text-3xl font-bold pb-3 text-primary-content">
+						<h2 className="h2 text-5xl pb-8">
 							{t("common.description")}
 						</h2>
 						<div className="space-y-5 text-sm text-secondary-content xl:text-base">
@@ -81,7 +81,7 @@ export default function ProjectPage() {
 						</div>
 					</div>
 					<div>
-						<h3 className="font-display text-3xl font-bold pb-3 text-primary-content">
+						<h3 className="h2 text-5xl pb-8">
 							{t("common.features")}
 						</h3>
 						<ul className="space-y-2 list-disc list-inside">

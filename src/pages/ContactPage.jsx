@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
 import PageLayout from "../components/wrappers/PageLayout";
 import Button from "../components/buttons/Button";
@@ -12,13 +12,6 @@ import { LuMail } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const INITIAL = { name: "", email: "", subject: "", message: "" };
-
-const labelClass =
-	"font-mono text-xs text-neutral-content uppercase mb-2 block";
-const inputClass =
-	"input font-mono text-sm placeholder:text-neutral-content/50 w-full bg-secondary";
-const textareaClass =
-	"textarea w-full font-mono text-sm placeholder:text-neutral-content/50 resize-none bg-secondary";
 
 export default function ContactPage() {
 	const { t } = useTranslation("pages");
@@ -56,9 +49,15 @@ export default function ContactPage() {
 			<div className="flex space-x-8">
 				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit max-w-72">
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
-						<img src={ProfileImg} alt="Profile image" className="max-w-48"/>
+						<img
+							src={ProfileImg}
+							alt="Profile image"
+							className="max-w-48"
+						/>
 					</div>
-					<p className="text-center text-2xl font-semibold text-primary-content pt-5">Sofie Fuglsang Hyllen</p>
+					<p className="text-center text-2xl font-semibold text-primary-content pt-5">
+						Sofie Fuglsang Hyllen
+					</p>
 					<div className="divider"></div>
 					<div className="space-y-3 text-secondary-content">
 						<div className="flex items-center space-x-4">
@@ -66,16 +65,38 @@ export default function ContactPage() {
 							<p>Copenhagen, DK</p>
 						</div>
 						<div className="flex items-center space-x-4">
-							<LuMail className="size-5"/>
-							<a href="mailto:sofiehyllen@outlook.com" className="underline underline-offset-2">sofiehyllen@outlook.com</a>
+							<LuMail className="size-5" />
+							<a
+								href="mailto:sofiehyllen@outlook.com"
+								className="underline underline-offset-2">
+								sofiehyllen@outlook.com
+							</a>
 						</div>
 						<div className="flex items-center space-x-4">
-							<FaLinkedinIn className="size-5"/>
-							<a href="https://www.linkedin.com/in/sofiefhyllen/"
+							<FaLinkedinIn className="size-5" />
+							<a
+								href="https://www.linkedin.com/in/sofiefhyllen/"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="underline underline-offset-2">/in/sofiefhyllen</a>
+								className="underline underline-offset-2">
+								/in/sofiefhyllen
+							</a>
 						</div>
+					</div>
+					<div className="divider"></div>
+					<div className="flex items-center gap-8">
+						<a
+							href="https://gitlab.com/sofiehyllen"
+							target="_blank"
+							rel="noopener noreferrer">
+							<FaGitlab className="size-6 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
+						</a>
+						<a
+							href="https://github.com/sofiehyllen"
+							target="_blank"
+							rel="noopener noreferrer">
+							<FaGithub className="size-7 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
+						</a>
 					</div>
 				</div>
 				<div className="w-3/5 bg-gradient-to-r from-white/35 to-secondary/35 dark:from-white/5 dark:to-gray-400/10 p-6 rounded-2xl h-fit">
@@ -95,11 +116,11 @@ export default function ContactPage() {
 						<form onSubmit={handleSubmit} className="space-y-6 ">
 							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 								<div>
-									<label className={labelClass}>
+									<label className="label">
 										{t("contact.name")}
 									</label>
 									<input
-										className={inputClass}
+										className="inputfield"
 										type="text"
 										name="name"
 										value={form.name}
@@ -111,11 +132,11 @@ export default function ContactPage() {
 									/>
 								</div>
 								<div>
-									<label className={labelClass}>
+									<label className="label">
 										{t("contact.email")}
 									</label>
 									<input
-										className={inputClass}
+										className="inputfield"
 										type="email"
 										name="email"
 										value={form.email}
@@ -128,11 +149,11 @@ export default function ContactPage() {
 								</div>
 							</div>
 							<div>
-								<label className={labelClass}>
+								<label className="label">
 									{t("contact.subject")}
 								</label>
 								<input
-									className={inputClass}
+									className="inputfield"
 									type="text"
 									name="subject"
 									value={form.subject}
@@ -144,11 +165,11 @@ export default function ContactPage() {
 								/>
 							</div>
 							<div>
-								<label className={labelClass}>
+								<label className="label">
 									{t("contact.message")}
 								</label>
 								<textarea
-									className={textareaClass}
+									className="textfield"
 									name="message"
 									rows={6}
 									value={form.message}
@@ -173,26 +194,6 @@ export default function ContactPage() {
 										? t("contact.sending")
 										: t("contact.send")}
 								</Button>
-								<div className="flex items-center gap-4">
-									<a
-										href="https://www.linkedin.com/in/sofiefhyllen/"
-										target="_blank"
-										rel="noopener noreferrer">
-										<FaLinkedin className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-									</a>
-									<a
-										href="https://gitlab.com/sofiehyllen"
-										target="_blank"
-										rel="noopener noreferrer">
-										<FaGitlab className="size-4 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-									</a>
-									<a
-										href="https://github.com/sofiehyllen"
-										target="_blank"
-										rel="noopener noreferrer">
-										<FaGithub className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
-									</a>
-								</div>
 							</div>
 						</form>
 					)}
