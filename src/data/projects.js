@@ -107,7 +107,7 @@ export const projects = [
 	},
 	{
 		id: "snake",
-		tags: ["Python", "Pygame"],
+		tags: ["Python", "Pygame", "NumPy", "Matplotlib", "Pickle", "Genetic Algorithm", "Neural Network", "Neuroevolution", "Game AI"],
 		coverimg: SnakeImg,
 		gallery: [
 			{ src: SnakeGameImg, size: "half" },
@@ -119,12 +119,13 @@ export const projects = [
 		id: "parkzone",
 		tags: [
 			"React",
-			"Firebase",
-			"Firestore",
-			"Tailwind",
 			"Vite",
-			"Framer-motion",
-			"clsx",
+			"JavaScript",
+			"Firestore",
+			"SPA",
+			"WordPress REST API",
+			"Tailwind",
+			"Framer-motion"
 		],
 		coverimg: ParkzoneImg,
 		gallery: [

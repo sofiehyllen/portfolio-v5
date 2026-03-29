@@ -35,7 +35,10 @@ export default function ContactPage() {
 					subject: form.subject,
 					message: form.message,
 				},
-				{ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+				{
+					publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+					limitRate: { throttle: 10000 },
+				}
 			);
 			setStatus("sent");
 			setForm(INITIAL);
