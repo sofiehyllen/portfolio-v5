@@ -68,41 +68,13 @@ export const projects = [
 		],
 		coverimg: WaitCoverImg,
 		gallery: [
-			{
-				src: WaitDashboardImg,
-				size: "full",
-				caption: "Customer dashboard",
-			},
-			{
-				src: WaitSearchImg,
-				size: "half",
-				caption: "Search results in customer dashboard",
-			},
-			{
-				src: WaitAdminDashboardImg,
-				size: "half",
-				caption: "Admin dashboard",
-			},
-			{
-				src: WaitAdminUsersImg,
-				size: "wide",
-				caption: "User overview in admin dashboard",
-			},
-			{
-				src: WaitPartnerImg,
-				size: "narrow",
-				caption: "Partner dashboard",
-			},
-			{
-				src: WaitRestaurantMenuImg,
-				size: "half",
-				caption: "Menu overview in restaurant dashboard",
-			},
-			{
-				src: WaitRestaurantAddImg,
-				size: "half",
-				caption: "Restaurant dashboard",
-			},
+			{ src: WaitDashboardImg, size: "full", captionKey: "customerDashboard" },
+			{ src: WaitSearchImg, size: "half", captionKey: "searchResults" },
+			{ src: WaitAdminDashboardImg, size: "half", captionKey: "adminDashboard" },
+			{ src: WaitAdminUsersImg, size: "wide", captionKey: "adminUsers" },
+			{ src: WaitPartnerImg, size: "narrow", captionKey: "partnerDashboard" },
+			{ src: WaitRestaurantMenuImg, size: "half", captionKey: "restaurantMenu" },
+			{ src: WaitRestaurantAddImg, size: "half", captionKey: "restaurantAdd" },
 		],
 	},
 	{

@@ -4,8 +4,8 @@ import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
 import { projectImages, projectGalleries } from "../data/projects";
-import { MdImageNotSupported } from "react-icons/md";
 import Lightbox from "../components/Lightbox";
+import Image from "../components/Image";
 
 function parseBold(text) {
 	return text
@@ -26,11 +26,15 @@ export default function ProjectPage() {
 	const { id } = useParams();
 	const { t } = useTranslation("projects");
 	const navigate = useNavigate();
-	const [imgError, setImgError] = useState(false);
 	const [lightboxIndex, setLightboxIndex] = useState(null);
 
 	const image = projectImages[id];
 	const gallery = projectGalleries[id] ?? [];
+	const lightboxImages = gallery.map(({ src, captionKey }, i) => ({
+		src,
+		alt: captionKey ? t(`${id}.gallery.${captionKey}`) : `${t(`${id}.coverAlt`)} ${i + 1}`,
+		caption: captionKey ? t(`${id}.gallery.${captionKey}`) : undefined,
+	}));
 
 	return (
 		<div className="space-y-7 mt-14 md:mt-20 md:mx-16 2xl:mx-32">
@@ -49,20 +53,13 @@ export default function ProjectPage() {
 				</h1>
 				<p className="font-mono xl:text-lg">{t(`${id}.subtitle`)}</p>
 			</div>
-			{image && !imgError ? (
-				<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm border border-gray-50">
-					<img
-						src={image}
-						alt={t(`${id}.title`)}
-						className="w-full h-full object-cover object-top"
-						onError={() => setImgError(true)}
-					/>
-				</div>
-			) : (
-				<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
-					<MdImageNotSupported className="size-20 text-neutral-content" />
-				</div>
-			)}
+			<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm border border-gray-50">
+				<Image
+					src={image}
+					alt={t(`${id}.coverAlt`)}
+					className="w-full h-full object-cover object-top"
+				/>
+			</div>
 			<div className="space-y-7 pt-5 xl:flex xl:space-x-10 xl:space-y-0">
 				<CodeBlock id={id} />
 				<div className="xl:w-3/5 space-y-16">
@@ -101,33 +98,36 @@ export default function ProjectPage() {
 			{gallery.length > 0 && (
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-						{gallery.map(({ src, size, caption }, i) => (
-							<div key={i} className={`space-y-2 ${SPANS[size]}`}>
-								<div
-									className="overflow-hidden rounded-2xl cursor-zoom-in"
-									onClick={() => setLightboxIndex(i)}>
-									<img
-										src={src}
-										alt={
-											caption ??
-											`${t(`${id}.title`)} ${i + 1}`
-										}
-										className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-									/>
+						{gallery.map(({ src, size, captionKey }, i) => {
+							const caption = captionKey
+								? t(`${id}.gallery.${captionKey}`)
+								: undefined;
+							return (
+								<div key={i} className={`space-y-2 ${SPANS[size]}`}>
+									<div
+										className="overflow-hidden rounded-2xl cursor-zoom-in"
+										onClick={() => setLightboxIndex(i)}>
+										<Image
+											src={src}
+											alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
+											className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
+									</div>
+									{caption && (
+										<p className="font-mono text-xs text-secondary-content italic">
+											{caption}
+										</p>
+									)}
 								</div>
-								{caption && (
-									<p className="font-mono text-xs text-secondary-content italic">
-										{caption}
-									</p>
-								)}
-							</div>
-						))}
+							);
+						})}
 					</div>
 				</div>
 			)}
 			{lightboxIndex !== null && (
 				<Lightbox
-					images={gallery}
+					images={lightboxImages}
 					initialIndex={lightboxIndex}
 					onClose={() => setLightboxIndex(null)}
 				/>

@@ -1,6 +1,7 @@
 {
   "parkzone": {
     "title": "ParkZone - React Web Application",
+    "coverAlt": "ParkZone website hero section",
     "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",
@@ -23,6 +24,16 @@
   },
   "wait": {
     "title": "Wait - Food ordering platform",
+    "coverAlt": "Wait platform customer dashboard",
+    "gallery": {
+      "customerDashboard": "Customer dashboard",
+      "searchResults": "Search results in customer dashboard",
+      "adminDashboard": "Admin dashboard",
+      "adminUsers": "User overview in admin dashboard",
+      "partnerDashboard": "Partner dashboard",
+      "restaurantMenu": "Menu overview in restaurant dashboard",
+      "restaurantAdd": "Restaurant dashboard"
+    },
     "subtitle": "Full-stack food ordering platform based on Wolt where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
     "date": "jun 2025",
     "code": "gitlab.com/sofiehyllen/wait_webdev",
@@ -44,6 +55,7 @@
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
+    "coverAlt": "AI chat for Shopify search widget",
     "subtitle": "An AI-powered search widget for Shopify stores that interprets natural language queries to generate dynamic results pages with personalized product recommendations.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
@@ -62,6 +74,7 @@
   },
     "snake": {
     "title": "Snake AI — Neuroevolution with Genetic Algorithms",
+    "coverAlt": "Neural network",
     "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game. ",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",

@@ -1,6 +1,7 @@
 {
   "parkzone": {
     "title": "ParkZone - React Web Application",
+    "coverAlt": "ParkZone hjemmesides hero-sektion",
     "subtitle": "Frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",
@@ -23,6 +24,16 @@
   },
   "wait": {
     "title": "Wait - Food ordering platform",
+    "coverAlt": "Wait platformens kundedashboard",
+    "gallery": {
+      "customerDashboard": "Kundedashboard",
+      "searchResults": "Søgeresultater i kundedashboard",
+      "adminDashboard": "Admindashboard",
+      "adminUsers": "Brugeroversigt i admindashboard",
+      "partnerDashboard": "Partnerdashboard",
+      "restaurantMenu": "Menupunkter i restaurantdashboard",
+      "restaurantAdd": "Restaurantdashboard"
+    },
     "subtitle": "Full-stack platform baseret på Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
     "code": "gitlab.com/sofiehyllen/wait_webdev",
@@ -44,6 +55,7 @@
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
+    "coverAlt": "AI chatten for Shopify widget",
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
@@ -62,6 +74,7 @@
   },
   "snake": {
     "title": "Snake AI — Neuroevolution med Genetiske Algoritmer",
+    "coverAlt": "Neuralt netværk",
     "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",
