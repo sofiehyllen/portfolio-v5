@@ -32,7 +32,9 @@ export default function ProjectPage() {
 	const gallery = projectGalleries[id] ?? [];
 	const lightboxImages = gallery.map(({ src, captionKey }, i) => ({
 		src,
-		alt: captionKey ? t(`${id}.gallery.${captionKey}`) : `${t(`${id}.coverAlt`)} ${i + 1}`,
+		alt: captionKey
+			? t(`${id}.gallery.${captionKey}`)
+			: `${t(`${id}.coverAlt`)} ${i + 1}`,
 		caption: captionKey ? t(`${id}.gallery.${captionKey}`) : undefined,
 	}));
 
@@ -103,13 +105,18 @@ export default function ProjectPage() {
 								? t(`${id}.gallery.${captionKey}`)
 								: undefined;
 							return (
-								<div key={i} className={`space-y-2 ${SPANS[size]}`}>
+								<div
+									key={i}
+									className={`space-y-2 ${SPANS[size]}`}>
 									<div
 										className="overflow-hidden rounded-2xl cursor-zoom-in"
 										onClick={() => setLightboxIndex(i)}>
 										<Image
 											src={src}
-											alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
+											alt={
+												caption ??
+												`${t(`${id}.title`)} ${i + 1}`
+											}
 											className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 											loading="lazy"
 										/>

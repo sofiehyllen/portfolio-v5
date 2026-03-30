@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import ParkzoneImg from "@assets/parkzone.png";
+import ParkzoneImg from "@assets/pz_thumbnail.png";
 import WidgetImg from "@assets/widget_chat_summer.png";
 import WaitImg from "@assets/wait_customer_dashboard.png";
 import { Link } from "react-router-dom";

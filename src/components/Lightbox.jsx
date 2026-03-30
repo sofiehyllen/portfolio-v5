@@ -69,10 +69,10 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 
 				{/* Image */}
 				<Image
-				src={src}
-				alt={alt}
-				className="max-h-[80vh] rounded-xl"
-				loading="lazy"
+					src={src}
+					alt={alt}
+					className="max-h-[80vh] rounded-xl"
+					loading="lazy"
 				/>
 
 				{/* Caption */}
