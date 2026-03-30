@@ -2,6 +2,17 @@
   "parkzone": {
     "title": "ParkZone - React Web Application",
     "coverAlt": "ParkZone website hero section",
+    "gallery": {
+      "privatHomepage": "Homepage for private customers",
+      "privatCheckout": "Checkout form for private customers",
+      "privatBooking": "Parking booking for private customers",
+      "privatLocation": "Parking location for private customers",
+      "privatContact": "Contact form for private customers",
+      "privatSubscription": "Subscription sign up for private customers",
+      "erhvervHomepage": "Homepage for business customers",
+      "erhvervProducts": "Product overview for business customers",
+      "erhvervContact": "Contact form for business customers"
+    },
     "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",

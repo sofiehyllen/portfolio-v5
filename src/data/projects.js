@@ -1,7 +1,13 @@
-import ParkzoneImg from "@assets/parkzone.png";
-import ParkzoneHomepageImg from "@assets/parkzone_homepage.png";
-import ParkzoneCheckoutImg from "@assets/parkzone_checkout.png";
-import ParkzoneBookingImg from "@assets/parkzone_booking.png";
+import PzThumbnailImg from "@assets/pz_thumbnail.png";
+import PzErhvervHomepageImg from "@assets/pz_erhverv_homepage.png";
+import PzErhvervContactImg from "@assets/pz_erhverv_contact.png";
+import PzErhvervProductsImg from "@assets/pz_erhverv_products.png";
+import PzPrivatHomepageImg from "@assets/pz_privat_homepage.png";
+import PzPrivatCheckoutImg from "@assets/pz_privat_checkout.png";
+import PzPrivatBookingImg from "@assets/pz_privat_booking.png";
+import PzPrivatContactImg from "@assets/pz_privat_contact.png";
+import PzPrivatLocationImg from "@assets/pz_privat_location.png";
+import PzPrivatSubscriptionImg from "@assets/pz_privat_subscription.png";
 
 import WaitCoverImg from "@assets/wait_cover_customer_dashboard.png";
 import WaitDashboardImg from "@assets/wait_customer_dashboard.png";
@@ -99,11 +105,17 @@ export const projects = [
 			"Tailwind",
 			"Framer-motion"
 		],
-		coverimg: ParkzoneImg,
+		coverimg: PzThumbnailImg,
 		gallery: [
-			{ src: ParkzoneHomepageImg, size: "full" },
-			{ src: ParkzoneCheckoutImg, size: "half" },
-			{ src: ParkzoneBookingImg, size: "half" },
+			{ src: PzPrivatHomepageImg, size: "full", captionKey: "privatHomepage" },
+			{ src: PzPrivatCheckoutImg, size: "half", captionKey: "privatCheckout" },
+			{ src: PzPrivatBookingImg, size: "half", captionKey: "privatBooking" },
+			{ src: PzPrivatLocationImg, size: "full", captionKey: "privatLocation" },
+			{ src: PzPrivatContactImg, size: "half", captionKey: "privatContact" },
+			{ src: PzPrivatSubscriptionImg, size: "half", captionKey: "privatSubscription" },
+			{ src: PzErhvervHomepageImg, size: "full", captionKey: "erhvervHomepage" },
+			{ src: PzErhvervProductsImg, size: "wide", captionKey: "erhvervProducts" },
+			{ src: PzErhvervContactImg, size: "narrow", captionKey: "erhvervContact" },
 		],
 	},
 ];
