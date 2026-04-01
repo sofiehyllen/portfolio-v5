@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import ParkzoneImg from "@assets/pz_thumbnail.png";
-import WidgetImg from "@assets/widget_chat_summer.png";
-import WaitImg from "@assets/wait_customer_dashboard.png";
+import ParkzoneThumbnail from "@assets/pz_thumbnail.png";
+import WidgetThumbnail from "@assets/widget_thumbnail.png";
+import WaitThumbnail from "@assets/wait_thumbnail.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Image from "./Image";
@@ -11,19 +11,19 @@ import Image from "./Image";
 const slides = [
 	{
 		label: "AI-Powered Shopify Search Widget",
-		img: WidgetImg,
+		img: WidgetThumbnail,
 		date: "jan 2026",
 		id: "shopify",
 	},
 	{
 		label: "Food Ordering Platform",
-		img: WaitImg,
+		img: WaitThumbnail,
 		date: "jun 2025",
 		id: "wait",
 	},
 	{
 		label: "Company Website",
-		img: ParkzoneImg,
+		img: ParkzoneThumbnail,
 		date: "jun 2024",
 		id: "parkzone",
 	},

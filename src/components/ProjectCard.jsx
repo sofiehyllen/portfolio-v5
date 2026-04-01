@@ -25,7 +25,7 @@ export default function ProjectCard({ id, coverimg }) {
 
 				<hr className="border-neutral-content/20" />
 
-				<div className="flex flex-col gap-4 py-4 2xl:flex-row">
+				{/* <div className="flex flex-col gap-4 py-4 2xl:flex-row">
 					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content 2xl:w-1/2">
 						{description}
 					</p>
@@ -37,6 +37,14 @@ export default function ProjectCard({ id, coverimg }) {
 							loading="lazy"
 						/>
 					</div>
+				</div> */}
+				<div className="rounded-xl overflow-hidden my-4">
+					<Image
+						src={coverimg}
+						alt={t(`${id}.coverAlt`)}
+						className="w-full h-full object-cover"
+						loading="lazy"
+					/>
 				</div>
 
 				<hr className="border-neutral-content/20 pb-4" />

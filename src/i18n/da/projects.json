@@ -2,6 +2,17 @@
   "parkzone": {
     "title": "ParkZone - React Web Application",
     "coverAlt": "ParkZone hjemmesides hero-sektion",
+    "gallery": {
+      "privatHomepage": "Homepage for privatkunder",
+      "privatCheckout": "Check-ud formular for privatkunder",
+      "privatBooking": "Parkeringsbooking for privatkunder",
+      "privatLocation": "Parkeringslokation for privatkunder",
+      "privatContact": "Kontaktformular for privatkunder",
+      "privatSubscription": "Subscription sign up for privatkunder",
+      "erhvervHomepage": "Homepage for erhvervskunder",
+      "erhvervProducts": "Produktoverblik for erhvervskunder",
+      "erhvervContact": "Kontaktformular for erhvervskunder"
+    },
     "subtitle": "Frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",
@@ -61,7 +72,7 @@
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "Dette projekt implementerer en AI-drevet søgewidget til Shopify stores, der forbedrer produktsøgning gennem naturlige sprogforespørgsler.",
-      "Frem for at været baseret på traditionel nøgleordsbaseret søgning analyserer systemet brugerens input for at forstå hensigten og genererer personaliserede produktinspirationsider med relevante produktanbefalinger. Widgetten integrerer med Shopify via Admin API’et og kan indlejres direkte i eksisterende webshops uden behov for ændringer i shoppens eksisterende layout eller design.",
+      "Frem for at være baseret på traditionel nøgleordsbaseret søgning analyserer systemet brugerens input for at forstå hensigten og genererer personaliserede produktinspirationssider med relevante produktanbefalinger. Widgetten integrerer med Shopify via Admin API’et og kan indlejres direkte i eksisterende webshops uden behov for ændringer i shoppens eksisterende layout eller design.",
       "Projektets primære fokus er backendarkitektur, API-integration og AI-assisteret søgelogik, udviklet som en del af en bacheloruddannelse i Webudvikling."
     ],
     "features": [

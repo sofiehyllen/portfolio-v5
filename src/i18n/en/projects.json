@@ -18,7 +18,7 @@
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
-      "This project is a full-scale website redesign for ParkZone A/S (now Guardian)— a Danish parking company with over 20 years of experience managing more than 2,000 parking areas across Denmark. The project is a React-based single-page application targeting two distinct user groups: private customers looking to find and book parking, and business customers seeking parking management solutions.", 
+      "This project is a full-scale website redesign for ParkZone A/S (now Guardian) — a Danish parking company with over 20 years of experience managing more than 2,000 parking areas across Denmark. The project is a React-based single-page application targeting two distinct user groups: private customers looking to find and book parking, and business customers seeking parking management solutions.", 
       "The site integrates real-time data from Firebase Firestore, dynamic content from a headless WordPress CMS, and a fully custom multi-step booking flow — all presented through a responsive, component-driven UI built with Tailwind CSS."
     ],
     "features": [
@@ -86,7 +86,7 @@
     "snake": {
     "title": "Snake AI — Neuroevolution with Genetic Algorithms",
     "coverAlt": "Neural network",
-    "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game. ",
+    "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",
     "description": [
