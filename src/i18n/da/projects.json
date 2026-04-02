@@ -43,7 +43,7 @@
       "adminUsers": "Brugeroversigt i admindashboard",
       "partnerDashboard": "Partnerdashboard",
       "restaurantMenu": "Menupunkter i restaurantdashboard",
-      "restaurantAdd": "Restaurantdashboard"
+      "restaurantAdd": "Tilføjelse af ny ret til menuen i restaurantdashboard"
     },
     "subtitle": "Full-stack platform baseret på Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
@@ -99,7 +99,8 @@
       "snakeGame": "Visualisering af snake spillet",
       "applesGraph": "Graf af samlede antal æbler for hver generation",
       "neuralNetwork": "Neuralt netværk for snake agenter",
-      "flow": "Flow af hver generations livscyklus"
+      "flow": "Flow af hver generations livscyklus",
+      "comparison": "Menneskelig highscore på 12 og et gnm. på 6.13 sammenlignet med snake agenterns highscore på 116 og et generationsgennemsnit på 34.20"
     },
     "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
     "date": "jun 2025",

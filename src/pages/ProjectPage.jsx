@@ -55,7 +55,7 @@ export default function ProjectPage() {
 				</h1>
 				<p className="font-mono xl:text-lg">{t(`${id}.subtitle`)}</p>
 			</div>
-			<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm border border-gray-50">
+			<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm">
 				<Image
 					src={image}
 					alt={t(`${id}.coverAlt`)}
@@ -109,7 +109,7 @@ export default function ProjectPage() {
 									key={i}
 									className={`space-y-2 ${SPANS[size]}`}>
 									<div
-										className="overflow-hidden rounded-2xl cursor-zoom-in"
+										className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700"
 										onClick={() => setLightboxIndex(i)}>
 										<Image
 											src={src}

@@ -4,7 +4,7 @@ import PzErhvervContactImg from "@assets/pz_erhverv_contact.png";
 import PzErhvervProductsImg from "@assets/pz_erhverv_products.png";
 import PzPrivatHomepageImg from "@assets/pz_privat_homepage.png";
 import PzPrivatCheckoutImg from "@assets/pz_privat_checkout.png";
-import PzPrivatBookingImg from "@assets/pz_privat_booking.png";
+import PzPrivatBookingImg from "@assets/pz_privat_book.png";
 import PzPrivatContactImg from "@assets/pz_privat_contact.png";
 import PzPrivatLocationImg from "@assets/pz_privat_location.png";
 import PzPrivatSubscriptionImg from "@assets/pz_privat_subscription.png";
@@ -32,6 +32,7 @@ import SnakeNNImg from "@assets/snake_nn.png";
 import SnakeGameImg from "@assets/snake_game.png";
 import SnakeFlowImg from "@assets/snake_flow.png";
 import SnakeApplesImg from "@assets/snake_apples.png";
+import SnakeCompareImg from "@assets/snake_comparison.png";
 
 export const projects = [
 	{
@@ -82,26 +83,26 @@ export const projects = [
 			},
 			{ src: WaitSearchImg, size: "half", captionKey: "searchResults" },
 			{
+				src: WaitPartnerImg,
+				size: "half",
+				captionKey: "partnerDashboard",
+			},
+			{ src: WaitAdminUsersImg, size: "full", captionKey: "adminUsers" },
+			{
 				src: WaitAdminDashboardImg,
 				size: "half",
 				captionKey: "adminDashboard",
-			},
-			{ src: WaitAdminUsersImg, size: "wide", captionKey: "adminUsers" },
-			{
-				src: WaitPartnerImg,
-				size: "narrow",
-				captionKey: "partnerDashboard",
-			},
-			{
-				src: WaitRestaurantMenuImg,
-				size: "half",
-				captionKey: "restaurantMenu",
 			},
 			{
 				src: WaitRestaurantAddImg,
 				size: "half",
 				captionKey: "restaurantAdd",
 			},
+			{
+				src: WaitRestaurantMenuImg,
+				size: "full",
+				captionKey: "restaurantMenu",
+			}
 		],
 	},
 	{
@@ -121,7 +122,8 @@ export const projects = [
 		gallery: [
 			{ src: SnakeGameImg, size: "narrow", captionKey: "snakeGame" },
 			{ src: SnakeApplesImg, size: "wide", captionKey: "applesGraph" },
-			{ src: SnakeNNImg, size: "wide", captionKey: "neuralNetwork" },
+			{ src: SnakeCompareImg, size: "half", captionKey: "comparison" },
+			{ src: SnakeNNImg, size: "half", captionKey: "neuralNetwork" },
 			{ src: SnakeFlowImg, size: "full", captionKey: "flow" }
 		],
 	},
@@ -145,24 +147,19 @@ export const projects = [
 				captionKey: "privatHomepage",
 			},
 			{
-				src: PzPrivatCheckoutImg,
-				size: "half",
-				captionKey: "privatCheckout",
+				src: PzErhvervContactImg,
+				size: "narrow",
+				captionKey: "erhvervContact",
 			},
 			{
 				src: PzPrivatBookingImg,
-				size: "half",
+				size: "wide",
 				captionKey: "privatBooking",
 			},
 			{
-				src: PzPrivatLocationImg,
-				size: "full",
-				captionKey: "privatLocation",
-			},
-			{
-				src: PzPrivatContactImg,
+				src: PzPrivatCheckoutImg,
 				size: "half",
-				captionKey: "privatContact",
+				captionKey: "privatCheckout",
 			},
 			{
 				src: PzPrivatSubscriptionImg,
@@ -170,20 +167,26 @@ export const projects = [
 				captionKey: "privatSubscription",
 			},
 			{
-				src: PzErhvervHomepageImg,
-				size: "full",
-				captionKey: "erhvervHomepage",
-			},
-			{
 				src: PzErhvervProductsImg,
 				size: "wide",
 				captionKey: "erhvervProducts",
 			},
-			{
-				src: PzErhvervContactImg,
+						{
+				src: PzPrivatContactImg,
 				size: "narrow",
-				captionKey: "erhvervContact",
+				captionKey: "privatContact",
 			},
+			{
+				src: PzErhvervHomepageImg,
+				size: "half",
+				captionKey: "erhvervHomepage",
+			},
+			{
+				src: PzPrivatLocationImg,
+				size: "half",
+				captionKey: "privatLocation",
+			},
+
 		],
 	},
 ];

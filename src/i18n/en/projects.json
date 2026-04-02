@@ -43,7 +43,7 @@
       "adminUsers": "User overview in admin dashboard",
       "partnerDashboard": "Partner dashboard",
       "restaurantMenu": "Menu overview in restaurant dashboard",
-      "restaurantAdd": "Restaurant dashboard"
+      "restaurantAdd": "Adding a new menu item in restaurant dashboard"
     },
     "subtitle": "Full-stack food ordering platform based on Wolt where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
     "date": "jun 2025",
@@ -99,7 +99,8 @@
       "snakeGame": "Visualization of the snake game",
       "applesGraph": "Graph of collected apples for each generation",
       "neuralNetwork": "Neural network of snake agents",
-      "flow": "Flow of the lifecycle of each generation"
+      "flow": "Flow of the lifecycle of each generation",
+      "comparison": "Human highscore of 12 and avg. of 6.13 compared to snake agents highscore of 116 and generational avg. of 34.20"
     },
     "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game.",
     "date": "jun 2025",
