@@ -30,7 +30,7 @@ import WidgetHike2Img from "@assets/widget_hike2.png";
 import SnakeThumbnail from "@assets/snake_thumbnail.png";
 import SnakeNNImg from "@assets/snake_nn.png";
 import SnakeGameImg from "@assets/snake_game.png";
-import SnakeGame2Img from "@assets/snake_game2.png";
+import SnakeFlowImg from "@assets/snake_flow.png";
 import SnakeApplesImg from "@assets/snake_apples.png";
 
 export const projects = [
@@ -50,13 +50,13 @@ export const projects = [
 		],
 		coverimg: WidgetThumbnail,
 		gallery: [
-			{ src: WidgetHomepageImg, size: "full" },
-			{ src: WidgetChatSummerImg, size: "half" },
-			{ src: WidgetSummer1Img, size: "half" },
-			{ src: WidgetSummer2Img, size: "wide" },
-			{ src: WidgetChatHikeImg, size: "narrow" },
-			{ src: WidgetHike1Img, size: "half" },
-			{ src: WidgetHike2Img, size: "half" },
+			{ src: WidgetHomepageImg, size: "full", captionKey: "homepage" },
+			{ src: WidgetChatSummerImg, size: "full", captionKey: "chatSummer" },
+			{ src: WidgetSummer1Img, size: "half", captionKey: "pageSummer1" },
+			{ src: WidgetSummer2Img, size: "half", captionKey: "pageSummer2" },
+			{ src: WidgetChatHikeImg, size: "full", captionKey: "chatHike" },
+			{ src: WidgetHike1Img, size: "half", captionKey: "pageHike1" },
+			{ src: WidgetHike2Img, size: "half", captionKey: "pageHike2" },
 		],
 	},
 	{
@@ -119,10 +119,10 @@ export const projects = [
 		],
 		coverimg: SnakeThumbnail,
 		gallery: [
-			{ src: SnakeGameImg, size: "half" },
-			{ src: SnakeGame2Img, size: "half" },
-			{ src: SnakeApplesImg, size: "full" },
-			{ src: SnakeNNImg, size: "full" },
+			{ src: SnakeGameImg, size: "narrow", captionKey: "snakeGame" },
+			{ src: SnakeApplesImg, size: "wide", captionKey: "applesGraph" },
+			{ src: SnakeNNImg, size: "wide", captionKey: "neuralNetwork" },
+			{ src: SnakeFlowImg, size: "full", captionKey: "flow" }
 		],
 	},
 	{

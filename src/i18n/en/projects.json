@@ -67,6 +67,15 @@
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
     "coverAlt": "AI chat for Shopify search widget",
+    "gallery": {
+      "homepage": "Test store with the widget implementet in the lower right corner",
+      "chatSummer": "Conversation with the AI chat about summer clothing",
+      "pageSummer1": "Part 1: Inspirational page generated based on the prior conversation about summer clothing",
+      "pageSummer2": "Part 2: Inspirational page generated based on the prior conversation about summer clothing",
+      "chatHike": "Conversation with the AI chat about active-wear",
+      "pageHike1": "Part 1: Inspirational page generated based on the prior conversation about active-wear",
+      "pageHike2": "Part 2: Inspirational page generated based on the prior conversation about active-wear"
+    },
     "subtitle": "An AI-powered search widget for Shopify stores that interprets natural language queries to generate dynamic results pages with personalized product recommendations.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
@@ -85,7 +94,13 @@
   },
     "snake": {
     "title": "Snake AI — Neuroevolution with Genetic Algorithms",
-    "coverAlt": "Neural network",
+    "coverAlt": "Neural network and snake game",
+    "gallery": {
+      "snakeGame": "Visualization of the snake game",
+      "applesGraph": "Graph of collected apples for each generation",
+      "neuralNetwork": "Neural network of snake agents",
+      "flow": "Flow of the lifecycle of each generation"
+    },
     "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",

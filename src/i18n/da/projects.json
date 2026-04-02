@@ -67,6 +67,15 @@
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
     "coverAlt": "AI chatten for Shopify widget",
+    "gallery": {
+      "homepage": "Testside med implementeret widget som ses nede i højre hjørne",
+      "chatSummer": "Samtale med AI chatten omkring sommertøj",
+      "pageSummer1": "Del 1: Inspirationsside genereret på baggrund af foregående samtale omkring sommertøj",
+      "pageSummer2": "Del 2: Inspirationsside genereret på baggrund af foregående samtale omkring sommertøj",
+      "chatHike": "Samtale med AI chatten omkring active-wear",
+      "pageHike1": "Del 1: Inspirationsside genereret på baggrund af foregående samtale omkring active-wear",
+      "pageHike2": "Del 2: Inspirationsside genereret på baggrund af foregående samtale omkring active-wear"
+    },
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
@@ -86,6 +95,12 @@
   "snake": {
     "title": "Snake AI — Neuroevolution med Genetiske Algoritmer",
     "coverAlt": "Neuralt netværk",
+    "gallery": {
+      "snakeGame": "Visualisering af snake spillet",
+      "applesGraph": "Graf af samlede antal æbler for hver generation",
+      "neuralNetwork": "Neuralt netværk for snake agenter",
+      "flow": "Flow af hver generations livscyklus"
+    },
     "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",
