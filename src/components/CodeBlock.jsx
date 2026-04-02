@@ -25,7 +25,7 @@ export default function CodeBlock({ id }) {
 				))}
 				</span>
 			</div>
-			<pre data-prefix="$">
+			<pre data-prefix="$" className="truncate">
 				<code className="font-semibold">
 					{t("common.code")}:{" "}
 					<a
@@ -38,7 +38,7 @@ export default function CodeBlock({ id }) {
 				</code>
 			</pre>
 			{i18n.exists(`projects:${id}.link`) && (
-				<pre data-prefix="$">
+				<pre data-prefix="$" className="truncate">
 					<code className="font-semibold">
 						{t("common.link")}:{" "}
 						<a

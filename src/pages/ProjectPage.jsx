@@ -39,7 +39,7 @@ export default function ProjectPage() {
 	}));
 
 	return (
-		<div className="space-y-7 mt-14 md:mt-20 md:mx-16 2xl:mx-32">
+		<div className="space-y-7 mt-14 md:mt-20 md:mx-10 lg:mx-16 2xl:mx-32">
 			<button
 				onClick={() => navigate(-1)}
 				className="flex items-center gap-2 font-mono text-sm mb-8">

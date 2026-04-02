@@ -12,7 +12,7 @@ export default function Header() {
 
 	return (
 		<header className="flex justify-between">
-			<div className="flex space-x-5 items-center md:items-end md:space-x-16">
+			<div className="flex space-x-5 items-center md:items-end md:space-x-10 lg:space-x-16">
 				<Link to="/" className="flex text-4xl font-bold text-accent">
 					<img
 						src={MobileLogo}
