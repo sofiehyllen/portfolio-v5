@@ -1,36 +1,37 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { MdImageNotSupported } from "react-icons/md";
-import ParkzoneImg from "@assets/parkzone.png";
-import WidgetImg from "@assets/widget_chat_summer.png";
-import WaitImg from "@assets/wait_customer_dashboard.png";
+import ParkzoneThumbnail from "@assets/pz_thumbnail.png";
+import WidgetThumbnail from "@assets/widget_thumbnail.png";
+import WaitThumbnail from "@assets/wait_thumbnail.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import Image from "./Image";
 
 const slides = [
 	{
 		label: "AI-Powered Shopify Search Widget",
-		img: WidgetImg,
+		img: WidgetThumbnail,
 		date: "jan 2026",
 		id: "shopify",
 	},
 	{
 		label: "Food Ordering Platform",
-		img: WaitImg,
+		img: WaitThumbnail,
 		date: "jun 2025",
 		id: "wait",
 	},
 	{
 		label: "Company Website",
-		img: ParkzoneImg,
+		img: ParkzoneThumbnail,
 		date: "jun 2024",
 		id: "parkzone",
 	},
 ];
 
 export default function Carousel() {
+	const { t } = useTranslation("projects");
 	const [current, setCurrent] = useState(0);
-	const [imgError, setImgError] = useState(false);
 
 	const goTo = (n) => setCurrent((n + slides.length) % slides.length);
 
@@ -53,21 +54,14 @@ export default function Carousel() {
 									{slide.date}
 								</p>
 							</div>
-							{slide.img && !imgError ? (
-								<div className="rounded-xl overflow-hidden w-full h-80">
-									<img
-										src={slide.img}
-										alt={slide.label}
-										className="w-full h-full object-cover"
-										onError={() => setImgError(true)}
-									/>
-								</div>
-							) : (
-								<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
-									<MdImageNotSupported className="size-20 text-neutral-content" />
-								</div>
-							)}
-							{/* <div><img src={slide.img} alt="" /></div> */}
+							<div className="rounded-xl overflow-hidden w-full h-80">
+								<Image
+									src={slide.img}
+									alt={t(`${slide.id}.coverAlt`)}
+									className="w-full h-full object-cover"
+									loading="lazy"
+								/>
+							</div>
 						</Link>
 					))}
 				</div>

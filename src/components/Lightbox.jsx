@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
+import Image from "./Image";
 
 export default function Lightbox({ images, initialIndex, onClose }) {
 	const [index, setIndex] = useState(initialIndex);
@@ -36,7 +37,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 		return () => window.removeEventListener("keydown", onKey);
 	}, [next, prev, onClose]);
 
-	const { src, caption } = images[index];
+	const { src, alt, caption } = images[index];
 
 	return createPortal(
 		<div
@@ -67,10 +68,11 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				</p>
 
 				{/* Image */}
-				<img
+				<Image
 					src={src}
-					alt={caption ?? `billede ${index + 1}`}
+					alt={alt}
 					className="max-h-[80vh] rounded-xl"
+					loading="lazy"
 				/>
 
 				{/* Caption */}
@@ -99,6 +101,7 @@ Lightbox.propTypes = {
 	images: PropTypes.arrayOf(
 		PropTypes.shape({
 			src: PropTypes.string.isRequired,
+			alt: PropTypes.string.isRequired,
 			caption: PropTypes.string,
 		})
 	).isRequired,

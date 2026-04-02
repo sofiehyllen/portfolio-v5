@@ -35,7 +35,10 @@ export default function ContactPage() {
 					subject: form.subject,
 					message: form.message,
 				},
-				{ publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+				{
+					publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+					limitRate: { throttle: 10000 },
+				}
 			);
 			setStatus("sent");
 			setForm(INITIAL);
@@ -51,8 +54,9 @@ export default function ContactPage() {
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
 						<img
 							src={ProfileImg}
-							alt="Profile image"
+							alt={t("contact.profileAlt")}
 							className="max-w-48"
+							loading="lazy"
 						/>
 					</div>
 					<p className="text-center text-2xl font-semibold text-primary-content pt-5">

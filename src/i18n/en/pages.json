@@ -24,7 +24,8 @@
       "backend": "Backend",
       "databases": "Databases",
       "frontend": "Frontend",
-      "devops": "DevOps & Infrastructure"
+      "devops": "DevOps & Infrastructure",
+      "ai": "AI & Machine Learning"
     },
     "education": "Education",
     "experience": "Experience",
@@ -58,6 +59,7 @@
   },
   "contact": {
     "title": "Let's get in touch!",
+    "profileAlt": "Avatar of Sofie Hyllen",
     "subtitle": "Fill out the form below or find me on social media.",
     "name": "Name",
     "email": "Email",

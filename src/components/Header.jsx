@@ -16,6 +16,7 @@ export default function Header() {
 				<Link to="/" className="flex text-4xl font-bold text-accent">
 					<img
 						src={MobileLogo}
+						alt={t("logoAlt")}
 						className="size-8 shrink-0 rounded-lg md:hidden"
 					/>
 					<IoIosRocket className="hidden mr-2 shrink-0 md:inline-block" />

@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import Tag from "./Tag";
 import PropTypes from "prop-types";
-import { useState } from "react";
-import { MdImageNotSupported } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { projectTags } from "../data/projects";
+import Image from "./Image";
 
 export default function ProjectCard({ id, coverimg }) {
 	const { t } = useTranslation("projects");
-	const [imgError, setImgError] = useState(false);
 
 	const title = t(`${id}.title`);
 	const description = t(`${id}.subtitle`);
@@ -27,24 +25,26 @@ export default function ProjectCard({ id, coverimg }) {
 
 				<hr className="border-neutral-content/20" />
 
-				<div className="flex flex-col gap-4 py-4 2xl:flex-row">
+				{/* <div className="flex flex-col gap-4 py-4 2xl:flex-row">
 					<p className="font-mono text-sm leading-relaxed text-balance text-neutral-content 2xl:w-1/2">
 						{description}
 					</p>
-					{coverimg && !imgError ? (
-						<div className="h-48 rounded-xl overflow-hidden md:mx-4 md:h-56 xl:mx-0 2xl:h-48 2xl:w-1/2">
-							<img
-								src={coverimg}
-								alt={title}
-								className="w-full h-full object-cover"
-								onError={() => setImgError(true)}
-							/>
-						</div>
-					) : (
-						<div className="w-full min-h-44 bg-neutral-content/20 rounded-xl flex items-center justify-center">
-							<MdImageNotSupported className="size-20 text-neutral-content" />
-						</div>
-					)}
+					<div className="h-48 rounded-xl overflow-hidden md:mx-4 md:h-56 xl:mx-0 2xl:h-48 2xl:w-1/2">
+						<Image
+							src={coverimg}
+							alt={t(`${id}.coverAlt`)}
+							className="w-full h-full object-cover"
+							loading="lazy"
+						/>
+					</div>
+				</div> */}
+				<div className="rounded-xl overflow-hidden my-4">
+					<Image
+						src={coverimg}
+						alt={t(`${id}.coverAlt`)}
+						className="w-full h-full object-cover"
+						loading="lazy"
+					/>
 				</div>
 
 				<hr className="border-neutral-content/20 pb-4" />

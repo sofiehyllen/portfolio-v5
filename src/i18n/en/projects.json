@@ -1,27 +1,50 @@
 {
   "parkzone": {
-    "title": "Technical Case Study - ParkZone",
+    "title": "ParkZone - React Web Application",
+    "coverAlt": "ParkZone website hero section",
+    "gallery": {
+      "privatHomepage": "Homepage for private customers",
+      "privatCheckout": "Checkout form for private customers",
+      "privatBooking": "Parking booking for private customers",
+      "privatLocation": "Parking location for private customers",
+      "privatContact": "Contact form for private customers",
+      "privatSubscription": "Subscription sign up for private customers",
+      "erhvervHomepage": "Homepage for business customers",
+      "erhvervProducts": "Product overview for business customers",
+      "erhvervContact": "Contact form for business customers"
+    },
     "subtitle": "Full frontend redesign and technical prototype of ParkZone’s public website. Focus on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
-      "This project is a full frontend redesign and technical prototype of ParkZone’s public website.",
-      "The focus was not only on UX and visual redesign, but on building a scalable, component-based architecture using a modern frontend stack and headless CMS setup.",
-      "The prototype simulates a production-ready structure with dynamic content, API integration, reusable components, and a structured booking/payment flow."
+      "This project is a full-scale website redesign for ParkZone A/S (now Guardian) — a Danish parking company with over 20 years of experience managing more than 2,000 parking areas across Denmark. The project is a React-based single-page application targeting two distinct user groups: private customers looking to find and book parking, and business customers seeking parking management solutions.", 
+      "The site integrates real-time data from Firebase Firestore, dynamic content from a headless WordPress CMS, and a fully custom multi-step booking flow — all presented through a responsive, component-driven UI built with Tailwind CSS."
     ],
     "features": [
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler"
+      "**Real-time Firestore Integration** — Parking area data is fetched directly from the Firebase Firestore REST API using dynamic route params, with a custom useFirebase hook for updates",
+      "**Multi-step Payment Flow** — A stateful, step-based booking component with branching logic depending on user selection, persistence for date/time values, and dynamic price calculation",
+      "**Headless WordPress CMS** — Blog content is fetched from a WordPress REST API via a custom useFetch hook. The implementation remains visible in the source code, although the content is no longer displayed on the deployed site due to the API no longer being maintained",
+      "**Client-side Form Validation** — A reusable InputField component exposes an onValidity callback, allowing parent components to aggregate field-level validity states before allowing form submission",
+      "**Component Architecture (Atomic Design)** — UI is structured into atoms, sections, cards, wrappers, and page-level components, with shared logic extracted into custom hooks.",
+      "**Conditional Rendering Based on Data Shape** — Parking detail pages conditionally render checkout prompts, pricing tiers, and informational blocks based on Firestore document fields.",
+      "**Scroll-aware Alert Visibility** — An alert component on parking pages tracks viewport intersection of the payment flow section via a scroll event listener, auto-dismissing when the user reaches the booking section",
+      "**Animated UI with Framer Motion** — Page transitions and interactive elements are animated using Framer Motion",
+      "**SEO Meta Management** — Each page sets its own <title> and <meta name=\"description\"> via React Helmet, passed as props through the PageWrapper component"
     ]
   },
   "wait": {
     "title": "Wait - Food ordering platform",
+    "coverAlt": "Wait platform customer dashboard",
+    "gallery": {
+      "customerDashboard": "Customer dashboard",
+      "searchResults": "Search results in customer dashboard",
+      "adminDashboard": "Admin dashboard",
+      "adminUsers": "User overview in admin dashboard",
+      "partnerDashboard": "Partner dashboard",
+      "restaurantMenu": "Menu overview in restaurant dashboard",
+      "restaurantAdd": "Adding a new menu item in restaurant dashboard"
+    },
     "subtitle": "Full-stack food ordering platform based on Wolt where users can browse restaurants, view menu items, and place orders. The system supports multiple roles, each with their own functionality and dashboards.",
     "date": "jun 2025",
     "code": "gitlab.com/sofiehyllen/wait_webdev",
@@ -43,13 +66,23 @@
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
+    "coverAlt": "AI chat for Shopify search widget",
+    "gallery": {
+      "homepage": "Test store with the widget implementet in the lower right corner",
+      "chatSummer": "Conversation with the AI chat about summer clothing",
+      "pageSummer1": "Part 1: Inspirational page generated based on the prior conversation about summer clothing",
+      "pageSummer2": "Part 2: Inspirational page generated based on the prior conversation about summer clothing",
+      "chatHike": "Conversation with the AI chat about active-wear",
+      "pageHike1": "Part 1: Inspirational page generated based on the prior conversation about active-wear",
+      "pageHike2": "Part 2: Inspirational page generated based on the prior conversation about active-wear"
+    },
     "subtitle": "An AI-powered search widget for Shopify stores that interprets natural language queries to generate dynamic results pages with personalized product recommendations.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "This project implements an AI-powered search widget for Shopify stores that enhances product discovery through natural language queries.",
       "Instead of relying on traditional keyword-based search, the system analyzes user prompts to understand intent and generates personalized product inspiration pages containing relevant product recommendations. The widget integrates with Shopify via the Admin API and can be embedded directly into existing webshops without requiring changes to the storefront layout or design.",
-      "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor's degree in web development."
+      "The primary focus of the project is backend architecture, API integration, and AI-assisted search logic, developed as part of a bachelor’s degree in web development."
     ],
     "features": [
       "**AI-assisted product search** using OpenAI to interpret natural language queries.",
@@ -60,21 +93,31 @@
     ]
   },
     "snake": {
-    "title": "Optimizing Neural Agents with a Genetic Algorithm Approach",
-    "subtitle": "This project uses a Genetic Algorithm to evolve neural network–controlled Snake agents that learn survival and apple collection in a classic Snake game. ",
+    "title": "Snake AI — Neuroevolution with Genetic Algorithms",
+    "coverAlt": "Neural network and snake game",
+    "gallery": {
+      "snakeGame": "Visualization of the snake game",
+      "applesGraph": "Graph of collected apples for each generation",
+      "neuralNetwork": "Neural network of snake agents",
+      "flow": "Flow of the lifecycle of each generation",
+      "comparison": "Human highscore of 12 and avg. of 6.13 compared to snake agents highscore of 116 and generational avg. of 34.20"
+    },
+    "subtitle": "This project uses a Genetic Algorithm to evolve neural network-controlled Snake agents that learn survival and apple collection in a classic Snake game.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",
     "description": [
-      "This project explores the use of a genetic algorithm to evolve intelligent Snake agents that maximize apple collection and survival. Neural networks act as controllers, while genetic operations such as selection, crossover, and mutation guide learning.",
-      "Each agent uses a feedforward neural network mapping 24 input features — distances to walls, body, and food — into 4 movement outputs. The network includes an input layer, a hidden layer, and an output layer.",
-      "The results show that with tuned fitness functions and input features, agents develop increasingly sophisticated behavior, suggesting that evolutionary algorithms can produce adaptive agents in simple game environments."
+      "This project explores the intersection of game development and artificial intelligence by training an autonomous agent to play the classic Snake game using neuroevolution.", "Rather than programming explicit rules or using traditional machine learning with backpropagation, a genetic algorithm evolves a population of neural networks over hundreds of generations — selecting, crossing over, and mutating the best performers until an agent emerges that can navigate the grid, avoid walls and its own body, and collect food effectively.",
+      "The snake agent perceives its environment through 8 binary sensors — detecting walls and food direction relative to its head — and outputs one of four movement decisions via a feed-forward neural network. No handcrafted logic guides its behavior; everything it learns comes purely from evolutionary pressure."
     ],
     "features": [
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler"
+      "**Neuroevolution training loop** — A genetic algorithm evolves a population of 100 neural networks across 300 generations, selecting the top 20 performers each round as parents for the next generation",
+      "**Feed-forward neural network agent** — 8-input → 10 hidden (tanh) → 4-output (softmax) architecture, with weights entirely encoded as the agent’s \"DNA\"",
+      "**Crossover & mutation** — New agents are bred from two parents using single-point crossover, with 5% random weight mutation to maintain genetic diversity",
+      "**Fitness function** — Agents are scored by apples collected and steps survived, with a stagnation penalty terminating runs where no food is collected within 100 steps",
+      "**Adaptive step limit** — The maximum allowed steps increases with each apple collected, rewarding agents that improve throughout a run",
+      "**Controller abstraction** — A protocol-based architecture supports both the GA agent and a human keyboard controller, sharing the same game loop",
+      "**Real-time visualization** — Pygame renders the snake agent playing live, and Matplotlib plots fitness and apple statistics across generations for experiment tracking",
+      "**Model persistence** — Trained models are serialized with Pickle, allowing the best agent to be saved and replayed without retraining"
     ]
   },
   "common": {

@@ -1,27 +1,50 @@
 {
   "parkzone": {
-    "title": "Technical Case Study - ParkZone",
+    "title": "ParkZone - React Web Application",
+    "coverAlt": "ParkZone hjemmesides hero-sektion",
+    "gallery": {
+      "privatHomepage": "Homepage for privatkunder",
+      "privatCheckout": "Check-ud formular for privatkunder",
+      "privatBooking": "Parkeringsbooking for privatkunder",
+      "privatLocation": "Parkeringslokation for privatkunder",
+      "privatContact": "Kontaktformular for privatkunder",
+      "privatSubscription": "Subscription sign up for privatkunder",
+      "erhvervHomepage": "Homepage for erhvervskunder",
+      "erhvervProducts": "Produktoverblik for erhvervskunder",
+      "erhvervContact": "Kontaktformular for erhvervskunder"
+    },
     "subtitle": "Frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside. Projektets fokus var skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS.",
     "date": "jun 2024",
     "code": "github.com/sofiehyllen/parkzone",
     "link": "parkzone-beige.vercel.app",
     "description": [
-      "Dette projekt er en fuld frontend redesign og teknisk prototype af ParkZones offentlige hjemmeside.",
-      "Fokus var ikke kun på UX og visuelt redesign, men på at bygge en skalerbar, komponentbaseret arkitektur med et moderne frontend-stack og headless CMS-opsætning.",
-      "Prototypen simulerer en produktionsklar struktur med dynamisk indhold, API-integration, genanvendelige komponenter og et struktureret booking/betalingsflow."
+      "Dette projekt er et komplet redesign af ParkZone A/S’ hjemmeside (nu Guardian) — et dansk parkeringsselskab med mere end 20 års erfaring og ansvar for over 2.000 parkeringsområder i hele Danmark. Projektet er udviklet som en React-baseret single-page application, målrettet to forskellige brugergrupper: privatkunder, der ønsker at finde og booke parkering, samt erhvervskunder, der søger løsninger til parkeringsadministration.",
+      "Hjemmesiden integrerer real-time data fra Firebase Firestore, dynamisk indhold fra et headless WordPress CMS samt et fuldt skræddersyet bookingflow i flere trin — alt sammen præsenteret i et responsivt, komponentbaseret interface bygget med Tailwind CSS."
     ],
     "features": [
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler"
+      "**Realtidsintegration med Firestore** — Data om parkeringsområder hentes direkte fra Firebase Firestore REST API’et ved hjælp af dynamiske route-parametre, samt en specialbygget useFirebase hook til opdateringer",
+      "**Bookingflow i flere trin** — En stateful bookingkomponent opbygget i trin med forgrenet logik afhængigt af brugerens valg, persistence af dato- og tidsværdier, samt dynamisk prisberegning",
+      "**Headless WordPress CMS** — Blogindhold hentes fra et WordPress REST API via et specialbygget useFetch hook. Implementeringen er stadig synlig i kildekoden, men indholdet vises ikke længere på den deployede løsning, da API’et ikke længere vedligeholdes",
+      "**Klient-side formularvalidering** — En genanvendelig InputField-komponent eksponerer en onValidity callback, så parent-komponenter kan samle valideringsstatus for inputfelter, før formularen indsendes",
+      "**Komponentarkitektur (Atomic Design)** — Interfacet er struktureret i atoms, sections, cards, wrappers og page-level komponenter, mens fælles logik er abstraheret ud i custom hooks.",
+      "**Betinget rendering baseret på datastruktur** — Parkeringsdetaljesider renderer betinget checkout-prompts, prisniveauer og informationsblokke afhængigt af datafelterne i Firestore-dokumenterne.",
+      "**Scroll-baseret alert-komponent** — En alert-komponent på parkeringssiderne vises og overvåger derefter, om bookingsektionen er i viewporten via en scroll event listener, og skjules automatisk, når brugeren når frem til bookingflowet",
+      "**Animeret UI med Framer Motion** — Sideovergange og interaktive elementer er animeret med Framer Motion",
+      "**SEO-håndtering af metadata** — Hver side sætter sin egen <title> og <meta name=\"description\"> via React Helmet, som sendes videre som props gennem PageWrapper-komponenten"
     ]
   },
   "wait": {
     "title": "Wait - Food ordering platform",
+    "coverAlt": "Wait platformens kundedashboard",
+    "gallery": {
+      "customerDashboard": "Kundedashboard",
+      "searchResults": "Søgeresultater i kundedashboard",
+      "adminDashboard": "Admindashboard",
+      "adminUsers": "Brugeroversigt i admindashboard",
+      "partnerDashboard": "Partnerdashboard",
+      "restaurantMenu": "Menupunkter i restaurantdashboard",
+      "restaurantAdd": "Tilføjelse af ny ret til menuen i restaurantdashboard"
+    },
     "subtitle": "Full-stack platform baseret på Wolt, hvor brugere kan browse restauranter, se menuer og afgive bestillinger. Systemet understøtter flere roller, hver med deres egen funktionalitet og dashboards.",
     "date": "jun 2025",
     "code": "gitlab.com/sofiehyllen/wait_webdev",
@@ -43,12 +66,22 @@
   },
   "shopify": {
     "title": "AI-Powered Shopify Search Widget",
+    "coverAlt": "AI chatten for Shopify widget",
+    "gallery": {
+      "homepage": "Testside med implementeret widget som ses nede i højre hjørne",
+      "chatSummer": "Samtale med AI chatten omkring sommertøj",
+      "pageSummer1": "Del 1: Inspirationsside genereret på baggrund af foregående samtale omkring sommertøj",
+      "pageSummer2": "Del 2: Inspirationsside genereret på baggrund af foregående samtale omkring sommertøj",
+      "chatHike": "Samtale med AI chatten omkring active-wear",
+      "pageHike1": "Del 1: Inspirationsside genereret på baggrund af foregående samtale omkring active-wear",
+      "pageHike2": "Del 2: Inspirationsside genereret på baggrund af foregående samtale omkring active-wear"
+    },
     "subtitle": "Et AI-drevet søgewidget til Shopify stores, der fortolker forespørgsler i naturligt sprog og genererer dynamiske resultatsider med personlige produktanbefalinger.",
     "date": "jan 2026",
     "code": "gitlab.com/sofiehyllen/bachelor_project",
     "description": [
       "Dette projekt implementerer en AI-drevet søgewidget til Shopify stores, der forbedrer produktsøgning gennem naturlige sprogforespørgsler.",
-      "Frem for at været baseret på traditionel nøgleordsbaseret søgning analyserer systemet brugerens input for at forstå hensigten og genererer personaliserede produktinspirationsider med relevante produktanbefalinger. Widgetten integrerer med Shopify via Admin API'et og kan indlejres direkte i eksisterende webshops uden behov for ændringer i shoppens eksisterende layout eller design.",
+      "Frem for at være baseret på traditionel nøgleordsbaseret søgning analyserer systemet brugerens input for at forstå hensigten og genererer personaliserede produktinspirationssider med relevante produktanbefalinger. Widgetten integrerer med Shopify via Admin API’et og kan indlejres direkte i eksisterende webshops uden behov for ændringer i shoppens eksisterende layout eller design.",
       "Projektets primære fokus er backendarkitektur, API-integration og AI-assisteret søgelogik, udviklet som en del af en bacheloruddannelse i Webudvikling."
     ],
     "features": [
@@ -60,21 +93,32 @@
     ]
   },
   "snake": {
-    "title": "Optimering af Neurale Agenter med en Genetisk Algoritme",
+    "title": "Snake AI — Neuroevolution med Genetiske Algoritmer",
+    "coverAlt": "Neuralt netværk",
+    "gallery": {
+      "snakeGame": "Visualisering af snake spillet",
+      "applesGraph": "Graf af samlede antal æbler for hver generation",
+      "neuralNetwork": "Neuralt netværk for snake agenter",
+      "flow": "Flow af hver generations livscyklus",
+      "comparison": "Menneskelig highscore på 12 og et gnm. på 6.13 sammenlignet med snake agenterns highscore på 116 og et generationsgennemsnit på 34.20"
+    },
     "subtitle": "Dette projekt bruger en genetisk algoritme til at udvikle neuralt netværk-styrede Snake-agenter, der lærer at overleve og spise æbler i et klassisk Snake-spil.",
     "date": "jun 2025",
     "code": "gitlab.com/aai_exam/ga_snake_project",
     "description": [
-      "Dette projekt undersøger brugen af en genetisk algoritme til at udvikle intelligente Snake-agenter, der maksimerer æbleindsamling og overlevelse. Neurale netværk fungerer som controllere, mens genetiske operationer som selection, crossover og mutation styrer indlæringen.",
-      "Hver agent bruger et feedforward neuralt netværk, der mapper 24 inputfunktioner — afstande til vægge, krop og mad — til 4 bevægelsesoutputs. Netværket består af et inputlag, et hidden lag og et outputlag.",
-      "Resultaterne viser, at agenter med veltunet fitnessfunktion og inputfunktioner udvikler stadig mere avanceret adfærd, hvilket viser, at evolutionære algoritmer kan producere adaptive agenter i simple spilmiljøer."
+      "Dette projekt undersøger samspillet mellem spiludvikling og kunstig intelligens ved at træne en autonom agent til at spille det klassiske Snake-spil ved hjælp af neuroevolution.",
+      "Frem for at programmere eksplicitte regler eller anvende traditionel machine learning med backpropagation, udvikler en genetisk algoritme en population af neurale netværk over hundredvis af generationer — ved at udvælge, kombinere og mutere de bedst præsterende individer, indtil der opstår en agent, som effektivt kan navigere på gridet, undgå vægge og sin egen krop samt samle mad.",
+      "Snake-agenten forstår sit miljø gennem 8 binære sensorer, som registrerer vægge og madens retning i forhold til dens hoved, og afgiver én af fire mulige bevægelsesbeslutninger via et feed-forward neuralt netværk. Dens adfærd er ikke styret af håndkodet logik; alt, hvad den lærer, opstår udelukkende gennem evolutionært selektionspres."
     ],
     "features": [
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler",
-      "mangler"
+      "**Træningsloop med neuroevolution** — En genetisk algoritme udvikler en population på 100 neurale netværk over 300 generationer, hvor de 20 bedst præsterende individer i hver runde udvælges som forældre til næste generation",
+      "**Feed-forward neuralt netværk som agent** — Arkitektur med 8 input → 10 skjulte neuroner (tanh) → 4 output (softmax), hvor alle vægte er fuldt ud kodet som agentens \"DNA\"",
+      "**Crossover og mutation** — Nye agenter skabes ud fra to forældre ved hjælp af single-point crossover samt 5 % tilfældig mutation af vægtene for at bevare genetisk diversitet",
+      "**Fitnessfunktion** — Agenter vurderes ud fra antal indsamlede æbler og antal overlevede skridt, med en stagnationsstraf der afslutter et run, hvis der ikke indsamles mad inden for 100 skridt",
+      "**Adaptiv step-grænse** — Det maksimalt tilladte antal skridt øges for hvert indsamlet æble, hvilket belønner agenter, der forbedrer deres performance undervejs i et run",
+      "**Controller-abstraktion** — En protokolbaseret arkitektur understøtter både GA-agenten og en menneskelig keyboard-controller, som deler det samme game loop",
+      "**Realtidsvisualisering** — Pygame renderer agentens gameplay live, mens Matplotlib visualiserer fitness- og æblestatistik på tværs af generationer til eksperimenttracking",
+      "**Modelpersistens** — Trænede modeller serialiseres med Pickle, så den bedste agent kan gemmes og afspilles igen uden behov for retræning"
     ]
   },
     "common": {

@@ -24,7 +24,8 @@
       "backend": "Backend",
       "databases": "Databaser",
       "frontend": "Frontend",
-      "devops": "DevOps & Infrastruktur"
+      "devops": "DevOps & Infrastruktur",
+      "ai": "AI & Machine Learning"
     },
     "education": "Uddannelse",
     "experience": "Erfaring",
@@ -58,6 +59,7 @@
   },
   "contact": {
     "title": "Kontakt mig",
+    "profileAlt": "Avatar af Sofie Hyllen",
     "subtitle": "Udfyld formularen nedenfor eller find mig på de sociale medier.",
     "name": "Navn",
     "email": "E-mail",
