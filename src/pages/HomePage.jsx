@@ -10,9 +10,9 @@ export default function HomePage() {
 	const { t } = useTranslation("pages");
 
 	return (
-		<section className="flex justify-center mt-20 md:mt-28 md:mx-16 xl:mt-72 xl:mx-48">
-			<div className="flex space-x-10">
-				<div className="w-1/2 shrink-0">
+		<section className="mt-20 md:mt-28 md:mx-16 xl:mt-32 xl:mx-32 2xl:mt-56">
+			<div className="flex flex-col lg:flex-row lg:space-x-10">
+				<div className="w-full pb-14 lg:w-1/2 lg:shrink-0 lg:pb-0">
 					<h1 className="font-sans font-bold text-5xl text-primary-content md:text-8xl">
 						{t("home.title")}
 					</h1>

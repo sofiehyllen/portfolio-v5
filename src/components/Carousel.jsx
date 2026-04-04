@@ -54,7 +54,7 @@ export default function Carousel() {
 									{slide.date}
 								</p>
 							</div>
-							<div className="rounded-xl overflow-hidden w-full h-80">
+							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
 									src={slide.img}
 									alt={t(`${slide.id}.coverAlt`)}
