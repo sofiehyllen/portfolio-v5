@@ -63,7 +63,7 @@ export default function ProjectPage() {
 				/>
 			</div>
 			<div className="space-y-7 md:space-y-16 xl:pt-5 xl:flex xl:space-x-10 xl:space-y-0">
-				<CodeBlock id={id}/>
+				<CodeBlock id={id} />
 				<div className="xl:w-3/5 space-y-16">
 					<div>
 						<h2 className="h2 md:text-5xl pb-5 md:pb-8">

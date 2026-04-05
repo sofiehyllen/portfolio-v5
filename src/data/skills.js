@@ -38,7 +38,7 @@ export const SKILLS = [
 			"Framer-motion",
 			"Pygame",
 			"SPA",
-			"i18n"
+			"i18n",
 		],
 	},
 	{

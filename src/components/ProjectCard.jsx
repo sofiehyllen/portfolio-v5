@@ -9,7 +9,7 @@ export default function ProjectCard({ id, coverimg }) {
 	const { t } = useTranslation("projects");
 
 	const title = t(`${id}.title`);
-	const description = t(`${id}.subtitle`);
+	// const description = t(`${id}.subtitle`);
 	const tags = projectTags[id] ?? [];
 	const date = t(`${id}.date`);
 	const link = `/projects/${id}`;

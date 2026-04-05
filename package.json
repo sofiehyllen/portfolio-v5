@@ -7,8 +7,9 @@
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
-        "format": "prettier \"src/**/*.{js,jsx,css,html}\" --write",
-        "preview": "vite preview"
+        "format": "prettier \"src/**/*.{js,jsx,css,html}\" \"scripts/**/*.js\" --write",
+        "preview": "vite preview",
+        "resize-images": "node scripts/resize-images.js"
     },
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
@@ -20,7 +21,8 @@
         "react-i18next": "^15.0.2",
         "react-icons": "^5.2.1",
         "react-router": "^6.26.0",
-        "react-router-dom": "^6.26.0"
+        "react-router-dom": "^6.26.0",
+        "sharp": "^0.34.5"
     },
     "devDependencies": {
         "@eslint/js": "^9.8.0",
