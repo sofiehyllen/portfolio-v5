@@ -10,7 +10,7 @@ import Image from "./Image";
 
 const slides = [
 	{
-		label: "AI-Powered Shopify Search Widget",
+		label: "AI Shopify Search Widget",
 		img: WidgetThumbnail,
 		date: "jan 2026",
 		id: "shopify",
@@ -54,7 +54,7 @@ export default function Carousel() {
 									{slide.date}
 								</p>
 							</div>
-							<div className="rounded-xl overflow-hidden w-full h-80">
+							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
 									src={slide.img}
 									alt={t(`${slide.id}.coverAlt`)}

@@ -17,9 +17,9 @@ function parseBold(text) {
 
 const SPANS = {
 	full: "col-span-2 md:col-span-6",
-	half: "col-span-1 md:col-span-3",
-	wide: "col-span-1 md:col-span-4",
-	narrow: "col-span-1 md:col-span-2",
+	half: "col-span-2 md:col-span-3",
+	wide: "col-span-2 md:col-span-4",
+	narrow: "col-span-2 md:col-span-2",
 };
 
 export default function ProjectPage() {
@@ -39,7 +39,7 @@ export default function ProjectPage() {
 	}));
 
 	return (
-		<div className="space-y-7 mt-14 md:mt-20 md:mx-16 2xl:mx-32">
+		<div className="space-y-7 mt-14 md:mt-20 md:mx-10 lg:mx-16 2xl:mx-32">
 			<button
 				onClick={() => navigate(-1)}
 				className="flex items-center gap-2 font-mono text-sm mb-8">
@@ -55,18 +55,18 @@ export default function ProjectPage() {
 				</h1>
 				<p className="font-mono xl:text-lg">{t(`${id}.subtitle`)}</p>
 			</div>
-			<div className="w-full overflow-hidden rounded-3xl h-[35rem] shadow-sm">
+			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-sm xl:h-[35rem]">
 				<Image
 					src={image}
 					alt={t(`${id}.coverAlt`)}
 					className="w-full h-full object-cover object-top"
 				/>
 			</div>
-			<div className="space-y-7 pt-5 xl:flex xl:space-x-10 xl:space-y-0">
-				<CodeBlock id={id} />
+			<div className="space-y-7 md:space-y-16 xl:pt-5 xl:flex xl:space-x-10 xl:space-y-0">
+				<CodeBlock id={id}/>
 				<div className="xl:w-3/5 space-y-16">
 					<div>
-						<h2 className="h2 text-5xl pb-8">
+						<h2 className="h2 md:text-5xl pb-5 md:pb-8">
 							{t("common.description")}
 						</h2>
 						<div className="space-y-5 text-sm text-secondary-content xl:text-base">

@@ -49,8 +49,8 @@ export default function ContactPage() {
 
 	return (
 		<PageLayout title={t("contact.title")} subtitle={t("contact.subtitle")}>
-			<div className="flex space-x-8">
-				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit max-w-72">
+			<div className="flex flex-col md:flex-row gap-4 lg:gap-8">
+				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit w-full sm:max-w-72 md:p-5 md:w-5/12">
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
 						<img
 							src={ProfileImg}
@@ -103,7 +103,7 @@ export default function ContactPage() {
 						</a>
 					</div>
 				</div>
-				<div className="w-3/5 bg-gradient-to-r from-white/35 to-secondary/35 dark:from-white/5 dark:to-gray-400/10 p-6 rounded-2xl h-fit">
+				<div className="w-full md:flex-1 bg-gradient-to-r from-white/35 to-secondary/35 dark:from-white/5 dark:to-gray-400/10 p-6 rounded-2xl h-fit">
 					{status === "sent" ? (
 						<div className="space-y-6 flex flex-col items-center pt-10 pb-5">
 							<IoIosRocket className="size-12 text-accent" />
@@ -118,7 +118,7 @@ export default function ContactPage() {
 						</div>
 					) : (
 						<form onSubmit={handleSubmit} className="space-y-6 ">
-							<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+							<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 								<div>
 									<label className="label">
 										{t("contact.name")}
