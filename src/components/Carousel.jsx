@@ -10,7 +10,7 @@ import Image from "./Image";
 
 const slides = [
 	{
-		label: "AI-Powered Shopify Search Widget",
+		label: "AI Shopify Search Widget",
 		img: WidgetThumbnail,
 		date: "jan 2026",
 		id: "shopify",
