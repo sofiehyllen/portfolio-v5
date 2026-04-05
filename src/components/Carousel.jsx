@@ -61,7 +61,10 @@ export default function Carousel() {
 							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
 									src={slide.img}
-									srcSet={buildSrcSet(slide.filename, "thumb")}
+									srcSet={buildSrcSet(
+										slide.filename,
+										"thumb"
+									)}
 									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
