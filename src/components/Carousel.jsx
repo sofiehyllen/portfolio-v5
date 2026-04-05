@@ -1,29 +1,33 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import ParkzoneThumbnail from "@assets/pz_thumbnail.png";
-import WidgetThumbnail from "@assets/widget_thumbnail.png";
-import WaitThumbnail from "@assets/wait_thumbnail.png";
+import ParkzoneThumbnail from "@assets/originals/pz_thumbnail.png";
+import WidgetThumbnail from "@assets/originals/widget_thumbnail.png";
+import WaitThumbnail from "@assets/originals/wait_thumbnail.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Image from "./Image";
+import { buildSrcSet, THUMB_SIZES } from "../utils/srcset";
 
 const slides = [
 	{
 		label: "AI Shopify Search Widget",
 		img: WidgetThumbnail,
+		filename: "widget_thumbnail.png",
 		date: "jan 2026",
 		id: "shopify",
 	},
 	{
 		label: "Food Ordering Platform",
 		img: WaitThumbnail,
+		filename: "wait_thumbnail.png",
 		date: "jun 2025",
 		id: "wait",
 	},
 	{
 		label: "Company Website",
 		img: ParkzoneThumbnail,
+		filename: "pz_thumbnail.png",
 		date: "jun 2024",
 		id: "parkzone",
 	},
@@ -57,6 +61,8 @@ export default function Carousel() {
 							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
 									src={slide.img}
+									srcSet={buildSrcSet(slide.filename, "thumb")}
+									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
 									loading="lazy"

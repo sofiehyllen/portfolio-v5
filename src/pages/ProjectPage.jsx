@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
-import { projectImages, projectGalleries } from "../data/projects";
+import { projectImages, projectGalleries, projectThumbFilenames } from "../data/projects";
 import Lightbox from "../components/Lightbox";
 import Image from "../components/Image";
+import { buildSrcSet, GALLERY_SIZES, HERO_SIZES } from "../utils/srcset";
 
 function parseBold(text) {
 	return text
@@ -29,6 +30,7 @@ export default function ProjectPage() {
 	const [lightboxIndex, setLightboxIndex] = useState(null);
 
 	const image = projectImages[id];
+	const thumbFilename = projectThumbFilenames[id];
 	const gallery = projectGalleries[id] ?? [];
 	const lightboxImages = gallery.map(({ src, captionKey }, i) => ({
 		src,
@@ -58,6 +60,8 @@ export default function ProjectPage() {
 			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-sm xl:h-[35rem]">
 				<Image
 					src={image}
+					srcSet={buildSrcSet(thumbFilename, "hero")}
+					sizes={HERO_SIZES}
 					alt={t(`${id}.coverAlt`)}
 					className="w-full h-full object-cover object-top"
 				/>
@@ -100,7 +104,7 @@ export default function ProjectPage() {
 			{gallery.length > 0 && (
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-						{gallery.map(({ src, size, captionKey }, i) => {
+						{gallery.map(({ src, filename, size, captionKey }, i) => {
 							const caption = captionKey
 								? t(`${id}.gallery.${captionKey}`)
 								: undefined;
@@ -113,6 +117,8 @@ export default function ProjectPage() {
 										onClick={() => setLightboxIndex(i)}>
 										<Image
 											src={src}
+											srcSet={buildSrcSet(filename, "gallery")}
+											sizes={GALLERY_SIZES[size]}
 											alt={
 												caption ??
 												`${t(`${id}.title`)} ${i + 1}`

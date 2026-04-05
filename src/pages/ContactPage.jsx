@@ -6,7 +6,7 @@ import { FaGitlab } from "react-icons/fa6";
 import PageLayout from "../components/wrappers/PageLayout";
 import Button from "../components/buttons/Button";
 import { IoIosRocket } from "react-icons/io";
-import ProfileImg from "@assets/profile_picture.png";
+import ProfileImg from "@assets/originals/profile_picture.png";
 import { LuMapPin } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { FaLinkedinIn } from "react-icons/fa";
