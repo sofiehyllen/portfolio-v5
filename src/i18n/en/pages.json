@@ -1,4 +1,9 @@
 {
+  "social": {
+    "linkedin": "LinkedIn profile",
+    "github": "GitHub profile",
+    "gitlab": "GitLab profile"
+  },
   "home": {
     "pretitle": "Hello! I am",
     "title": "sofie hyllen",

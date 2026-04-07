@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function ThemeButton() {
-	const { t } = useTranslation();
+	const { t } = useTranslation("navigation");
 
 	const [theme, setTheme] = useState(() => {
 		if (typeof window !== "undefined") {
@@ -31,6 +31,7 @@ export default function ThemeButton() {
 						type="checkbox"
 						className="theme-controller"
 						value="darktheme"
+						aria-label={t("toggleTheme")}
 					/>
 
 					{/* sun icon */}

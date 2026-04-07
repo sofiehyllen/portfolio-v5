@@ -29,7 +29,7 @@ export default {
                     info: '#67E8F9',
                     success: '#B9F452',
                     warning: '#F97316',
-                    error: '#DC2626',
+                    error: '#E84949',
                 },
             },
             {
@@ -46,7 +46,7 @@ export default {
                     info: '#67E8F9',
                     success: '#B9F452',
                     warning: '#F97316',
-                    error: '#DC2626',
+                    error: '#871414',
                 },
             },
         ],

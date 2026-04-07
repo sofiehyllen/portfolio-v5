@@ -28,6 +28,7 @@ export default function Header() {
 			</div>
 			<button
 				className="p-2 bg-secondary rounded-md md:hidden"
+				aria-label={t("menuOpen")}
 				onClick={() =>
 					document.getElementById("my_modal_3").showModal()
 				}>
@@ -38,8 +39,8 @@ export default function Header() {
 				className="modal [&::backdrop]:backdrop-blur-sm [&::backdrop]:bg-black/30 md:hidden">
 				<div className="modal-box min-w-full min-h-screen rounded-none bg-primary/95 p-5 pt-28">
 					<form method="dialog">
-						<button className="size-9 pt-1 bg-secondary rounded-md absolute right-5 top-10 text-lg">
-							✕
+						<button className="size-9 pt-1 bg-secondary rounded-md absolute right-5 top-10 text-lg" aria-label={t("menuClose")}>
+							<span aria-hidden="true">✕</span>
 						</button>
 					</form>
 					<h3 className="font-bold text-5xl pb-10">

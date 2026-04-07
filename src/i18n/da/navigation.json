@@ -5,5 +5,16 @@
   "controls": "Kontrolcenter",
   "language": "Sprog",
   "theme": "Tema",
-  "logoAlt": "Sofie Hyllen logo"
+  "logoAlt": "Sofie Hyllen logo",
+  "menuOpen": "Åbn menu",
+  "menuClose": "Luk menu",
+  "toggleTheme": "Skift tema",
+  "switchToEnglish": "Skift til engelsk",
+  "switchToDanish": "Skift til dansk",
+  "prevSlide": "Forrige slide",
+  "nextSlide": "Næste slide",
+  "goToSlide": "Gå til slide {{number}}: {{label}}",
+  "prevImage": "Forrige billede",
+  "nextImage": "Næste billede",
+  "closeGallery": "Luk billedvisning"
 }

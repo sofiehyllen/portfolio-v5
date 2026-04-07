@@ -26,19 +26,22 @@ export default function HomePage() {
 							<a
 								href="https://www.linkedin.com/in/sofiefhyllen/"
 								target="_blank"
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+								aria-label={t("social.linkedin")}>
 								<FaLinkedin className="size-6 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
 							<a
 								href="https://gitlab.com/sofiehyllen"
 								target="_blank"
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+								aria-label={t("social.gitlab")}>
 								<FaGitlab className="size-5 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
 							<a
 								href="https://github.com/sofiehyllen"
 								target="_blank"
-								rel="noopener noreferrer">
+								rel="noopener noreferrer"
+								aria-label={t("social.github")}>
 								<FaGithub className="size-6 text-secondary-content/40 hover:text-secondary-content/60 transition-colors" />
 							</a>
 						</div>
