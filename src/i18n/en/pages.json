@@ -73,6 +73,7 @@
     "sending": "sending...",
     "sent": "Thank you for your message. I'll get back to you as soon as possible.",
     "error": "Something went wrong. Please try again or contact me directly.",
-    "send_again": "Send new message"
+    "send_again": "Send new message",
+    "required": "This field is required"
   }
 }

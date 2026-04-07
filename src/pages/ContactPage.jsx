@@ -15,27 +15,44 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const INITIAL = { name: "", email: "", subject: "", message: "" };
 
+function validate(form) {
+	const errors = {};
+	if (!form.name.trim()) errors.name = true;
+	if (!form.email.trim()) errors.email = true;
+	if (!form.subject.trim()) errors.subject = true;
+	if (!form.message.trim()) errors.message = true;
+	return errors;
+}
+
 export default function ContactPage() {
 	const { t } = useTranslation("pages");
 	const [form, setForm] = useState(INITIAL);
+	const [errors, setErrors] = useState({});
 	const [status, setStatus] = useState("idle"); // idle | sending | sent | error
 
 	function handleChange(e) {
-		setForm({ ...form, [e.target.name]: e.target.value });
+		const { name, value } = e.target;
+		setForm({ ...form, [name]: value });
+		if (errors[name]) setErrors({ ...errors, [name]: false });
 	}
 
 	async function handleSubmit(e) {
 		e.preventDefault();
+		const newErrors = validate(form);
+		if (Object.keys(newErrors).length > 0) {
+			setErrors(newErrors);
+			return;
+		}
 		setStatus("sending");
 		try {
 			await emailjs.send(
 				import.meta.env.VITE_EMAILJS_SERVICE_ID,
 				import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 				{
-					from_name: form.name,
-					from_email: form.email,
-					subject: form.subject,
-					message: form.message,
+					from_name: form.name.trim(),
+					from_email: form.email.trim(),
+					subject: form.subject.trim(),
+					message: form.message.trim(),
 				},
 				{
 					publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
@@ -127,7 +144,7 @@ export default function ContactPage() {
 										{t("contact.name")}
 									</label>
 									<input
-										className="inputfield"
+										className={`inputfield ${errors.name ? "border-error" : ""}`}
 										type="text"
 										name="name"
 										value={form.name}
@@ -143,7 +160,7 @@ export default function ContactPage() {
 										{t("contact.email")}
 									</label>
 									<input
-										className="inputfield"
+										className={`inputfield ${errors.email ? "border-error" : ""}`}
 										type="email"
 										name="email"
 										value={form.email}
@@ -160,7 +177,7 @@ export default function ContactPage() {
 									{t("contact.subject")}
 								</label>
 								<input
-									className="inputfield"
+									className={`inputfield ${errors.subject ? "border-error" : ""}`}
 									type="text"
 									name="subject"
 									value={form.subject}
@@ -176,7 +193,7 @@ export default function ContactPage() {
 									{t("contact.message")}
 								</label>
 								<textarea
-									className="textfield"
+									className={`textfield ${errors.message ? "border-error" : ""}`}
 									name="message"
 									rows={6}
 									value={form.message}

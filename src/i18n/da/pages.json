@@ -73,6 +73,7 @@
     "sending": "sender...",
     "sent": "Tak for din besked. Jeg vender tilbage hurtigst muligt.",
     "error": "Noget gik galt. Prøv igen eller kontakt mig direkte.",
-    "send_again": "Send ny besked"
+    "send_again": "Send ny besked",
+    "required": "Feltet må ikke være tomt"
   }
 }
