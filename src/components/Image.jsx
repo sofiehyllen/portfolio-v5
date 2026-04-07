@@ -5,7 +5,7 @@ import { MdImageNotSupported } from "react-icons/md";
 export default function Image({ src, alt, className, loading, srcSet, sizes }) {
 	const [imgError, setImgError] = useState(false);
 
-	if (!src || imgError) {
+	if ((!src && !srcSet) || imgError) {
 		return (
 			<div className="w-full h-full min-h-44 bg-neutral-content/20 flex items-center justify-center">
 				<MdImageNotSupported className="size-20 text-neutral-content" />
