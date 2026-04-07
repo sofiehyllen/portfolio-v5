@@ -14,6 +14,7 @@
   "prevSlide": "Forrige slide",
   "nextSlide": "Næste slide",
   "goToSlide": "Gå til slide {{number}}: {{label}}",
+  "mainNav": "Hovednavigation",
   "prevImage": "Forrige billede",
   "nextImage": "Næste billede",
   "closeGallery": "Luk billedvisning"

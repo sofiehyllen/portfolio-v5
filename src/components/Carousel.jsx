@@ -42,7 +42,6 @@ export default function Carousel() {
 									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
-									loading="lazy"
 								/>
 							</div>
 						</Link>
