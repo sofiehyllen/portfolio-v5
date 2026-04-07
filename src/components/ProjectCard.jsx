@@ -2,14 +2,16 @@ import { Link } from "react-router-dom";
 import Tag from "./Tag";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import { projectTags } from "../data/projects";
+import { projectTags, projectThumbFilenames } from "../data/projects";
 import Image from "./Image";
+import { buildSrcSet, THUMB_SIZES } from "../utils/srcset";
 
 export default function ProjectCard({ id, coverimg }) {
 	const { t } = useTranslation("projects");
+	const thumbFilename = projectThumbFilenames[id];
 
 	const title = t(`${id}.title`);
-	const description = t(`${id}.subtitle`);
+	// const description = t(`${id}.subtitle`);
 	const tags = projectTags[id] ?? [];
 	const date = t(`${id}.date`);
 	const link = `/projects/${id}`;
@@ -41,9 +43,10 @@ export default function ProjectCard({ id, coverimg }) {
 				<div className="rounded-xl overflow-hidden my-4">
 					<Image
 						src={coverimg}
+						srcSet={buildSrcSet(thumbFilename, "thumb")}
+						sizes={THUMB_SIZES}
 						alt={t(`${id}.coverAlt`)}
 						className="w-full h-full object-cover"
-						loading="lazy"
 					/>
 				</div>
 

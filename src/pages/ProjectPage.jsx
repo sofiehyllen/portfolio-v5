@@ -3,9 +3,14 @@ import { useTranslation } from "react-i18next";
 import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
-import { projectImages, projectGalleries } from "../data/projects";
+import {
+	projectImages,
+	projectGalleries,
+	projectThumbFilenames,
+} from "../data/projects";
 import Lightbox from "../components/Lightbox";
 import Image from "../components/Image";
+import { buildSrcSet, GALLERY_SIZES, HERO_SIZES } from "../utils/srcset";
 
 function parseBold(text) {
 	return text
@@ -29,9 +34,12 @@ export default function ProjectPage() {
 	const [lightboxIndex, setLightboxIndex] = useState(null);
 
 	const image = projectImages[id];
+	const thumbFilename = projectThumbFilenames[id];
 	const gallery = projectGalleries[id] ?? [];
-	const lightboxImages = gallery.map(({ src, captionKey }, i) => ({
+	const lightboxImages = gallery.map(({ src, filename, size, captionKey }, i) => ({
 		src,
+		filename,
+		size,
 		alt: captionKey
 			? t(`${id}.gallery.${captionKey}`)
 			: `${t(`${id}.coverAlt`)} ${i + 1}`,
@@ -58,12 +66,14 @@ export default function ProjectPage() {
 			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-sm xl:h-[35rem]">
 				<Image
 					src={image}
+					srcSet={buildSrcSet(thumbFilename, "hero")}
+					sizes={HERO_SIZES}
 					alt={t(`${id}.coverAlt`)}
 					className="w-full h-full object-cover object-top"
 				/>
 			</div>
 			<div className="space-y-7 md:space-y-16 xl:pt-5 xl:flex xl:space-x-10 xl:space-y-0">
-				<CodeBlock id={id}/>
+				<CodeBlock id={id} />
 				<div className="xl:w-3/5 space-y-16">
 					<div>
 						<h2 className="h2 md:text-5xl pb-5 md:pb-8">
@@ -100,35 +110,42 @@ export default function ProjectPage() {
 			{gallery.length > 0 && (
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-						{gallery.map(({ src, size, captionKey }, i) => {
-							const caption = captionKey
-								? t(`${id}.gallery.${captionKey}`)
-								: undefined;
-							return (
-								<div
-									key={i}
-									className={`space-y-2 ${SPANS[size]}`}>
+						{gallery.map(
+							({ src, filename, size, captionKey }, i) => {
+								const caption = captionKey
+									? t(`${id}.gallery.${captionKey}`)
+									: undefined;
+								return (
 									<div
-										className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700"
-										onClick={() => setLightboxIndex(i)}>
-										<Image
-											src={src}
-											alt={
-												caption ??
-												`${t(`${id}.title`)} ${i + 1}`
-											}
-											className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-											loading="lazy"
-										/>
+										key={i}
+										className={`space-y-2 ${SPANS[size]}`}>
+										<div
+											className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700"
+											onClick={() => setLightboxIndex(i)}>
+											<Image
+												src={src}
+												srcSet={buildSrcSet(
+													filename,
+													"gallery"
+												)}
+												sizes={GALLERY_SIZES[size]}
+												alt={
+													caption ??
+													`${t(`${id}.title`)} ${i + 1}`
+												}
+												className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+												loading="lazy"
+											/>
+										</div>
+										{caption && (
+											<p className="font-mono text-xs text-secondary-content italic">
+												{caption}
+											</p>
+										)}
 									</div>
-									{caption && (
-										<p className="font-mono text-xs text-secondary-content italic">
-											{caption}
-										</p>
-									)}
-								</div>
-							);
-						})}
+								);
+							}
+						)}
 					</div>
 				</div>
 			)}
