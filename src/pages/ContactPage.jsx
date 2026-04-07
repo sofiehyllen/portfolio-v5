@@ -140,10 +140,11 @@ export default function ContactPage() {
 						<form onSubmit={handleSubmit} className="space-y-6 ">
 							<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 								<div>
-									<label className="label">
+									<label className="label" htmlFor="contact-name">
 										{t("contact.name")}
 									</label>
 									<input
+										id="contact-name"
 										className={`inputfield ${errors.name ? "border-error" : ""}`}
 										type="text"
 										name="name"
@@ -156,10 +157,11 @@ export default function ContactPage() {
 									/>
 								</div>
 								<div>
-									<label className="label">
+									<label className="label" htmlFor="contact-email">
 										{t("contact.email")}
 									</label>
 									<input
+										id="contact-email"
 										className={`inputfield ${errors.email ? "border-error" : ""}`}
 										type="email"
 										name="email"
@@ -173,10 +175,11 @@ export default function ContactPage() {
 								</div>
 							</div>
 							<div>
-								<label className="label">
+								<label className="label" htmlFor="contact-subject">
 									{t("contact.subject")}
 								</label>
 								<input
+									id="contact-subject"
 									className={`inputfield ${errors.subject ? "border-error" : ""}`}
 									type="text"
 									name="subject"
@@ -189,10 +192,11 @@ export default function ContactPage() {
 								/>
 							</div>
 							<div>
-								<label className="label">
+								<label className="label" htmlFor="contact-message">
 									{t("contact.message")}
 								</label>
 								<textarea
+									id="contact-message"
 									className={`textfield ${errors.message ? "border-error" : ""}`}
 									name="message"
 									rows={6}

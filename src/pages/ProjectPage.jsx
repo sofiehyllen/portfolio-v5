@@ -119,8 +119,10 @@ export default function ProjectPage() {
 									<div
 										key={i}
 										className={`space-y-2 ${SPANS[size]}`}>
-										<div
-											className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700"
+										<button
+											type="button"
+											className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700 w-full block"
+											aria-label={caption ?? `${t(`${id}.title`)} ${i + 1}`}
 											onClick={() => setLightboxIndex(i)}>
 											<Image
 												src={src}
@@ -136,7 +138,7 @@ export default function ProjectPage() {
 												className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 												loading="lazy"
 											/>
-										</div>
+										</button>
 										{caption && (
 											<p className="font-mono text-xs text-secondary-content italic">
 												{caption}
