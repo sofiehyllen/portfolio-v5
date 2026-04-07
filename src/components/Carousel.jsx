@@ -35,6 +35,7 @@ const slides = [
 
 export default function Carousel() {
 	const { t } = useTranslation("projects");
+	const { t: tNav } = useTranslation("navigation");
 	const [current, setCurrent] = useState(0);
 
 	const goTo = (n) => setCurrent((n + slides.length) % slides.length);
@@ -78,15 +79,19 @@ export default function Carousel() {
 
 			<div className="flex items-center justify-center gap-4 mt-4">
 				<button
+					aria-label={tNav("prevSlide")}
 					onClick={() => goTo(current - 1)}
 					className="w-9 h-9 rounded-full flex items-center justify-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary">
-					<MdKeyboardArrowLeft />
+					<MdKeyboardArrowLeft aria-hidden="true" />
 				</button>
 
 				<div className="flex items-center gap-1.5">
-					{slides.map((_, i) => (
-						<div
+					{slides.map((slide, i) => (
+						<button
+							type="button"
 							key={i}
+							aria-label={tNav("goToSlide", { number: i + 1, label: slide.label })}
+							aria-current={i === current ? "true" : undefined}
 							onClick={() => goTo(i)}
 							className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
 								i === current
@@ -98,9 +103,10 @@ export default function Carousel() {
 				</div>
 
 				<button
+					aria-label={tNav("nextSlide")}
 					onClick={() => goTo(current + 1)}
 					className="w-9 h-9 rounded-full flex items-center justify-center text-2xl hover:bg-secondary/50 transition dark:hover:bg-secondary">
-					<MdKeyboardArrowRight />
+					<MdKeyboardArrowRight aria-hidden="true" />
 				</button>
 			</div>
 		</div>

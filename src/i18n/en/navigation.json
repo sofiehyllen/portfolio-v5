@@ -7,5 +7,14 @@
   "theme": "Theme",
   "logoAlt": "Sofie Hyllen logo",
   "menuOpen": "Open menu",
-  "menuClose": "Close menu"
+  "menuClose": "Close menu",
+  "toggleTheme": "Toggle theme",
+  "switchToEnglish": "Switch to English",
+  "switchToDanish": "Switch to Danish",
+  "prevSlide": "Previous slide",
+  "nextSlide": "Next slide",
+  "goToSlide": "Go to slide {{number}}: {{label}}",
+  "prevImage": "Previous image",
+  "nextImage": "Next image",
+  "closeGallery": "Close image viewer"
 }

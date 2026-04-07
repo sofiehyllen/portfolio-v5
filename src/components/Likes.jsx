@@ -7,8 +7,9 @@ export default function Likes() {
 	return (
 		<button
 			className="btn btn-neutral btn-sm "
+			aria-label={`(${likes}) likes`}
 			onClick={() => setLikes((likes) => likes + 1)}>
-			<GoHeartFill />
+			<GoHeartFill aria-hidden="true" />
 			{likes}
 		</button>
 	);

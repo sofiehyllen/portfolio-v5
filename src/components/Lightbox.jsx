@@ -6,8 +6,10 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 import Image from "./Image";
 import { buildSrcSet, LIGHTBOX_SIZES } from "../utils/srcset";
+import { useTranslation } from "react-i18next";
 
 export default function Lightbox({ images, initialIndex, onClose }) {
+	const { t } = useTranslation("navigation");
 	const [index, setIndex] = useState(initialIndex);
 	const containerRef = useRef(null);
 
@@ -57,7 +59,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 		return () => window.removeEventListener("keydown", onKey);
 	}, [next, prev, onClose]);
 
-	const { src, filename, size, alt, caption } = images[index];
+	const { src, filename, alt, caption } = images[index];
 
 	return createPortal(
 		<div
@@ -69,7 +71,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 			onClick={onClose}>
 			{/* Prev */}
 			<button
-				aria-label="Forrige billede"
+				aria-label={t("prevImage")}
 				onClick={(e) => {
 					e.stopPropagation();
 					prev();
@@ -82,7 +84,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				onClick={(e) => e.stopPropagation()}>
 				{/* Close */}
 				<button
-					aria-label="Luk billedvisning"
+					aria-label={t("closeGallery")}
 					onClick={onClose}
 					className="absolute -top-10 right-16 text-white/60 hover:text-white transition-colors">
 					<IoCloseOutline className="size-6" aria-hidden="true" />
@@ -113,7 +115,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 
 			{/* Next */}
 			<button
-				aria-label="Næste billede"
+				aria-label={t("nextImage")}
 				onClick={(e) => {
 					e.stopPropagation();
 					next();

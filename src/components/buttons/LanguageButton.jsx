@@ -16,6 +16,8 @@ export default function LanguageButton() {
 			<div className="flex items-end pb-0.5">
 				<button
 					onClick={() => changeLanguage("en")}
+					aria-label={t("switchToEnglish")}
+					aria-pressed={i18n.language === "en"}
 					className={`font-display font-bold text-3xl md:text-base ${
 						i18n.language === "en"
 							? "text-secondary-content underline"
@@ -23,11 +25,13 @@ export default function LanguageButton() {
 					}`}>
 					en
 				</button>
-				<span className="font-medium px-2 text-neutral text-3xl md:text-base">
+				<span className="font-medium px-2 text-neutral text-3xl md:text-base" aria-hidden="true">
 					/
 				</span>
 				<button
 					onClick={() => changeLanguage("da")}
+					aria-label={t("switchToDanish")}
+					aria-pressed={i18n.language === "da"}
 					className={`font-display font-bold text-3xl md:text-base ${
 						i18n.language === "da"
 							? "text-secondary-content underline"
