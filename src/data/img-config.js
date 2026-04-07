@@ -44,19 +44,19 @@ export const imageConfigs = {
 	},
 	"widget_summer1.png": {
 		outputFolder: "shopify",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"widget_summer2.png": {
 		outputFolder: "shopify",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"widget_hike1.png": {
 		outputFolder: "shopify",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"widget_hike2.png": {
 		outputFolder: "shopify",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 
 	// --- Wait gallery ---
@@ -74,19 +74,19 @@ export const imageConfigs = {
 	},
 	"wait_customer_search.png": {
 		outputFolder: "wait",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"wait_partner_dashboard.png": {
 		outputFolder: "wait",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"wait_admin_dashboard.png": {
 		outputFolder: "wait",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"wait_restaurant_add_item.png": {
 		outputFolder: "wait",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 
 	// --- Snake gallery ---
@@ -96,7 +96,7 @@ export const imageConfigs = {
 	},
 	"snake_apples.png": {
 		outputFolder: "snake",
-		variants: { gallery: [350, 550, 800] }, // wide
+		variants: { gallery: [350, 550, 1000] }, // wide
 	},
 	"snake_comparison.png": {
 		outputFolder: "snake",
@@ -108,45 +108,45 @@ export const imageConfigs = {
 	},
 	"snake_game.png": {
 		outputFolder: "snake",
-		variants: { gallery: [200, 300, 400, 800] }, // narrow
+		variants: { gallery: [200, 300, 400, 600] }, // narrow
 	},
 
 	// --- Parkzone gallery ---
 	"pz_privat_homepage.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [400, 800, 1100, 1400, 2200] }, // full
+		variants: { gallery: [400, 800, 1400, 2200] }, // full
 	},
 	"pz_privat_book.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 550, 800, 1600] }, // wide
+		variants: { gallery: [350, 550, 800, 1600, 2200] }, // wide
 	},
 	"pz_erhverv_products.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 550, 800, 1600] }, // wide
+		variants: { gallery: [350, 550, 800, 1600, 2200] }, // wide
 	},
 	"pz_privat_checkout.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 1800] }, // half
 	},
 	"pz_privat_subscription.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 1700] }, // half
 	},
 	"pz_erhverv_homepage.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"pz_privat_location.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [350, 450, 600, 1200] }, // half
+		variants: { gallery: [350, 600, 1200, 2200] }, // half
 	},
 	"pz_erhverv_contact.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [200, 300, 400, 800] }, // narrow
+		variants: { gallery: [300, 400, 900, 1500] }, // narrow
 	},
 	"pz_privat_contact.png": {
 		outputFolder: "parkzone",
-		variants: { gallery: [200, 300, 400, 800] }, // narrow
+		variants: { gallery: [300, 400, 900, 1500] }, // narrow
 	},
 
 	// --- Profile picture (fast width: max-w-48 = 192px, 2x retina = 384px) ---

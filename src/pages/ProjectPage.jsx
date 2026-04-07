@@ -36,8 +36,10 @@ export default function ProjectPage() {
 	const image = projectImages[id];
 	const thumbFilename = projectThumbFilenames[id];
 	const gallery = projectGalleries[id] ?? [];
-	const lightboxImages = gallery.map(({ src, captionKey }, i) => ({
+	const lightboxImages = gallery.map(({ src, filename, size, captionKey }, i) => ({
 		src,
+		filename,
+		size,
 		alt: captionKey
 			? t(`${id}.gallery.${captionKey}`)
 			: `${t(`${id}.coverAlt`)} ${i + 1}`,

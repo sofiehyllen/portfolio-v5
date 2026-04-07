@@ -28,6 +28,10 @@ export const GALLERY_SIZES = {
 export const THUMB_SIZES =
 	"(max-width: 768px) calc(100vw - 40px), (max-width: 1024px) 232px, (max-width: 1280px) 360px, 490px";
 
+// Lightbox: max-w-7xl (1280px) med px-16 (64px hver side) = max 1152px
+export const LIGHTBOX_SIZES =
+	"(max-width: 768px) 100vw, (max-width: 1280px) calc(100vw - 128px), 1152px";
+
 // ProjectPage cover: samme bredde som full-galleri
 export const HERO_SIZES =
 	"(max-width: 768px) calc(100vw - 40px), (max-width: 1024px) 592px, (max-width: 1280px) 800px, (max-width: 1536px) 1056px, 1184px";

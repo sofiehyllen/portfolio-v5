@@ -5,6 +5,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 import Image from "./Image";
+import { buildSrcSet, LIGHTBOX_SIZES } from "../utils/srcset";
 
 export default function Lightbox({ images, initialIndex, onClose }) {
 	const [index, setIndex] = useState(initialIndex);
@@ -37,7 +38,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 		return () => window.removeEventListener("keydown", onKey);
 	}, [next, prev, onClose]);
 
-	const { src, alt, caption } = images[index];
+	const { src, filename, size, alt, caption } = images[index];
 
 	return createPortal(
 		<div
@@ -70,9 +71,11 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				{/* Image */}
 				<Image
 					src={src}
+					srcSet={buildSrcSet(filename, "gallery")}
+					sizes={LIGHTBOX_SIZES}
 					alt={alt}
 					className="max-h-[80vh] rounded-xl"
-					loading="lazy"
+					loading="eager"
 				/>
 
 				{/* Caption */}
@@ -101,6 +104,8 @@ Lightbox.propTypes = {
 	images: PropTypes.arrayOf(
 		PropTypes.shape({
 			src: PropTypes.string.isRequired,
+			filename: PropTypes.string,
+			size: PropTypes.string,
 			alt: PropTypes.string.isRequired,
 			caption: PropTypes.string,
 		})
