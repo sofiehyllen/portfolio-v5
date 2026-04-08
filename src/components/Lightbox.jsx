@@ -97,7 +97,6 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 
 				{/* Image */}
 				<Image
-					src={src}
 					srcSet={buildSrcSet(filename, "gallery")}
 					sizes={LIGHTBOX_SIZES}
 					alt={alt}
@@ -131,7 +130,6 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 Lightbox.propTypes = {
 	images: PropTypes.arrayOf(
 		PropTypes.shape({
-			src: PropTypes.string.isRequired,
 			filename: PropTypes.string,
 			size: PropTypes.string,
 			alt: PropTypes.string.isRequired,

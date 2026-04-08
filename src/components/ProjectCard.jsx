@@ -6,7 +6,7 @@ import { projectTags, projectThumbFilenames } from "../data/projects";
 import Image from "./Image";
 import { buildSrcSet, THUMB_SIZES } from "../utils/srcset";
 
-export default function ProjectCard({ id, coverimg }) {
+export default function ProjectCard({ id }) {
 	const { t } = useTranslation("projects");
 	const thumbFilename = projectThumbFilenames[id];
 
@@ -42,7 +42,6 @@ export default function ProjectCard({ id, coverimg }) {
 				</div> */}
 				<div className="rounded-xl overflow-hidden my-4">
 					<Image
-						src={coverimg}
 						srcSet={buildSrcSet(thumbFilename, "thumb")}
 						sizes={THUMB_SIZES}
 						alt={t(`${id}.coverAlt`)}
@@ -71,5 +70,4 @@ export default function ProjectCard({ id, coverimg }) {
 
 ProjectCard.propTypes = {
 	id: PropTypes.string.isRequired,
-	coverimg: PropTypes.string,
 };

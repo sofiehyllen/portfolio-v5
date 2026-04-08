@@ -1,37 +1,14 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import ParkzoneThumbnail from "@assets/originals/pz_thumbnail.png";
-import WidgetThumbnail from "@assets/originals/widget_thumbnail.png";
-import WaitThumbnail from "@assets/originals/wait_thumbnail.png";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Image from "./Image";
 import { buildSrcSet, THUMB_SIZES } from "../utils/srcset";
+import { projects } from "../data/projects";
 
-const slides = [
-	{
-		label: "AI Shopify Search Widget",
-		img: WidgetThumbnail,
-		filename: "widget_thumbnail.png",
-		date: "jan 2026",
-		id: "shopify",
-	},
-	{
-		label: "Food Ordering Platform",
-		img: WaitThumbnail,
-		filename: "wait_thumbnail.png",
-		date: "jun 2025",
-		id: "wait",
-	},
-	{
-		label: "Company Website",
-		img: ParkzoneThumbnail,
-		filename: "pz_thumbnail.png",
-		date: "jun 2024",
-		id: "parkzone",
-	},
-];
+const CAROUSEL_IDS = ["shopify", "wait", "parkzone"];
+const slides = projects.filter((p) => CAROUSEL_IDS.includes(p.id));
 
 export default function Carousel() {
 	const { t } = useTranslation("projects");
@@ -49,27 +26,22 @@ export default function Carousel() {
 					{slides.map((slide, i) => (
 						<Link
 							to={`/projects/${slide.id}`}
-							key={i}
+							key={slide.id}
 							className={`min-w-full h-fit p-4 rounded-xl bg-gray-100 dark:bg-secondary `}>
 							<div className="flex justify-between pb-5 pt-1">
 								<p className="font-mono text-accent text-sm">
-									{slide.label}
+									{t(`${slide.id}.title`)}
 								</p>
 								<p className="font-mono text-sm text-neutral">
-									{slide.date}
+									{t(`${slide.id}.date`)}
 								</p>
 							</div>
 							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
-									src={slide.img}
-									srcSet={buildSrcSet(
-										slide.filename,
-										"thumb"
-									)}
+									srcSet={buildSrcSet(slide.thumbFilename, "thumb")}
 									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
-									loading="lazy"
 								/>
 							</div>
 						</Link>
@@ -89,8 +61,8 @@ export default function Carousel() {
 					{slides.map((slide, i) => (
 						<button
 							type="button"
-							key={i}
-							aria-label={tNav("goToSlide", { number: i + 1, label: slide.label })}
+							key={slide.id}
+							aria-label={tNav("goToSlide", { number: i + 1, label: t(`${slide.id}.title`) })}
 							aria-current={i === current ? "true" : undefined}
 							onClick={() => goTo(i)}
 							className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${

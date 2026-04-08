@@ -4,7 +4,6 @@ import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
 import {
-	projectImages,
 	projectGalleries,
 	projectThumbFilenames,
 } from "../data/projects";
@@ -33,11 +32,9 @@ export default function ProjectPage() {
 	const navigate = useNavigate();
 	const [lightboxIndex, setLightboxIndex] = useState(null);
 
-	const image = projectImages[id];
 	const thumbFilename = projectThumbFilenames[id];
 	const gallery = projectGalleries[id] ?? [];
-	const lightboxImages = gallery.map(({ src, filename, size, captionKey }, i) => ({
-		src,
+	const lightboxImages = gallery.map(({ filename, size, captionKey }, i) => ({
 		filename,
 		size,
 		alt: captionKey
@@ -65,7 +62,6 @@ export default function ProjectPage() {
 			</div>
 			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-sm xl:h-[35rem]">
 				<Image
-					src={image}
 					srcSet={buildSrcSet(thumbFilename, "hero")}
 					sizes={HERO_SIZES}
 					alt={t(`${id}.coverAlt`)}
@@ -111,7 +107,7 @@ export default function ProjectPage() {
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
 						{gallery.map(
-							({ src, filename, size, captionKey }, i) => {
+							({ filename, size, captionKey }, i) => {
 								const caption = captionKey
 									? t(`${id}.gallery.${captionKey}`)
 									: undefined;
@@ -125,16 +121,9 @@ export default function ProjectPage() {
 											aria-label={caption ?? `${t(`${id}.title`)} ${i + 1}`}
 											onClick={() => setLightboxIndex(i)}>
 											<Image
-												src={src}
-												srcSet={buildSrcSet(
-													filename,
-													"gallery"
-												)}
+												srcSet={buildSrcSet(filename, "gallery")}
 												sizes={GALLERY_SIZES[size]}
-												alt={
-													caption ??
-													`${t(`${id}.title`)} ${i + 1}`
-												}
+												alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
 												className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
 												loading="lazy"
 											/>

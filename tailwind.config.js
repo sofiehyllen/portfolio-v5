@@ -8,7 +8,6 @@ export default {
         extend: {
             fontFamily: {
                 display: ['"Avenir Next", sans-serif'],
-                sans: ['"Avenir Next", sans-serif'],
                 mono: ['"Source Code Pro", monospace']
             },
         },
