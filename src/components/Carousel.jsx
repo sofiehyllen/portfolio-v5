@@ -23,7 +23,7 @@ export default function Carousel() {
 				<div
 					className="flex transition-transform duration-300 ease-in-out h-fit"
 					style={{ transform: `translateX(-${current * 100}%)` }}>
-					{slides.map((slide) => (
+					{slides.map((slide, i) => (
 						<Link
 							to={`/projects/${slide.id}`}
 							key={slide.id}
@@ -45,6 +45,8 @@ export default function Carousel() {
 									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
+									loading={i === 0 ? "eager" : "lazy"}
+									fetchpriority={i === 0 ? "high" : "auto"}
 								/>
 							</div>
 						</Link>
