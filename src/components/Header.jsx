@@ -11,7 +11,7 @@ export default function Header() {
 	const { t } = useTranslation("navigation");
 
 	return (
-		<header className="flex justify-between">
+		<header className="flex justify-between max-w-screen-2xl mx-auto">
 			<div className="flex space-x-5 items-center md:items-end md:space-x-10 lg:space-x-16">
 				<Link to="/" className="flex text-4xl font-bold text-accent">
 					<img

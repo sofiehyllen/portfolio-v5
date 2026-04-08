@@ -62,10 +62,16 @@
 
 @layer utilities {
 	.bg-light {
-		background-image: url("/public/bg-light.png");
+		background-image: image-set(
+			url("/bg-light.webp") type("image/webp"),
+			url("/bg-light.png") type("image/png")
+		);
 	}
 	.bg-dark {
-		background-image: url("/public/bg-dark.png");
+		background-image: image-set(
+			url("/bg-dark.webp") type("image/webp"),
+			url("/bg-dark.png") type("image/png")
+		);
 	}
 }
 
