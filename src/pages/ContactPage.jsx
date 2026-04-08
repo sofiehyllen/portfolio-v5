@@ -78,14 +78,14 @@ export default function ContactPage() {
 							sizes="192px"
 							alt={t("contact.profileAlt")}
 							className="max-w-48"
-							fetchPriority="high"
+							fetchpriority="high"
 						/>
 					</div>
-					<p className="text-center text-2xl font-semibold text-primary-content pt-5">
+					<p className="font-display text-center text-2xl font-semibold text-primary-content pt-5">
 						Sofie Fuglsang Hyllen
 					</p>
 					<div className="divider"></div>
-					<div className="space-y-3 text-secondary-content">
+					<div className="space-y-3 text-secondary-content font-display">
 						<div className="flex items-center space-x-4">
 							<LuMapPin className="size-5" />
 							<p>Copenhagen, DK</p>

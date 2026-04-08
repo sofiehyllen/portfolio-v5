@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { MdImageNotSupported } from "react-icons/md";
 
-export default function Image({ alt, className, loading, fetchPriority, srcSet, sizes }) {
+export default function Image({ alt, className, loading, fetchpriority, srcSet, sizes }) {
 	const [imgError, setImgError] = useState(false);
 
 	if (!srcSet || imgError) {
@@ -20,7 +20,7 @@ export default function Image({ alt, className, loading, fetchPriority, srcSet, 
 			alt={alt}
 			className={className}
 			loading={loading}
-			fetchPriority={fetchPriority}
+			fetchpriority={fetchpriority}
 			onError={() => setImgError(true)}
 		/>
 	);
@@ -30,7 +30,7 @@ Image.propTypes = {
 	alt: PropTypes.string.isRequired,
 	className: PropTypes.string,
 	loading: PropTypes.oneOf(["lazy", "eager"]),
-	fetchPriority: PropTypes.oneOf(["high", "low", "auto"]),
+	fetchpriority: PropTypes.oneOf(["high", "low", "auto"]),
 	srcSet: PropTypes.string,
 	sizes: PropTypes.string,
 };

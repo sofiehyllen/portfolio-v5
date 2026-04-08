@@ -17,7 +17,7 @@ export default function CodeBlock({ id }) {
 				</code>
 			</pre>
 			<div className="flex items-start gap-2 font-semibold">
-				<span className="select-none font-mono font-light w-8 text-right dark:text-[#6A6A7E] shrink-0">
+				<span className="select-none font-mono font-light w-8 text-right text-[#ADADC1] dark:text-[#6A6A7E] shrink-0">
 					$
 				</span>{" "}
 				{/* data-prefix */}

@@ -7,6 +7,22 @@
 }
 
 @font-face {
+	font-family: "Avenir Next";
+	src: url("/public/AvenirLTProHeavy.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Avenir Next";
+	src: url("/public/AvenirNextLTPro-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: "Source Code Pro";
 	src: url("/public/SourceCodePro-VariableFont_wght.woff2") format("woff2");
 	font-weight: normal;
@@ -62,12 +78,14 @@
 
 @layer utilities {
 	.bg-light {
+		background-image: url("/bg-light.png");
 		background-image: image-set(
 			url("/bg-light.webp") type("image/webp"),
 			url("/bg-light.png") type("image/png")
 		);
 	}
 	.bg-dark {
+		background-image: url("/bg-dark.png");
 		background-image: image-set(
 			url("/bg-dark.webp") type("image/webp"),
 			url("/bg-dark.png") type("image/png")

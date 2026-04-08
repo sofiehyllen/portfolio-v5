@@ -46,7 +46,7 @@ export default function Carousel() {
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
 									loading={i === 0 ? "eager" : "lazy"}
-									fetchPriority={i === 0 ? "high" : "auto"}
+									fetchpriority={i === 0 ? "high" : "auto"}
 								/>
 							</div>
 						</Link>

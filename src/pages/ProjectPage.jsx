@@ -57,7 +57,7 @@ export default function ProjectPage() {
 				</h1>
 				<p className="font-mono xl:text-lg">{t(`${id}.subtitle`)}</p>
 			</div>
-			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-sm xl:h-[35rem]">
+			<div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-md xl:h-[35rem]">
 				<Image
 					srcSet={buildSrcSet(thumbFilename, "hero")}
 					sizes={HERO_SIZES}
@@ -113,7 +113,7 @@ export default function ProjectPage() {
 									className={`space-y-2 ${SPANS[size]}`}>
 									<button
 										type="button"
-										className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700 w-full block"
+										className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-100 dark:border-gray-700 w-full block shadow-sm"
 										aria-label={
 											caption ??
 											`${t(`${id}.title`)} ${i + 1}`
