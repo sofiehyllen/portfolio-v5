@@ -3,21 +3,21 @@ export const imageConfigs = {
 	"widget_thumbnail.png": {
 		outputFolder: "shopify",
 		variants: {
-			thumb: [350, 576, 1152],
+			thumb: [350, 576, 700, 1152],
 			hero: [600, 900, 1400, 2100],
 		},
 	},
 	"wait_thumbnail.png": {
 		outputFolder: "wait",
 		variants: {
-			thumb: [350, 576, 1152],
+			thumb: [350, 576, 700, 1152],
 			hero: [600, 900, 1400, 2100],
 		},
 	},
 	"snake_thumbnail.png": {
 		outputFolder: "snake",
 		variants: {
-			thumb: [350, 576, 1152],
+			thumb: [350, 576, 700, 1152],
 			hero: [600, 900, 1400, 2100],
 		},
 	},

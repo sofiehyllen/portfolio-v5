@@ -11,14 +11,8 @@ export function useMetaTags() {
 		document.title = title;
 		document.documentElement.lang = i18n.language;
 
-		document
-			.querySelector('meta[name="description"]')
-			?.setAttribute("content", description);
-		document
-			.querySelector('meta[property="og:title"]')
-			?.setAttribute("content", title);
-		document
-			.querySelector('meta[property="og:description"]')
-			?.setAttribute("content", description);
+		document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+		document.querySelector('meta[property="og:title"]')?.setAttribute("content", title);
+		document.querySelector('meta[property="og:description"]')?.setAttribute("content", description);
 	}, [i18n.language, t]);
 }

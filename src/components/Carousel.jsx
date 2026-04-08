@@ -38,10 +38,15 @@ export default function Carousel() {
 							</div>
 							<div className="rounded-xl overflow-hidden w-full h-56 md:h-80">
 								<Image
-									srcSet={buildSrcSet(slide.thumbFilename, "thumb")}
+									srcSet={buildSrcSet(
+										slide.thumbFilename,
+										"thumb"
+									)}
 									sizes={THUMB_SIZES}
 									alt={t(`${slide.id}.coverAlt`)}
 									className="w-full h-full object-cover"
+									loading={i === 0 ? "eager" : "lazy"}
+									fetchpriority={i === 0 ? "high" : "auto"}
 								/>
 							</div>
 						</Link>
@@ -62,7 +67,10 @@ export default function Carousel() {
 						<button
 							type="button"
 							key={slide.id}
-							aria-label={tNav("goToSlide", { number: i + 1, label: t(`${slide.id}.title`) })}
+							aria-label={tNav("goToSlide", {
+								number: i + 1,
+								label: t(`${slide.id}.title`),
+							})}
 							aria-current={i === current ? "true" : undefined}
 							onClick={() => goTo(i)}
 							className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${

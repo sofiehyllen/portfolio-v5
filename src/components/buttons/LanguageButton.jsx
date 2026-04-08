@@ -25,7 +25,9 @@ export default function LanguageButton() {
 					}`}>
 					en
 				</button>
-				<span className="font-medium px-2 text-neutral text-3xl md:text-base" aria-hidden="true">
+				<span
+					className="font-medium px-2 text-neutral text-3xl md:text-base"
+					aria-hidden="true">
 					/
 				</span>
 				<button

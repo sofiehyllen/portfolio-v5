@@ -5,7 +5,10 @@ export default function Navigation() {
 	const { t } = useTranslation("navigation");
 
 	return (
-		<nav aria-label={t("mainNav")} role="navigation" className="pb-0.5 flex space-x-5 md:space-x-8 lg:space-x-10">
+		<nav
+			aria-label={t("mainNav")}
+			role="navigation"
+			className="pb-0.5 flex space-x-5 md:space-x-8 lg:space-x-10">
 			<Link
 				to="/projects"
 				className="font-mono text-sm tracking-tight lg:text-base hover:text-accent transition-colors">

@@ -6,7 +6,6 @@ import { FaGitlab } from "react-icons/fa6";
 import PageLayout from "../components/wrappers/PageLayout";
 import Button from "../components/buttons/Button";
 import { IoIosRocket } from "react-icons/io";
-import ProfileImg from "@assets/originals/profile_picture.png";
 import Image from "../components/Image";
 import { buildSrcSet } from "../utils/srcset";
 import { LuMapPin } from "react-icons/lu";
@@ -72,18 +71,21 @@ export default function ContactPage() {
 				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit w-full sm:max-w-72 md:p-5 md:w-5/12">
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
 						<Image
-							src={ProfileImg}
-							srcSet={buildSrcSet("profile_picture.png", "default")}
+							srcSet={buildSrcSet(
+								"profile_picture.png",
+								"default"
+							)}
 							sizes="192px"
 							alt={t("contact.profileAlt")}
 							className="max-w-48"
+							fetchpriority="high"
 						/>
 					</div>
-					<p className="text-center text-2xl font-semibold text-primary-content pt-5">
+					<p className="font-display text-center text-2xl font-semibold text-primary-content pt-5">
 						Sofie Fuglsang Hyllen
 					</p>
 					<div className="divider"></div>
-					<div className="space-y-3 text-secondary-content">
+					<div className="space-y-3 text-secondary-content font-display">
 						<div className="flex items-center space-x-4">
 							<LuMapPin className="size-5" />
 							<p>Copenhagen, DK</p>
@@ -142,7 +144,9 @@ export default function ContactPage() {
 						<form onSubmit={handleSubmit} className="space-y-6 ">
 							<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 								<div>
-									<label className="label" htmlFor="contact-name">
+									<label
+										className="label"
+										htmlFor="contact-name">
 										{t("contact.name")}
 									</label>
 									<input
@@ -159,7 +163,9 @@ export default function ContactPage() {
 									/>
 								</div>
 								<div>
-									<label className="label" htmlFor="contact-email">
+									<label
+										className="label"
+										htmlFor="contact-email">
 										{t("contact.email")}
 									</label>
 									<input
@@ -177,7 +183,9 @@ export default function ContactPage() {
 								</div>
 							</div>
 							<div>
-								<label className="label" htmlFor="contact-subject">
+								<label
+									className="label"
+									htmlFor="contact-subject">
 									{t("contact.subject")}
 								</label>
 								<input
@@ -194,7 +202,9 @@ export default function ContactPage() {
 								/>
 							</div>
 							<div>
-								<label className="label" htmlFor="contact-message">
+								<label
+									className="label"
+									htmlFor="contact-message">
 									{t("contact.message")}
 								</label>
 								<textarea
