@@ -73,7 +73,10 @@ export default function ContactPage() {
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
 						<Image
 							src={ProfileImg}
-							srcSet={buildSrcSet("profile_picture.png", "default")}
+							srcSet={buildSrcSet(
+								"profile_picture.png",
+								"default"
+							)}
 							sizes="192px"
 							alt={t("contact.profileAlt")}
 							className="max-w-48"
@@ -142,7 +145,9 @@ export default function ContactPage() {
 						<form onSubmit={handleSubmit} className="space-y-6 ">
 							<div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 								<div>
-									<label className="label" htmlFor="contact-name">
+									<label
+										className="label"
+										htmlFor="contact-name">
 										{t("contact.name")}
 									</label>
 									<input
@@ -159,7 +164,9 @@ export default function ContactPage() {
 									/>
 								</div>
 								<div>
-									<label className="label" htmlFor="contact-email">
+									<label
+										className="label"
+										htmlFor="contact-email">
 										{t("contact.email")}
 									</label>
 									<input
@@ -177,7 +184,9 @@ export default function ContactPage() {
 								</div>
 							</div>
 							<div>
-								<label className="label" htmlFor="contact-subject">
+								<label
+									className="label"
+									htmlFor="contact-subject">
 									{t("contact.subject")}
 								</label>
 								<input
@@ -194,7 +203,9 @@ export default function ContactPage() {
 								/>
 							</div>
 							<div>
-								<label className="label" htmlFor="contact-message">
+								<label
+									className="label"
+									htmlFor="contact-message">
 									{t("contact.message")}
 								</label>
 								<textarea

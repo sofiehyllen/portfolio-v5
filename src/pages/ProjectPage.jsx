@@ -3,10 +3,7 @@ import { useTranslation } from "react-i18next";
 import CodeBlock from "../components/CodeBlock";
 import { SlArrowLeft } from "react-icons/sl";
 import { useState } from "react";
-import {
-	projectGalleries,
-	projectThumbFilenames,
-} from "../data/projects";
+import { projectGalleries, projectThumbFilenames } from "../data/projects";
 import Lightbox from "../components/Lightbox";
 import Image from "../components/Image";
 import { buildSrcSet, GALLERY_SIZES, HERO_SIZES } from "../utils/srcset";
@@ -106,37 +103,44 @@ export default function ProjectPage() {
 			{gallery.length > 0 && (
 				<div className="py-10">
 					<div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-						{gallery.map(
-							({ filename, size, captionKey }, i) => {
-								const caption = captionKey
-									? t(`${id}.gallery.${captionKey}`)
-									: undefined;
-								return (
-									<div
-										key={i}
-										className={`space-y-2 ${SPANS[size]}`}>
-										<button
-											type="button"
-											className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700 w-full block"
-											aria-label={caption ?? `${t(`${id}.title`)} ${i + 1}`}
-											onClick={() => setLightboxIndex(i)}>
-											<Image
-												srcSet={buildSrcSet(filename, "gallery")}
-												sizes={GALLERY_SIZES[size]}
-												alt={caption ?? `${t(`${id}.title`)} ${i + 1}`}
-												className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-												loading="lazy"
-											/>
-										</button>
-										{caption && (
-											<p className="font-mono text-xs text-secondary-content italic">
-												{caption}
-											</p>
-										)}
-									</div>
-								);
-							}
-						)}
+						{gallery.map(({ filename, size, captionKey }, i) => {
+							const caption = captionKey
+								? t(`${id}.gallery.${captionKey}`)
+								: undefined;
+							return (
+								<div
+									key={i}
+									className={`space-y-2 ${SPANS[size]}`}>
+									<button
+										type="button"
+										className="overflow-hidden rounded-2xl cursor-zoom-in border border-gray-200 dark:border-gray-700 w-full block"
+										aria-label={
+											caption ??
+											`${t(`${id}.title`)} ${i + 1}`
+										}
+										onClick={() => setLightboxIndex(i)}>
+										<Image
+											srcSet={buildSrcSet(
+												filename,
+												"gallery"
+											)}
+											sizes={GALLERY_SIZES[size]}
+											alt={
+												caption ??
+												`${t(`${id}.title`)} ${i + 1}`
+											}
+											className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
+									</button>
+									{caption && (
+										<p className="font-mono text-xs text-secondary-content italic">
+											{caption}
+										</p>
+									)}
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			)}

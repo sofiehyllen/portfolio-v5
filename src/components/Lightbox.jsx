@@ -43,7 +43,8 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 			if (e.key === "ArrowLeft") prev();
 			if (e.key === "Escape") onClose();
 			if (e.key === "Tab") {
-				const focusable = containerRef.current?.querySelectorAll("button");
+				const focusable =
+					containerRef.current?.querySelectorAll("button");
 				if (!focusable?.length) return;
 				const arr = Array.from(focusable);
 				const currentIndex = arr.indexOf(document.activeElement);
@@ -59,7 +60,7 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 		return () => window.removeEventListener("keydown", onKey);
 	}, [next, prev, onClose]);
 
-	const { src, filename, alt, caption } = images[index];
+	const { filename, alt, caption } = images[index];
 
 	return createPortal(
 		<div
@@ -91,7 +92,9 @@ export default function Lightbox({ images, initialIndex, onClose }) {
 				</button>
 
 				{/* Counter */}
-				<p className="absolute -top-10 left-16 font-mono text-xs text-white/40" aria-live="polite">
+				<p
+					className="absolute -top-10 left-16 font-mono text-xs text-white/40"
+					aria-live="polite">
 					{index + 1} / {images.length}
 				</p>
 
