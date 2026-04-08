@@ -78,6 +78,7 @@ export default function ContactPage() {
 							sizes="192px"
 							alt={t("contact.profileAlt")}
 							className="max-w-48"
+							fetchPriority="high"
 						/>
 					</div>
 					<p className="text-center text-2xl font-semibold text-primary-content pt-5">
