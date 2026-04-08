@@ -6,7 +6,6 @@ import { FaGitlab } from "react-icons/fa6";
 import PageLayout from "../components/wrappers/PageLayout";
 import Button from "../components/buttons/Button";
 import { IoIosRocket } from "react-icons/io";
-import ProfileImg from "@assets/originals/profile_picture.png";
 import Image from "../components/Image";
 import { buildSrcSet } from "../utils/srcset";
 import { LuMapPin } from "react-icons/lu";
@@ -72,7 +71,6 @@ export default function ContactPage() {
 				<div className="bg-white/35 dark:bg-white/5 rounded-2xl p-10 flex flex-col items-center h-fit w-full sm:max-w-72 md:p-5 md:w-5/12">
 					<div className="rounded-full bg-white dark:bg-gray-100/20 overflow-hidden">
 						<Image
-							src={ProfileImg}
 							srcSet={buildSrcSet(
 								"profile_picture.png",
 								"default"
