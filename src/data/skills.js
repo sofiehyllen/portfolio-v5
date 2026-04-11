@@ -2,7 +2,6 @@ import { FiServer } from "react-icons/fi";
 import { FiDatabase } from "react-icons/fi";
 import { LuCode } from "react-icons/lu";
 import { FiBox } from "react-icons/fi";
-import { LuBrain } from "react-icons/lu";
 
 export const SKILLS = [
 	{
@@ -45,18 +44,5 @@ export const SKILLS = [
 		key: "devops",
 		icon: FiBox,
 		items: ["Docker", "Nginx", "GitLab-CI", "CI/CD", "Git"],
-	},
-	{
-		key: "ai",
-		icon: LuBrain,
-		items: [
-			"OpenAI API",
-			"NumPy",
-			"Matplotlib",
-			"Genetic Algorithm",
-			"Neural Network",
-			"Neuroevolution",
-			"Game AI",
-		],
-	},
+	}
 ];

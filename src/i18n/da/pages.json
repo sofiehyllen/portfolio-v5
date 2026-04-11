@@ -17,11 +17,11 @@
   },
   "projects": {
     "title": "Projekter",
-    "subtitle": "En samling af projekter jeg har bygget hen ad vejen. Nogle af dem er live og production-ready, andre er stadig under udvikling (eller sparket til hjørne). Jeg kommer tilbage til dem i hjørnet på et tidspunkt. Måske."
+    "subtitle": "En samling af projekter jeg har bygget hen ad vejen. Nogle af dem er live og production-ready, andre er stadig under udvikling (eller midlertidigt parkeret). Jeg vender tilbage til de parkerede på et tidspunkt. Måske."
   },
   "about": {
-    "title": "Lidt om mig",
-    "subtitle": "Udvikler med en professionsbachelor i Webudvikling og en stor interesse i fullstack/backend udvikling, datasystemer, og applikationsarkitektur.",
+    "title": "Teknologier & Værktøjer",
+    "subtitle": "Her finder du de sprog, teknologier og værktøjer jeg bruger mest lige nu, eller som jeg har erfaring med.",
     "atm": "Hvad sker der lige nu",
     "atm-content": [
       "Jeg er for nyligt blevet færdiguddannet og er lige nu **open to work**.",
