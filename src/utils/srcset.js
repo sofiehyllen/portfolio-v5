@@ -23,10 +23,10 @@ export const GALLERY_SIZES = {
 	narrow: "(max-width: 768px) calc(100vw - 40px), (max-width: 1024px) 197px, (max-width: 1280px) 267px, (max-width: 1536px) 352px, 395px",
 };
 
-// Carousel: HomePage md:mx-16 xl:mx-48 + tekst md:w-1/2 + gap md:space-x-10
-// md=232px  lg=360px  xl=360px  2xl=490px  (max-w-xl=576px)
+// Carousel: max-w-xl (576px) med slide p-4 (32px) = 544px ved md+
+// Mobil: layout p-5=40px + slide p-4=32px = calc(100vw - 72px)
 export const THUMB_SIZES =
-	"(max-width: 768px) calc(100vw - 40px), (max-width: 1024px) 232px, (max-width: 1280px) 360px, 490px";
+	"(max-width: 768px) calc(100vw - 72px), 544px";
 
 // Lightbox: max-w-7xl (1280px) med px-16 (64px hver side) = max 1152px
 export const LIGHTBOX_SIZES =
