@@ -88,7 +88,7 @@ export default function ContactPage() {
 					<div className="space-y-3 text-secondary-content font-display">
 						<div className="flex items-center space-x-4">
 							<LuMapPin className="size-5" />
-							<p>Copenhagen, DK</p>
+							<p>{t("contact.cph")}</p>
 						</div>
 						<div className="flex items-center space-x-4">
 							<LuMail className="size-5" />
