@@ -30,11 +30,10 @@
     ],
     "skills": {
       "title": "Technologies & Tools",
-      "backend": "Backend",
-      "databases": "Databases",
+      "backend": "Backend & Databases",
       "frontend": "Frontend",
       "devops": "DevOps & Infrastructure",
-      "ai": "AI & Machine Learning"
+      "tools": "Tools"
     },
     "education": "Education",
     "experience": "Experience",

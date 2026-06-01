@@ -1,5 +1,5 @@
 import { FiServer } from "react-icons/fi";
-import { FiDatabase } from "react-icons/fi";
+import { FiTool } from "react-icons/fi";
 import { LuCode } from "react-icons/lu";
 import { FiBox } from "react-icons/fi";
 
@@ -10,39 +10,59 @@ export const SKILLS = [
 		items: [
 			"Python",
 			"Flask",
-			"REST API",
+			"API/REST/GraphQL",
+			"MySQL",
+			"PostgreSQL",
+			"MongoDB",
+			"ArangoDB",
+			"Redis",
+			"Firebase",
 			"SQLAlchemy",
-			"Gunicorn",
-			"Node.js",
-			"Shopify API",
-			"WordPress REST API",
-			"Pickle",
+			"Headless CMS",
 		],
-	},
-	{
-		key: "databases",
-		icon: FiDatabase,
-		items: ["MySQL", "PostgreSQL", "Redis", "Firestore", "GraphQL"],
 	},
 	{
 		key: "frontend",
 		icon: LuCode,
 		items: [
-			"React",
-			"JavaScript",
-			"Tailwind",
-			"Vite",
 			"HTML",
 			"CSS",
-			"Framer-motion",
-			"Pygame",
-			"SPA",
-			"i18n",
+			"JavaScript",
+			"TypeScript",
+			"React",
+			"Vue.js",
+			"Next.js",
+			"Tailwind",
+			"Storybook",
 		],
 	},
 	{
 		key: "devops",
 		icon: FiBox,
-		items: ["Docker", "Nginx", "GitLab-CI", "CI/CD", "Git"],
-	}
+		items: [
+			"Docker",
+			"Nginx",
+			"CI/CD",
+			"GitLab Pipelines",
+			"Cloud VPS (Linode/Akamai)",
+			"Alpine Linux",
+			"SSH",
+			"Git",
+			"Github",
+			"Gitlab",
+			"Shell scripts",
+		],
+	},
+	{
+		key: "tools",
+		icon: FiTool,
+		items: [
+			"VS Code",
+			"Vim",
+			"Postman",
+			"Jupyter Notebook",
+			"Jira",
+			"Claude Code",
+		],
+	},
 ];
