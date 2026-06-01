@@ -25,8 +25,7 @@ export const GALLERY_SIZES = {
 
 // Carousel: max-w-xl (576px) med slide p-4 (32px) = 544px ved md+
 // Mobil: layout p-5=40px + slide p-4=32px = calc(100vw - 72px)
-export const THUMB_SIZES =
-	"(max-width: 768px) calc(100vw - 72px), 544px";
+export const THUMB_SIZES = "(max-width: 768px) calc(100vw - 72px), 544px";
 
 // Lightbox: max-w-7xl (1280px) med px-16 (64px hver side) = max 1152px
 export const LIGHTBOX_SIZES =
